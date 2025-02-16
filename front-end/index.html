@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" data-next-head="">
+    <meta name="viewport" content="width=device-width" data-next-head="">  
+    <link rel="stylesheet" href="styles.css">
+    <script src="fabric.min.js"></script>
+    <script type="module" src="index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.8.0/two.min.js"></script>
+</head>
+<body>
+        <div class="main_cont">
+            <!-- Sidebar Section -->
+            <div class="side_bar" data-title="Parts Library">
+                <div class="sidebar_head">
+                    <div class="port_select_wrapper">   
+                        <select id="port_select">
+                            <option value="none">select port</option>
+                        </select>
+                    </div>
+                    <textarea id="json_string" placeholder="enter gcode" rows="10"></textarea>
+                    <button id="send_gcode" onclick="sendGcode()" disabled>Send</button>
+                </div>
+                <div class="sidebar_card_wrapper"><p>hello</p></div>
+            </div>
+
+            <!-- Workspace Section -->
+            <div class="work_space" data-title="Build space">
+                <div class="command_btns">
+                    <button id="start_btn">Start</button>
+                    <button id="stop_btn">Stop</button>
+                    <button id="pause_btn">Pause</button>
+                    <button id="estop_btn" style="background-color:red">E-stop</button>
+                </div>
+                
+                <div class="canvas_container">
+                    <div class="dimansios_bar" id="dimansios_bar"></div>
+                    <div class="draw_tools_btns">
+                        <button id="draw_rect">▭</button>
+                        <button id="draw_circle">⬤</button>
+                        <button id="draw_triangle">△</button>
+                        <button id="draw_polygon">⬠</button>
+                        <button id="draw_line">─</button>
+                        <button id="draw_arrow">→</button>
+                        <button id="draw_ellipse">⬥</button>
+                    </div>
+
+                    <div class="utils_btns">
+                        <button id="build_btn">Build</button>
+                        <button id="send_svg">Send SVG</button>
+                        <button id="export_btn">Export</button>
+                        <button id="send_json">Send JSON</button>
+                    </div>
+                    <div class="canvas_wrapper" id="fabricCanvas"></div>
+                    <!-- <div id="paperCanvas" resize></div> -->
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="foot_bar" data-title="Workbench">
+                <div class="Workbench_parts_wrapper"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal_overlay" id="modal_overlay"> </div>
+
+</body>
+</html>

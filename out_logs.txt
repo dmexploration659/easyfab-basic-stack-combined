@@ -1,0 +1,1539 @@
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'parts_sender', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'parts_sender'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'parts_sender'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'message': '', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'part_planner'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'part_planner'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'part_planner', 'message': '[\n  {\n    "position": {\n      "left": 135.03807220787573,\n      "top": 35.21421315387596\n    },\n    "dimensions": {\n      "width": 23.276,\n      "height": 396.5714285714286\n    },\n    "partData": {\n      "thickness": {\n        "val": "3",\n        "unit": "mm"\n      },\n      "length": {\n        "val": "4",\n        "unit": "m"\n      },\n      "width": {\n        "val": "44",\n        "unit": "mm"\n      },\n      "name": "Sheet metal"\n    },\n    "label": "1/  Sheet metal 4m",\n    "fontSize": 20,\n    "angle": 0\n  }\n]', 'title': 'shapes_data-test-pito'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'part_planner', 'message': '[\n  {\n    "position": {\n      "left": 135.03807220787573,\n      "top": 35.21421315387596\n    },\n    "dimensions": {\n      "width": 23.276,\n      "height": 396.5714285714286\n    },\n    "partData": {\n      "thickness": {\n        "val": "3",\n        "unit": "mm"\n      },\n      "length": {\n        "val": "4",\n        "unit": "m"\n      },\n      "width": {\n        "val": "44",\n        "unit": "mm"\n      },\n      "name": "Sheet metal"\n    },\n    "label": "1/  Sheet metal 4m",\n    "fontSize": 20,\n    "angle": 0\n  }\n]', 'title': 'shapes_data-test-pito'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message-response', 'success': False, 'message': 'Target client "parts_sender" not found or not connected.'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message-response', 'success': False, 'message': 'Target client "parts_sender" not found or not connected.'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message-response', 'success': False, 'message': 'Target client "parts_sender" not found or not connected.'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 35}, 'title': 'send_to_cnc'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 35}, 'title': 'send_to_cnc'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 'b', 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5', 'COM8']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'port': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'port': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'port': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'port': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'port': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'port': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'port': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'port': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'port': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'port': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5', 'COM8']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: ['COM3', 'COM7', 'COM4', 'COM5']
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM5'}, 'title': 'connect_port'}
+port COM5 connection status: False
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X10.0 Y20.0
+G1 X60.0 Y20.0 F1000
+G1 X60.0 Y50.0 F1000
+G1 X10.0 Y50.0 F1000
+G1 X10.0 Y20.0 F1000
+M30
+cnc response: 
+send_to_cnc executed,serial response: 
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X10.0 Y20.0
+G1 X60.0 Y20.0 F1000
+G1 X60.0 Y50.0 F1000
+G1 X10.0 Y50.0 F1000
+G1 X10.0 Y20.0 F1000
+M30
+cnc response: Grbl 1.1h ['$' for help]
+send_to_cnc executed,serial response: Grbl 1.1h ['$' for help]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'circle', 'center_x': 0, 'center_y': 0, 'radius': 10, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X10.0 Y0.0
+G2 X10.0 Y0.0 I-10.0 J0 F1000
+M30
+cnc response: ok
+send_to_cnc executed,serial response: ok
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'circle', 'center_x': 0, 'center_y': 0, 'radius': 60, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X60.0 Y0.0
+G2 X60.0 Y0.0 I-60.0 J0 F1000
+M30
+cnc response: ok
+send_to_cnc executed,serial response: ok
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X10.0 Y20.0
+G1 X60.0 Y20.0 F1000
+G1 X60.0 Y50.0 F1000
+G1 X10.0 Y50.0 F1000
+G1 X10.0 Y20.0 F1000
+M30
+cnc response: 
+send_to_cnc executed,serial response: 
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1400}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X10.0 Y20.0
+G1 X60.0 Y20.0 F1000
+G1 X60.0 Y50.0 F1000
+G1 X10.0 Y50.0 F1000
+G1 X10.0 Y20.0 F1000
+M30
+cnc response: Grbl 1.1h ['$' for help]
+send_to_cnc executed,serial response: Grbl 1.1h ['$' for help]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 600}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X10.0 Y20.0
+G1 X60.0 Y20.0 F1000
+G1 X60.0 Y50.0 F1000
+G1 X10.0 Y50.0 F1000
+G1 X10.0 Y20.0 F1000
+M30
+cnc response: ok
+send_to_cnc executed,serial response: ok
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 600}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X10.0 Y20.0
+G1 X60.0 Y20.0 F1000
+G1 X60.0 Y50.0 F1000
+G1 X10.0 Y50.0 F1000
+G1 X10.0 Y20.0 F1000
+M30
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 50, 'height': 30, 'start_x': 10, 'start_y': 20, 'feedrate': 1000}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X10.0 Y20.0
+G1 X60.0 Y20.0 F1000
+G1 X60.0 Y50.0 F1000
+G1 X10.0 Y50.0 F1000
+G1 X10.0 Y20.0 F1000
+M30
+cnc response: 
+send_to_cnc executed,serial response: 
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+Connection closed by the server.
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: False
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM3'}, 'title': 'connect_port'}
+port COM3 connection status: False
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM5'}, 'title': 'connect_port'}
+port COM5 connection status: False
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: False
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM4'}, 'title': 'connect_port'}
+port COM4 connection status: True
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 219.49999999999997, 'length': 219.49999999999997, 'start_x': 130.78598108149134, 'start_y': 134.56132015617345}, 'title': 'send_to_cnc'}
+error: Missing required parameters: height
+send_to_cnc executed,serial response: not sent
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 219.49999999999997, 'height': 219.49999999999997, 'start_x': 143.9606444433204, 'start_y': 147.72489263055144}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X143.9606444433204 Y147.72489263055144
+G1 X363.46064444332035 Y147.72489263055144 F1000
+G1 X363.46064444332035 Y367.2248926305514 F1000
+G1 X143.9606444433204 Y367.2248926305514 F1000
+G1 X143.9606444433204 Y147.72489263055144 F1000
+M30
+cnc response: 
+send_to_cnc executed,serial response: 
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 90.09442645066807, 'height': 90.09442645066807, 'start_x': 39.73386758316705, 'start_y': 43.531388432752635}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X39.73386758316705 Y43.531388432752635
+G1 X129.8282940338351 Y43.531388432752635 F1000
+G1 X129.8282940338351 Y133.6258148834207 F1000
+G1 X39.73386758316705 Y133.6258148834207 F1000
+G1 X39.73386758316705 Y43.531388432752635 F1000
+M30
+cnc response: 
+send_to_cnc executed,serial response: 
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'circle', 'width': 219.49999999999997, 'height': 219.49999999999997, 'start_x': 122.00287217360511, 'start_y': 125.78560517325495}, 'title': 'send_to_cnc'}
+error: Missing required parameters: center_x, center_y, radius
+send_to_cnc executed,serial response: not sent
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM7'}, 'title': 'connect_port'}
+port COM7 connection status: False
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 74.6705710102489, 'height': 74.6705710102489, 'radius': 37.33528550512445, 'start_x': 13.606977574884388, 'start_y': 11.93311453574824}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X13.606977574884388 Y11.93311453574824
+G1 X88.27754858513329 Y11.93311453574824 F1000
+G1 X88.27754858513329 Y86.60368554599715 F1000
+G1 X13.606977574884388 Y86.60368554599715 F1000
+G1 X13.606977574884388 Y11.93311453574824 F1000
+M30
+cnc response: 
+send_to_cnc executed,serial response: 
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 63.211490697516965, 'height': 128.55527002499394, 'radius': 31.605745348758482, 'start_x': 13.606977574884398, 'start_y': 16.32335739249307}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X13.606977574884398 Y16.32335739249307
+G1 X76.81846827240136 Y16.32335739249307 F1000
+G1 X76.81846827240136 Y144.87862741748702 F1000
+G1 X13.606977574884398 Y144.87862741748702 F1000
+G1 X13.606977574884398 Y16.32335739249307 F1000
+M30
+cnc response: Grbl 1.1h ['$' for help]
+send_to_cnc executed,serial response: Grbl 1.1h ['$' for help]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'circle', 'width': 65.17142895375014, 'height': 65.17142895375014, 'radius': 32.58571447687507, 'start_x': 26.78880306189496, 'start_y': 26.567257391564063}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X59.37451753877003 Y26.567257391564063
+G2 X59.37451753877003 Y26.567257391564063 I-32.58571447687507 J0 F1000
+M30
+cnc response: ok
+send_to_cnc executed,serial response: ok
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}

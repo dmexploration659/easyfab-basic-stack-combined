@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS TEST</title>
+</head>
+<body>
+    <h1>ws_test</h1>
+    <div id="chat">
+        <input type="text" id="targetClientName" placeholder="Recipient's name">
+        <input type="text" id="messageInput" placeholder="Type a message">
+        <button onclick="sendPrivateMessage()">Send Private Message</button>
+        <pre id="output"
+        style="background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-family: Consolas, monospace;
+        white-space: pre-wrap; /* Ensures the JSON wraps if it's too long */
+        word-wrap: break-word;
+      "></pre>
+      <div id="svg_output"></div>
+    </div>
+
+    <script type="module" src="web_sock_test.js"></script>
+</body>
+</html>

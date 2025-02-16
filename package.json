@@ -1,0 +1,21 @@
+{
+  "name": "easyfab-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "electron": "electron ."
+  },
+  "dependencies": {
+    "fabric": "^6.5.4",
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "electron": "^34.1.1"
+  }
+}
