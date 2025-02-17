@@ -69,20 +69,21 @@ async def connect_to_electron():
 
                         case "send_to_cnc":
                             shape_data = data.get("message")
-                            gcode = gcode_gen.generate_gcode(**shape_data)
-                            if gcode.startswith("G"):  # Check if it's valid gcode
-                                print('gcode:', gcode)
-                                await log_to_file(f"converted gcode: {gcode}")
-                                cnc_response = serial_comm.send_gcode(gcode)
-                                await log_to_file(f"cnc response: {cnc_response}")
-                            else:
-                                print('error:', gcode) 
-                                await log_to_file(f"error: {gcode}")
-                                cnc_response = "not sent"
+                            cnc_response = serial_comm.send_gcode(shape_data)
+                            # gcode = gcode_gen.generate_gcode(**shape_data)
+                            # if gcode.startswith("G"):  # Check if it's valid gcode
+                            #     print('gcode:', gcode)
+                            #     await log_to_file(f"converted gcode: {gcode}")
+                            #     cnc_response = serial_comm.send_gcode(gcode)
+                            await log_to_file(f"cnc response: {cnc_response}")
+                            # else:
+                            #     print('error:', gcode) 
+                            #     await log_to_file(f"error: {gcode}")
+                            #     cnc_response = "not sent"
                             await websocket.send(json.dumps({
                                 "type": "private-message",
                                 "title": "cnc_response",
-                                "message": {"serial_response":cnc_response, "used_gcode": gcode},
+                                "message": {"serial_response":cnc_response, "used_gcode": "..."},
                                 "to": "front-end-client"
                                 }))
                             await log_to_file(f"send_to_cnc executed,serial response: {cnc_response}")

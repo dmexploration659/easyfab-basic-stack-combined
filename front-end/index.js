@@ -130,8 +130,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 window.sendGcode = function() {
     const gcode = document.getElementById("json_string").value;
     try {
-        const json_obj = JSON.parse(gcode) ;
-        wsClient.sendPrivateMessage("py-executive-client", { title: "send_to_cnc", content: json_obj});
+        // const json_obj = JSON.parse(gcode) ;
+        wsClient.sendPrivateMessage("py-executive-client", { title: "send_to_cnc", content: gcode});
     } catch (error) {
         console.error("Error parsing JSON:", error);
         alert("Invalid JSON format. Please enter a valid JSON object.");
