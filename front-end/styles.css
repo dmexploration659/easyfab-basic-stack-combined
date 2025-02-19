@@ -126,8 +126,51 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    gap: 10px;
+  }
+
+  #debug_response_pre{
+    background-color: white;
+    color: #000000;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    border-radius: 8px;
+    position: relative;
+    border: solid 1px white;
+    overflow-y: auto;
+    padding-top: 20px;
+    white-space: pre-wrap;
+  }
+  #json_string{
+    width: 100%;
+  }
+
+  #debug_response_pre::after{
+    content: attr(data-title);
+    font-size: 0.8rem;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding-inline: 3px;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  #debug_response_pre p{
+    margin-block: 3px;
+    border-radius: 8px;
+    border: solid 1px black;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
   
+  #debug_response_pre p:nth-child(1){
+    border-color: darkorange;
+  }
   .sidebar_card_wrapper {
     display: flex;
     flex-wrap: wrap;

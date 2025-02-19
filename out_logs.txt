@@ -1537,3 +1537,506 @@ M30
 cnc response: ok
 send_to_cnc executed,serial response: ok
 websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+port COM8 connection status: True
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 109.58088405388573, 'height': 109.58088405388573, 'radius': 54.79044202694286, 'start_x': 19.364048272387304, 'start_y': 17.52059537281784}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X19.364048272387304 Y17.52059537281784
+G1 X128.94493232627303 Y17.52059537281784 F1000
+G1 X128.94493232627303 Y127.10147942670356 F1000
+G1 X19.364048272387304 Y127.10147942670356 F1000
+G1 X19.364048272387304 Y17.52059537281784 F1000
+M30
+cnc response: 
+send_to_cnc executed,serial response: 
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'circle', 'width': 51.051051051051054, 'height': 51.051051051051054, 'radius': 25.525525525525527, 'start_x': 12.20723870818607, 'start_y': 9.164319474629801}, 'title': 'send_to_cnc'}
+converted gcode: G21
+G90
+G0 X37.7327642337116 Y9.164319474629801
+G2 X37.7327642337116 Y9.164319474629801 I-25.525525525525527 J0 F1000
+M30
+cnc response: Grbl 1.1h ['$' for help]
+send_to_cnc executed,serial response: Grbl 1.1h ['$' for help]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+script started
+Connected to WebSocket server.
+Sent registration data.
+websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 21:29:09--script started
+2025-02-19 21:29:09--Connected to WebSocket server.
+2025-02-19 21:29:09--Sent registration data.
+2025-02-19 21:29:09--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 21:29:09--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 21:29:33--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 21:29:33--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 21:29:36--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 21:32:54--script started
+2025-02-19 21:32:54--Connected to WebSocket server.
+2025-02-19 21:32:54--Sent registration data.
+2025-02-19 21:32:54--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 21:32:54--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 21:32:55--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 21:33:02--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 21:33:02--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 21:33:03--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 21:33:04--port COM8 connection status: True
+2025-02-19 21:33:42--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 21:33:42--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 21:33:54--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:34:58--script started
+2025-02-19 21:34:58--Connected to WebSocket server.
+2025-02-19 21:34:58--Sent registration data.
+2025-02-19 21:34:58--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 21:34:58--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 21:34:58--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 21:35:01--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 21:35:01--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 21:35:04--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 21:35:05--port COM8 connection status: True
+2025-02-19 21:35:14--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:35:14--receved gcode(dev source): $
+2025-02-19 21:35:15--cnc response (dev): 
+2025-02-19 21:35:15--send_to_cnc_dev executed,serial response: 
+2025-02-19 21:36:00--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:36:00--receved gcode(dev source): $
+2025-02-19 21:36:01--cnc response (dev): 
+2025-02-19 21:36:01--send_to_cnc_dev executed,serial response: 
+2025-02-19 21:36:58--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:36:58--receved gcode(dev source): ?
+2025-02-19 21:37:00--cnc response (dev): 
+2025-02-19 21:37:00--send_to_cnc_dev executed,serial response: 
+2025-02-19 21:37:40--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'G21\nG90\nG0 X10.0 Y20.0\nG1 X60.0 Y20.0 F1000\nG1 X60.0 Y50.0 F1000\nG1 X10.0 Y50.0 F1000\nG1 X10.0 Y20.0 F1000\nM30', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:37:40--receved gcode(dev source): G21
+G90
+G0 X10.0 Y20.0
+G1 X60.0 Y20.0 F1000
+G1 X60.0 Y50.0 F1000
+G1 X10.0 Y50.0 F1000
+G1 X10.0 Y20.0 F1000
+M30
+2025-02-19 21:37:41--cnc response (dev): 
+2025-02-19 21:37:41--send_to_cnc_dev executed,serial response: 
+2025-02-19 21:39:01--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:39:01--receved gcode(dev source): ?
+2025-02-19 21:39:03--cnc response (dev): 
+2025-02-19 21:39:03--send_to_cnc_dev executed,serial response: 
+2025-02-19 21:39:04--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:39:04--receved gcode(dev source): ?
+2025-02-19 21:39:05--cnc response (dev): 
+2025-02-19 21:39:05--send_to_cnc_dev executed,serial response: 
+2025-02-19 21:39:08--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:39:08--receved gcode(dev source): ?
+2025-02-19 21:39:09--cnc response (dev): 
+2025-02-19 21:39:09--send_to_cnc_dev executed,serial response: 
+2025-02-19 21:39:09--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 21:39:09--receved gcode(dev source): ?
+2025-02-19 21:39:10--cnc response (dev): 
+2025-02-19 21:39:10--send_to_cnc_dev executed,serial response: 
+2025-02-19 22:21:14--script started
+2025-02-19 22:21:14--Connected to WebSocket server.
+2025-02-19 22:21:14--Sent registration data.
+2025-02-19 22:21:14--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 22:21:14--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 22:21:26--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 22:21:26--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 22:21:29--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 22:21:30--port COM8 connection status: True
+2025-02-19 22:21:46--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 22:21:46--receved gcode(dev source): $
+2025-02-19 22:21:46--cnc response (dev): None
+2025-02-19 22:21:46--send_to_cnc_dev executed,serial response: None
+2025-02-19 22:22:30--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'G21\nG90\nG0 X13.606977574884388 Y11.93311453574824\nG1 X88.27754858513329 Y11.93311453574824 F1000\nG1 X88.27754858513329 Y86.60368554599715 F1000\nG1 X13.606977574884388 Y86.60368554599715 F1000\nG1 X13.606977574884388 Y11.93311453574824 F1000\nM30', 'title': 'send_to_cnc_dev'}
+2025-02-19 22:22:30--receved gcode(dev source): G21
+G90
+G0 X13.606977574884388 Y11.93311453574824
+G1 X88.27754858513329 Y11.93311453574824 F1000
+G1 X88.27754858513329 Y86.60368554599715 F1000
+G1 X13.606977574884388 Y86.60368554599715 F1000
+G1 X13.606977574884388 Y11.93311453574824 F1000
+M30
+2025-02-19 22:22:30--cnc response (dev): None
+2025-02-19 22:22:30--send_to_cnc_dev executed,serial response: None
+2025-02-19 22:23:00--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'G21\nG90\nG0 X13.606977574884388 Y11.93311453574824\nG1 X88.27754858513329 Y11.93311453574824 F1000\nG1 X88.27754858513329 Y86.60368554599715 F1000\nG1 X13.606977574884388 Y86.60368554599715 F1000\nG1 X13.606977574884388 Y11.93311453574824 F1000\nM30', 'title': 'send_to_cnc_dev'}
+2025-02-19 22:23:00--receved gcode(dev source): G21
+G90
+G0 X13.606977574884388 Y11.93311453574824
+G1 X88.27754858513329 Y11.93311453574824 F1000
+G1 X88.27754858513329 Y86.60368554599715 F1000
+G1 X13.606977574884388 Y86.60368554599715 F1000
+G1 X13.606977574884388 Y11.93311453574824 F1000
+M30
+2025-02-19 22:23:00--cnc response (dev): None
+2025-02-19 22:23:00--send_to_cnc_dev executed,serial response: None
+2025-02-19 22:24:52--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-02-19 22:46:58--script started
+2025-02-19 22:46:58--Connected to WebSocket server.
+2025-02-19 22:46:58--Sent registration data.
+2025-02-19 22:46:58--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 22:46:58--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 22:47:38--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 22:47:38--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 22:47:41--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 22:47:43--port COM8 connection status: True
+2025-02-19 22:47:58--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 22:47:58--receved gcode(dev source): $
+2025-02-19 22:47:58--cnc response (dev): None
+2025-02-19 22:47:58--send_to_cnc_dev executed,serial response: None
+2025-02-19 22:48:57--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 22:48:57--receved gcode(dev source): $
+2025-02-19 22:48:57--cnc response (dev): None
+2025-02-19 22:48:57--send_to_cnc_dev executed,serial response: None
+2025-02-19 22:52:08--script started
+2025-02-19 22:52:08--Connected to WebSocket server.
+2025-02-19 22:52:08--Sent registration data.
+2025-02-19 22:52:08--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 22:52:08--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 22:52:08--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 22:52:13--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 22:52:13--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 22:52:16--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 22:52:17--port COM8 connection status: True
+2025-02-19 22:56:17--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 22:56:17--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 22:56:17--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-02-19 22:56:39--script started
+2025-02-19 22:56:39--Connected to WebSocket server.
+2025-02-19 22:56:39--Sent registration data.
+2025-02-19 22:56:39--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 22:56:39--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 22:56:39--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 22:56:43--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 22:56:43--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 22:56:45--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 22:58:39--script started
+2025-02-19 22:58:39--Connected to WebSocket server.
+2025-02-19 22:58:39--Sent registration data.
+2025-02-19 22:58:39--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 22:58:39--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 22:58:42--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 22:58:42--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 22:58:44--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 22:58:45--port COM8 connection status: True
+2025-02-19 23:02:42--script started
+2025-02-19 23:02:42--Connected to WebSocket server.
+2025-02-19 23:02:42--Sent registration data.
+2025-02-19 23:02:42--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 23:02:42--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 23:02:42--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 23:02:50--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:02:50--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:02:51--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:02:53--port COM8 connection status: True
+2025-02-19 23:03:07--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:03:07--receved gcode(dev source): $
+2025-02-19 23:03:07--cnc response (dev): None
+2025-02-19 23:03:07--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:04:12--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:04:12--receved gcode(dev source): ?
+2025-02-19 23:04:12--cnc response (dev): None
+2025-02-19 23:04:12--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:05:18--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:05:18--receved gcode(dev source): ?
+2025-02-19 23:05:18--cnc response (dev): None
+2025-02-19 23:05:18--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:10:27--script started
+2025-02-19 23:10:27--Connected to WebSocket server.
+2025-02-19 23:10:27--Sent registration data.
+2025-02-19 23:10:27--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 23:10:27--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 23:10:34--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:10:34--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:10:35--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:10:37--port COM8 connection status: True
+2025-02-19 23:10:52--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:10:52--receved gcode(dev source): ?
+2025-02-19 23:10:52--cnc response (dev): None
+2025-02-19 23:10:52--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:14:34--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:14:34--receved gcode(dev source): ?
+2025-02-19 23:14:34--cnc response (dev): None
+2025-02-19 23:14:34--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:18:09--script started
+2025-02-19 23:18:09--Connected to WebSocket server.
+2025-02-19 23:18:09--Sent registration data.
+2025-02-19 23:18:09--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 23:18:09--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 23:18:13--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:18:13--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:18:15--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:18:17--port COM8 connection status: True
+2025-02-19 23:18:33--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:18:33--receved gcode(dev source): ?
+2025-02-19 23:18:33--cnc response (dev): None
+2025-02-19 23:18:33--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:24:29--script started
+2025-02-19 23:24:29--Connected to WebSocket server.
+2025-02-19 23:24:29--Sent registration data.
+2025-02-19 23:24:29--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 23:24:29--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 23:24:30--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 23:24:33--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:24:33--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:24:34--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:24:35--port COM8 connection status: True
+2025-02-19 23:24:37--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': ''}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:24:37--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': "Grbl 1.1h ['$' for help]"}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:25:12--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:25:12--receved gcode(dev source): ?
+2025-02-19 23:25:12--cnc response (dev): None
+2025-02-19 23:25:12--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:25:12--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '<Idle|MPos:0.0000,0.0000,0.0000|FS:0.0,0|WCO:0.0000,0.0000,0.0000>'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:25:12--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:25:47--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:25:47--receved gcode(dev source): $
+2025-02-19 23:25:47--cnc response (dev): None
+2025-02-19 23:25:47--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:25:47--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:25:47--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:27:35--Connection closed by the server.
+2025-02-19 23:27:45--script started
+2025-02-19 23:27:45--Connected to WebSocket server.
+2025-02-19 23:27:45--Sent registration data.
+2025-02-19 23:27:45--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 23:27:45--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 23:27:53--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:27:54--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:27:55--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:27:56--port COM8 connection status: True
+2025-02-19 23:27:57--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': ''}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:27:57--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': "Grbl 1.1h ['$' for help]"}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:28:14--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:28:14--receved gcode(dev source): ?
+2025-02-19 23:28:14--cnc response (dev): None
+2025-02-19 23:28:14--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:28:14--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '<Idle|MPos:0.0000,0.0000,0.0000|FS:0.0,0|WCO:0.0000,0.0000,0.0000>'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:28:14--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:28:23--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:28:23--receved gcode(dev source): $
+2025-02-19 23:28:23--cnc response (dev): None
+2025-02-19 23:28:23--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:28:23--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:28:23--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:36:02--script started
+2025-02-19 23:36:02--Connected to WebSocket server.
+2025-02-19 23:36:02--Sent registration data.
+2025-02-19 23:36:02--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 23:36:02--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 23:36:02--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 23:36:05--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:36:05--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:36:06--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:36:07--port COM8 connection status: True
+2025-02-19 23:36:09--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': ''}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:36:09--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': "Grbl 1.1h ['$' for help]"}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:36:27--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:36:27--receved gcode(dev source): $
+2025-02-19 23:36:27--cnc response (dev): None
+2025-02-19 23:36:27--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:36:27--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:36:27--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:37:09--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-02-19 23:37:14--script started
+2025-02-19 23:37:14--Connected to WebSocket server.
+2025-02-19 23:37:14--Sent registration data.
+2025-02-19 23:37:14--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-02-19 23:37:14--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-02-19 23:37:17--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:37:17--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:37:18--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:37:19--port COM8 connection status: True
+2025-02-19 23:37:21--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': ''}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:37:21--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': "Grbl 1.1h ['$' for help]"}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:37:29--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:37:29--receved gcode(dev source): $
+2025-02-19 23:37:29--cnc response (dev): None
+2025-02-19 23:37:29--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:37:29--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:37:29--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:43:13--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-02-19 23:43:13--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 23:43:17--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:43:17--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:43:20--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:43:22--port COM8 connection status: True
+2025-02-19 23:43:23--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': ''}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:43:23--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': "Grbl 1.1h ['$' for help]"}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:43:37--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:43:37--receved gcode(dev source): $
+2025-02-19 23:43:37--cnc response (dev): None
+2025-02-19 23:43:37--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:43:37--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:43:37--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:43:47--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:43:47--receved gcode(dev source): ?
+2025-02-19 23:43:47--cnc response (dev): None
+2025-02-19 23:43:47--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:43:47--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '<Idle|MPos:0.0000,0.0000,0.0000|FS:0.0,0|WCO:0.0000,0.0000,0.0000>'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:43:47--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:44:49--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-02-19 23:44:49--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 23:44:51--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:44:51--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:44:53--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:44:55--port COM8 connection status: True
+2025-02-19 23:44:56--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': ''}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:44:56--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': "Grbl 1.1h ['$' for help]"}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:45:02--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:45:02--receved gcode(dev source): $
+2025-02-19 23:45:02--cnc response (dev): None
+2025-02-19 23:45:02--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:45:02--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:45:02--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:45:12--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:45:12--receved gcode(dev source): ?
+2025-02-19 23:45:12--cnc response (dev): None
+2025-02-19 23:45:12--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:45:12--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '<Idle|MPos:0.0000,0.0000,0.0000|FS:0.0,0|WCO:0.0000,0.0000,0.0000>'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:45:12--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:48:03--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-02-19 23:48:03--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 23:48:06--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:48:06--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:48:07--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:48:09--port COM8 connection status: True
+2025-02-19 23:48:10--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': ''}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:48:10--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': "Grbl 1.1h ['$' for help]"}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:48:16--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '$', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:48:16--receved gcode(dev source): $
+2025-02-19 23:48:16--cnc response (dev): None
+2025-02-19 23:48:16--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:48:16--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:48:16--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:48:25--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:48:25--receved gcode(dev source): ?
+2025-02-19 23:48:25--cnc response (dev): None
+2025-02-19 23:48:25--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:48:25--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '<Idle|MPos:0.0000,0.0000,0.0000|FS:0.0,0|WCO:0.0000,0.0000,0.0000>'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:48:25--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:50:49--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'shape': 'rectangle', 'width': 74.6705710102489, 'height': 74.6705710102489, 'radius': 37.33528550512445, 'start_x': 12.679051788010817, 'start_y': 14.859943106911405}, 'title': 'send_to_cnc'}
+2025-02-19 23:50:49--converted gcode: G21
+G90
+G0 X12.679051788010817 Y14.859943106911405
+G1 X87.34962279825973 Y14.859943106911405 F1000
+G1 X87.34962279825973 Y89.53051411716031 F1000
+G1 X12.679051788010817 Y89.53051411716031 F1000
+G1 X12.679051788010817 Y14.859943106911405 F1000
+M30
+2025-02-19 23:50:49--2025-02-19 23:50:49--cnc response: None
+2025-02-19 23:50:49--send_to_cnc executed,serial response: None
+2025-02-19 23:50:49--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:50:49--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:50:49--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:50:49--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:50:49--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:50:49--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:50:49--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:51:07--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '[MSG:Pgm End]'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:51:07--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:52:41--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-02-19 23:52:41--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-02-19 23:52:55--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-02-19 23:52:55--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}, {'device': 'COM8', 'description': 'USB-SERIAL CH340 (COM8)', 'manufacturer': 'wch.cn', 'product': None, 'serial_number': '', 'hwid': 'USB VID:PID=1A86:7523 SER= LOCATION=1-1'}]
+2025-02-19 23:52:56--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': {'port': 'COM8'}, 'title': 'connect_port'}
+2025-02-19 23:52:58--port COM8 connection status: True
+2025-02-19 23:52:59--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': ''}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:52:59--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': "Grbl 1.1h ['$' for help]"}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:53:05--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '?', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:53:05--receved gcode(dev source): ?
+2025-02-19 23:53:05--cnc response (dev): None
+2025-02-19 23:53:05--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:53:05--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': '<Idle|MPos:0.0000,0.0000,0.0000|FS:0.0,0|WCO:0.0000,0.0000,0.0000>'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:53:05--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'ok'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:53:42--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'G', 'title': 'send_to_cnc_dev'}
+2025-02-19 23:53:42--receved gcode(dev source): G
+2025-02-19 23:53:42--cnc response (dev): None
+2025-02-19 23:53:42--send_to_cnc_dev executed,serial response: None
+2025-02-19 23:53:42--incoming serial datas: {'type': 'private-message', 'message': {'serial_data': 'error:2'}, 'to': 'front-end-client', 'title': 'incoming_serial_data'}
+2025-02-19 23:54:16--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}

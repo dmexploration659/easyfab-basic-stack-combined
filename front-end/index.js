@@ -74,6 +74,13 @@ document.addEventListener("DOMContentLoaded", async function () {
                 document.getElementById("send_gcode").disabled = true;
             }
         }
+        if (data?.type === 'private-message' && data?.title === 'incoming_serial_data') {
+            console.log("serial_response_dev", data.message.serial_data);
+            const serial_resp_box = document.getElementById("debug_response_pre");
+            const serial_resp_item = document.createElement("p");
+            serial_resp_item.textContent = data.message.serial_data;
+            serial_resp_box.insertBefore(serial_resp_item, serial_resp_box.firstChild);
+        }
     });
 
     const containerDiv = document.getElementById("fabricCanvas");
@@ -130,8 +137,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 window.sendGcode = function() {
     const gcode = document.getElementById("json_string").value;
     try {
-        const json_obj = JSON.parse(gcode) ;
-        wsClient.sendPrivateMessage("py-executive-client", { title: "send_to_cnc", content: json_obj});
+        // const json_obj = JSON.parse(gcode) ;
+        wsClient.sendPrivateMessage("py-executive-client", { title: "send_to_cnc_dev", content: gcode});
     } catch (error) {
         console.error("Error parsing JSON:", error);
         alert("Invalid JSON format. Please enter a valid JSON object.");
