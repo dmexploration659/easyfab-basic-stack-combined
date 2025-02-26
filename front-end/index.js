@@ -115,10 +115,16 @@ document.addEventListener("DOMContentLoaded", async function () {
     select_port.addEventListener("change", () => {
         wsClient.sendPrivateMessage("py-executive-client", {title: "connect_port", content: {port: select_port.value}});
     });
+
     document.getElementById("build_btn").addEventListener("click", () => {
         const objects = cnc_canvas.collectObjects();
         console.log(objects);
     });
+    document.getElementById('send_svg').addEventListener('click', function () {
+        const svg_data = cnc_canvas.getSvg();
+        console.log('svg_data----',svg_data);
+        wsClient.sendPrivateMessage("py-executive-client", { title: "svg_data", content: svg_data});
+    })
 
     document.getElementById("start_btn").addEventListener("click", () => {
         const objects = cnc_canvas.collectObjects();
@@ -130,6 +136,29 @@ document.addEventListener("DOMContentLoaded", async function () {
             alert("Invalid JSON format. Please enter a valid JSON object.");
         }
         
+    });
+
+    const buttons = document.querySelectorAll('.control_btns button');
+    const stepInput = document.getElementById('step-input');
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            let gcode = '';
+            if(!this.classList.contains('home-button')){
+                let step = parseFloat(stepInput.value);
+                let direction = this.dataset.gcode_val;
+                gcode = `G21 G91 ${direction} ${step}`;
+            }else{
+                gcode = this.dataset.gcode_val;
+            }
+            
+            try {
+                // const json_obj = JSON.parse(gcode) ;
+                wsClient.sendPrivateMessage("py-executive-client", { title: "send_to_cnc_dev", content: gcode});
+            } catch (error) {
+                console.error("Error parsing JSON:", error);
+                alert("Invalid JSON format. Please enter a valid JSON object.");
+            }
+        });
     });
 
 });

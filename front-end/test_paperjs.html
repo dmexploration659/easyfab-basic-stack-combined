@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper.js Rectangle Example</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            width: 1000px;
+            height: 2000px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" resize></canvas>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
+    <script type="text/javascript">
+        // Wait for Paper.js to be ready
+        paper.setup(document.getElementById('myCanvas'));
+
+        // Conversion factor: 1mm = 3.78 pixels
+        var mmToPixels = 3.78;
+
+        // Define the workspace size in mm
+        var workspaceWidth = 1000; // 1000mm
+        var workspaceHeight = 2000; // 2000mm
+
+        // Convert workspace size to pixels
+        var workspaceWidthPx = workspaceWidth * mmToPixels;
+        var workspaceHeightPx = workspaceHeight * mmToPixels;
+
+        // Set the canvas size to match the workspace
+        paper.view.viewSize = new paper.Size(workspaceWidthPx, workspaceHeightPx);
+
+        // Define rectangle size in mm
+        var rectWidth = 200; // 200mm
+        var rectHeight = 100; // 100mm
+
+        // Convert rectangle size to pixels
+        var rectWidthPx = rectWidth * mmToPixels;
+        var rectHeightPx = rectHeight * mmToPixels;
+
+        // Create the rectangle
+        var rect = new paper.Path.Rectangle({
+            point: [100, 100], // Starting position (in pixels)
+            size: [rectWidthPx, rectHeightPx],
+            fillColor: 'blue',
+            strokeColor: 'black',
+            strokeWidth: 2
+        });
+
+        // Make the rectangle interactive
+        rect.selected = true;
+
+        // Enable dragging, scaling, and rotating
+        rect.onMouseDrag = function(event) {
+            if (event.modifiers.shift) {
+                // Scale the rectangle
+                this.scaling = this.scaling.add(event.delta.divide(100));
+            } else if (event.modifiers.alt) {
+                // Rotate the rectangle
+                this.rotation += event.delta.x / 10;
+            } else {
+                // Move the rectangle
+                this.position = this.position.add(event.delta);
+            }
+        };
+    </script>
+</body>
+</html>

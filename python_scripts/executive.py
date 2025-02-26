@@ -130,6 +130,21 @@ async def connect_to_electron():
                                 "to": "front-end-client"
                                 }))
                             await log_to_file(f"send_to_cnc_dev executed,serial response: {cnc_response_dev}")
+
+                        # this block is used temporaly to receive svg data from the front-end
+                        #  and save them into the log file(out_logs.txt). search by "received svg data"
+                        # all content between "-------svg content-------" and "-------end of svg content-------"
+                        # is the svg data string.
+                        
+                        case "svg_data":
+                            svg_data = data.get("message")
+                            await log_to_file(f"received svg data:\n -------svg content-------\n\n {svg_data} \n\n -------end of svg content-------\n")
+                            await websocket.send(json.dumps({
+                                "type": "private-message",
+                                "title": "received_svg_data",
+                                "message": {"svg_data": svg_data},
+                                "to": "front-end-client"
+                                }))
                         
                         case "disconnect_port":
                             serial_comm.disconnect()

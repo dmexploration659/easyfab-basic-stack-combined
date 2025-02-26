@@ -100,7 +100,7 @@ export class FabricCanvasManager {
       const wInPixels = this.convertToScaledPixels(partW, partWUnit).width;
   
       const partRect = new fabric.Rect({
-        fill: '#555555',
+        fill: '#FDFBF6',
         width: wInPixels,
         height: hInPixels,
         selectable: true,
@@ -112,7 +112,7 @@ export class FabricCanvasManager {
       const labelText = `${this.partCount}/  ${partData.title} ${partData.length.val}${partData.length.unit}`;
       const partLabel = new fabric.Text(labelText, {
         fontSize: 9,
-        fill: 'white',
+        fill: 'black',
         textAlign: 'center',
         originX: 'center',
         originY: 'center',
@@ -195,6 +195,9 @@ export class FabricCanvasManager {
            
             return allObjects;
         
+    }
+    getSvg(){
+        return this.canvas.toSVG();
     }
     
   }
