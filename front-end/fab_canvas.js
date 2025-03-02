@@ -15,7 +15,7 @@ export class FabricCanvasManager {
 
     //       // Add zoom properties
     this.canvas.zoomLevel = 1;
-    this.canvas.minZoom = 0.1;
+    this.canvas.minZoom = 1;
     this.canvas.maxZoom = 5;
     
     // Add mouse wheel zoom handler
@@ -42,9 +42,12 @@ export class FabricCanvasManager {
     let isPanning = false;
     let lastPosX;
     let lastPosY;
+    let isSpacePressed = false;  // Add this to track space key state
 
     document.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {
+            e.preventDefault();  // Prevent page scroll
+            isSpacePressed = true;
             this.canvas.defaultCursor = 'grab';
             this.canvas.setCursor('grab');
         }
@@ -52,6 +55,7 @@ export class FabricCanvasManager {
 
     document.addEventListener('keyup', (e) => {
         if (e.code === 'Space') {
+            isSpacePressed = false;
             this.canvas.defaultCursor = 'default';
             this.canvas.setCursor('default');
             isPanning = false;
@@ -59,7 +63,7 @@ export class FabricCanvasManager {
     });
 
     this.canvas.on('mouse:down', (opt) => {
-        if (opt.e.shiftKey || opt.e.altKey) {
+        if (isSpacePressed || opt.e.shiftKey || opt.e.altKey) {
             isPanning = true;
             lastPosX = opt.e.clientX;
             lastPosY = opt.e.clientY;
@@ -69,7 +73,7 @@ export class FabricCanvasManager {
     });
 
     this.canvas.on('mouse:move', (opt) => {
-        if (isPanning && (opt.e.shiftKey || opt.e.altKey)) {
+        if (isPanning && (isSpacePressed || opt.e.shiftKey || opt.e.altKey)) {
             const deltaX = opt.e.clientX - lastPosX;
             const deltaY = opt.e.clientY - lastPosY;
             lastPosX = opt.e.clientX;
@@ -141,13 +145,18 @@ export class FabricCanvasManager {
       const self = this;
       this.canvas.on('object:scaling', function(event) {
         const obj = event.target;
-        const scaledWidth = (obj.getScaledWidth()*this.scaleY).toFixed(3);
-        const scaledHeight = (obj.getScaledHeight()*this.scaleY).toFixed(3);
-        // dim_bar.innerHTML = `<p>Width: ${scaledWidth}mm</p>  <p>Height: ${scaledHeight}mm</p>`;
+        const scaledWidth = (obj.getScaledWidth()*(1000/self.canvas.height)).toFixed(3);
+        const scaledHeight = (obj.getScaledHeight()*(1000/self.canvas.height)).toFixed(3);
+        
         const width_dim = dim_bar.querySelector('#width_dim');
         const height_dim = dim_bar.querySelector('#height_dim');
         width_dim.innerHTML = `Width: ${scaledWidth}mm`;
         height_dim.innerHTML = `Height: ${scaledHeight}mm`;
+        
+        // Force canvas to render the scaling in real-time
+        obj.setCoords();
+        self.canvas.renderAll();
+        
         console.log('Scaled Width:', scaledWidth);
         console.log('Scaled Height:', scaledHeight);
       });
@@ -171,7 +180,7 @@ export class FabricCanvasManager {
         const obj = event.selected[0];
         updateDimensions(obj);
       });
-      //this.drawGrid();
+      this.drawGrid();
 
     }
 

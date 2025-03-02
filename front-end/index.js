@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
 
     const containerDiv = document.getElementById("fabricCanvas");
-    const dim_bar = document.getElementById("dimansios_bar");
+    const dim_bar = document.getElementById("dimansion_bar");
     //const paperCanvas = document.getElementById("paperCanvas");
     // const twoApp = new TwoApp('paperCanvas');
 
@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     ///+++++++++++++++++++++++zooming++++++++++++++++++++++++++++++///
-        // document.getElementById('zoomIn').addEventListener('click', () => cnc_canvas.zoomIn());
-        // document.getElementById('zoomOut').addEventListener('click', () => cnc_canvas.zoomOut());
+        document.getElementById('zoomIn').addEventListener('click', () => cnc_canvas.zoomIn());
+        document.getElementById('zoomOut').addEventListener('click', () => cnc_canvas.zoomOut());
 
     ///++++++++++++++++++++zooming+++++++++++++++++++++++++++++++++///
 
