@@ -4548,3 +4548,103 @@ M30
 2025-03-02 22:01:00--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
 2025-03-02 22:01:00--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
 2025-03-02 22:01:16--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1383" height="954" viewBox="0 0 1383 954" xml:space="preserve">\n<desc>Created with Fabric.js 6.5.3</desc>\n<defs>\n</defs>\n<g transform="matrix(1 0 0 1 691.5 477)"  >\n<path style="stroke: rgb(255,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-opacity: 0; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-691.5, -477)" d="M 666.5 452 L 716.5 452 L 716.5 502 L 666.5 502 Z" stroke-linecap="round" />\n</g>\n</svg>', 'title': 'svg_data'}
+2025-03-02 22:14:27--script started
+2025-03-02 22:14:27--Connected to WebSocket server.
+2025-03-02 22:14:27--Sent registration data.
+2025-03-02 22:14:27--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-03-02 22:14:27--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-03-02 22:17:02--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:21:15--script started
+2025-03-02 22:21:15--Connected to WebSocket server.
+2025-03-02 22:21:15--Sent registration data.
+2025-03-02 22:21:15--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-03-02 22:21:15--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-03-02 22:38:58--script started
+2025-03-02 22:38:58--Connected to WebSocket server.
+2025-03-02 22:38:58--Sent registration data.
+2025-03-02 22:38:58--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-03-02 22:38:58--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-03-02 22:40:04--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:40:04--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:41:45--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:41:45--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:43:06--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:43:16--script started
+2025-03-02 22:43:16--Connected to WebSocket server.
+2025-03-02 22:43:16--Sent registration data.
+2025-03-02 22:43:16--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-03-02 22:43:16--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-03-02 22:44:13--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:44:13--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:46:16--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:46:16--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:47:17--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:47:17--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:47:39--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:47:39--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:48:40--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:48:40--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:49:42--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:49:42--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:51:15--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:51:15--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:52:42--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:52:42--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:53:08--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:53:08--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 22:53:16--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 22:53:16--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:03:36--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:03:37--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:04:21--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:04:21--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:04:32--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:04:32--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:04:55--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:04:55--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:05:34--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:05:34--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:06:05--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:06:05--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:06:58--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:06:58--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:07:45--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-03-02 23:07:45--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+2025-03-02 23:10:12--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
+2025-03-02 23:10:12--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+2025-03-02 23:17:09--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:17:10--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:17:45--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:17:45--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:20:16--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:20:16--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:21:38--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:21:38--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:21:53--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:21:53--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:22:39--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:22:39--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:23:28--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:23:28--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:23:34--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:23:34--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:23:49--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:23:49--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:24:03--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:24:03--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:24:23--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:24:23--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:24:53--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:24:53--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:25:41--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:25:41--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:26:02--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:26:02--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:27:25--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:27:25--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:28:00--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:28:00--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:28:49--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:28:50--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}
+2025-03-02 23:29:22--websocket logs: Received from server: {'type': 'user-left', 'name': 'front-end-client'}
+2025-03-02 23:29:22--websocket logs: Received from server: {'type': 'user-joined', 'name': 'front-end-client'}

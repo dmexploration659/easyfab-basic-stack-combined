@@ -423,7 +423,7 @@
     border-radius: 50%;
   }
 
-  .dimansios_bar{
+  .dimansion_bar{
     position: absolute;
     top: 0px;
     left: 50%;
@@ -439,7 +439,7 @@
     padding-inline: 5px;
     padding-block: 5px;
   }
-  .dimansios_bar p{
+  .dimansion_bar p{
     color: #FFFFFF;
     font-size: .8rem;
     border: solid 1px white;
@@ -625,3 +625,33 @@
     background-color: #0b7e41;
     display: block;
   }
+
+.zoom_btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  height: 100%;
+}
+.zoom_btns button{
+  padding: 0.5rem;
+  background-color: #121212;
+  border: solid 1px #1F2937;
+  color: #FFFFFF;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.zoom_btns button:hover{
+  border: solid 1px #2f3d51;
+  transform: scale(1.05);
+}

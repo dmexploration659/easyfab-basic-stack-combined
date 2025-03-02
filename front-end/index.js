@@ -107,6 +107,14 @@ document.addEventListener("DOMContentLoaded", async function () {
               cnc_canvas.deleteSelected();
             }});
     }
+
+    ///+++++++++++++++++++++++zooming++++++++++++++++++++++++++++++///
+        // document.getElementById('zoomIn').addEventListener('click', () => cnc_canvas.zoomIn());
+        // document.getElementById('zoomOut').addEventListener('click', () => cnc_canvas.zoomOut());
+
+    ///++++++++++++++++++++zooming+++++++++++++++++++++++++++++++++///
+
+
     select_port.addEventListener("focus", () => {
         select_port.innerHTML = "";
         wsClient.sendPrivateMessage("py-executive-client", {title: "ports_request", content: "ports_request"});

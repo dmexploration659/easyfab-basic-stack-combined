@@ -4,12 +4,94 @@ export class FabricCanvasManager {
       // Create and append the canvas element to the provided container div
       this.canvasEl = document.createElement('canvas');
       containerDiv.appendChild(this.canvasEl);
+
+
   
       // Initialize the Fabric.js canvas
       this.canvas = new fabric.Canvas(this.canvasEl);
       initCenteringGuidelines(this.canvas);
       initAligningGuidelines(this.canvas);
-  
+      ///+++++++++++++++++++++++++++++++++++++++++++++++++++++///
+
+    //       // Add zoom properties
+    this.canvas.zoomLevel = 1;
+    this.canvas.minZoom = 0.1;
+    this.canvas.maxZoom = 5;
+    
+    // Add mouse wheel zoom handler
+    this.canvas.on('mouse:wheel', (opt) => {
+        const delta = opt.e.deltaY;
+        let zoom = this.canvas.getZoom();
+        zoom *= 0.999 ** delta;
+        
+        // Limit zoom to reasonable values
+        zoom = Math.min(Math.max(this.canvas.minZoom, zoom), this.canvas.maxZoom);
+        
+        // Get mouse position
+        const pointer = this.canvas.getPointer(opt.e);
+        
+        // Set zoom point (zoom towards mouse position)
+        this.canvas.zoomToPoint({ x: pointer.x, y: pointer.y }, zoom);
+        
+        // Prevent page scrolling
+        opt.e.preventDefault();
+        opt.e.stopPropagation();
+    });
+
+    // Add pan functionality when space is held down
+    let isPanning = false;
+    let lastPosX;
+    let lastPosY;
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space') {
+            this.canvas.defaultCursor = 'grab';
+            this.canvas.setCursor('grab');
+        }
+    });
+
+    document.addEventListener('keyup', (e) => {
+        if (e.code === 'Space') {
+            this.canvas.defaultCursor = 'default';
+            this.canvas.setCursor('default');
+            isPanning = false;
+        }
+    });
+
+    this.canvas.on('mouse:down', (opt) => {
+        if (opt.e.shiftKey || opt.e.altKey) {
+            isPanning = true;
+            lastPosX = opt.e.clientX;
+            lastPosY = opt.e.clientY;
+            this.canvas.defaultCursor = 'grabbing';
+            this.canvas.setCursor('grabbing');
+        }
+    });
+
+    this.canvas.on('mouse:move', (opt) => {
+        if (isPanning && (opt.e.shiftKey || opt.e.altKey)) {
+            const deltaX = opt.e.clientX - lastPosX;
+            const deltaY = opt.e.clientY - lastPosY;
+            lastPosX = opt.e.clientX;
+            lastPosY = opt.e.clientY;
+
+            const delta = new fabric.Point(deltaX, deltaY);
+            this.canvas.relativePan(delta);
+        }
+    });
+
+    this.canvas.on('mouse:up', () => {
+        isPanning = false;
+        this.canvas.defaultCursor = 'default';
+        this.canvas.setCursor('default');
+    });
+
+
+
+
+
+      ///+++++++++++++++++++++++++++++++++++++++++++++++++++++///
+
       // Set initial canvas dimensions to match the container
       this.resizeCanvas();
   
@@ -139,64 +221,59 @@ export class FabricCanvasManager {
     }
 
     //////new rect with paths =====
-    drawRectangle() {
-      // Define the rectangle's dimensions
-      const width = 50;
-      const height = 50;
-      const halfWidth = width / 2;
-      const halfHeight = height / 2;
-      // Determine the center of the canvas
-      const centerX = this.canvas.width / 2;
-      const centerY = this.canvas.height / 2;
+    // drawRectangle() {
+    //   // Define the rectangle's dimensions
+    //   const width = 50;
+    //   const height = 50;
+    //   const halfWidth = width / 2;
+    //   const halfHeight = height / 2;
+    //   // Determine the center of the canvas
+    //   const centerX = this.canvas.width / 2;
+    //   const centerY = this.canvas.height / 2;
     
-      // Create a path string for a rectangle centered on the canvas.
-      // The path moves to the top-left corner and draws lines to each corner, closing the path.
-      const pathStr = `
-        M ${centerX - halfWidth} ${centerY - halfHeight}
-        L ${centerX + halfWidth} ${centerY - halfHeight}
-        L ${centerX + halfWidth} ${centerY + halfHeight}
-        L ${centerX - halfWidth} ${centerY + halfHeight}
-        Z
-      `;
+    //   // Create a path string for a rectangle centered on the canvas.
+    //   // The path moves to the top-left corner and draws lines to each corner, closing the path.
+    //   const pathStr = `
+    //     M ${centerX - halfWidth} ${centerY - halfHeight}
+    //     L ${centerX + halfWidth} ${centerY - halfHeight}
+    //     L ${centerX + halfWidth} ${centerY + halfHeight}
+    //     L ${centerX - halfWidth} ${centerY + halfHeight}
+    //     Z
+    //   `;
     
-      const rectPath = new fabric.Path(pathStr, {
-        fill: 'transparent',
-        stroke: 'red',
-        strokeWidth: 1,
-        strokeUniform: true,
-        selectable: true,
-        name: 'rectangle',
-        snapAngle: 45,
-        snapThreshold: 5,
-      });
-    
-      this.canvas.add(rectPath);
-    }
-    
-
-
-
-
-
-    // drawRectangle() {// Method to draw a rectangle on the canvas
-    //   const rect = new fabric.Rect({
+    //   const rectPath = new fabric.Path(pathStr, {
     //     fill: 'transparent',
     //     stroke: 'red',
     //     strokeWidth: 1,
     //     strokeUniform: true,
-    //     width: 50,
-    //     height: 50,
     //     selectable: true,
-    //     originX: 'center',
-    //     originY: 'center',
-    //     top: this.canvas.height / 2,
-    //     left: this.canvas.width / 2,
     //     name: 'rectangle',
     //     snapAngle: 45,
     //     snapThreshold: 5,
     //   });
-    //   this.canvas.add(rect);
+    
+    //   this.canvas.add(rectPath);
     // }
+    
+    drawRectangle() {// Method to draw a rectangle on the canvas
+      const rect = new fabric.Rect({
+        fill: 'transparent',
+        stroke: 'red',
+        strokeWidth: 1,
+        strokeUniform: true,
+        width: 50,
+        height: 50,
+        selectable: true,
+        originX: 'center',
+        originY: 'center',
+        top: this.canvas.height / 2,
+        left: this.canvas.width / 2,
+        name: 'rectangle',
+        snapAngle: 45,
+        snapThreshold: 5,
+      });
+      this.canvas.add(rect);
+    }
     drawCircle() {// Method to draw a circle on the canvas
       const circle = new fabric.Circle({
         fill: 'transparent',
@@ -336,6 +413,55 @@ export class FabricCanvasManager {
     getSvg(){
         return this.canvas.toSVG({ suppressPreamble: true });
     }
+
+
+ ///+++++++++++++++++++++++++++++++++++++++++++++++++++++///
+
+  zoomIn() {
+      let zoom = this.canvas.getZoom();
+      zoom *= 1.1;
+      zoom = Math.min(zoom, this.canvas.maxZoom);
+      this.canvas.setZoom(zoom);
+  }
+  
+  zoomOut() {
+      let zoom = this.canvas.getZoom();
+      zoom /= 1.1;
+      zoom = Math.max(zoom, this.canvas.minZoom);
+      this.canvas.setZoom(zoom);
+  }
+  
+  resetZoom() {
+      this.canvas.setZoom(1);
+      this.canvas.setViewportTransform([1, 0, 0, 1, 0, 0]);
+  }
+  
+  zoomToFit() {
+      const objects = this.canvas.getObjects();
+      if (objects.length === 0) return;
+  
+      const group = new fabric.Group(objects);
+      const groupWidth = group.width * group.scaleX;
+      const groupHeight = group.height * group.scaleY;
+      const canvasWidth = this.canvas.width;
+      const canvasHeight = this.canvas.height;
+  
+      const scaleX = canvasWidth / groupWidth;
+      const scaleY = canvasHeight / groupHeight;
+      const scale = Math.min(scaleX, scaleY) * 0.9; // 0.9 to add some padding
+  
+      this.canvas.setZoom(scale);
+      this.canvas.setViewportTransform([scale, 0, 0, scale, 
+          (canvasWidth - groupWidth * scale) / 2,
+          (canvasHeight - groupHeight * scale) / 2
+      ]);
+  
+      // Clean up temporary group
+      group.destroy();
+      this.canvas.renderAll();
+
+    }
+///+++++++++++++++++++++++++++++++++++++++++++++++++++++///
     
   }
   
