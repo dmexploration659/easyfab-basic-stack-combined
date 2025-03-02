@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width" data-next-head="">  
     <link rel="stylesheet" href="styles.css">
     <script src="fabric.min.js"></script>
+    <script src="centering_guidelines.js"></script>
+    <script src="aligning_guidelines.js"></script>
     <script type="module" src="index.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.8.0/two.min.js"></script>
 </head>
@@ -22,7 +24,8 @@
                     <button id="send_gcode" onclick="sendGcode()" disabled>Send</button>
                     <pre id="debug_response_pre" data-title="cnc response"></pre>
                 </div>
-                <div class="sidebar_card_wrapper"><p>hello</p></div>
+                <div class="sidebar_card_wrapper"></div>
+                <div class="preset_stock_wrapper"></div>
             </div>
 
             <!-- Workspace Section -->
@@ -35,7 +38,9 @@
                 </div>
                 
                 <div class="canvas_container">
-                    <div class="dimansios_bar" id="dimansios_bar"></div>
+                    <div class="dimansios_bar" id="dimansios_bar">
+                        <p id="width_dim">Width:</p><p id="height_dim">Height:</p><p id="rotation_dim">Rotation:</p>
+                    </div>
                     <div class="draw_tools_btns">
                         <button id="draw_rect">▭</button>
                         <button id="draw_circle">⬤</button>
@@ -83,7 +88,21 @@
             </div>
         </div>
     </div>
-    <div class="modal_overlay" id="modal_overlay"> </div>
-
+    <div class="modal_overlay" id="modal_overlay">
+        <div class="modal_content">
+                <div class="size_select_wrapper">
+                    <label for="size_select">Choose size:</label>
+                    <select id="size_select"></select>
+                </div>
+                <div class="length_input_wrapper">
+                    <label for="length_input">Length</label>
+                    <input type="number" id="length_input" placeholder="Length">
+                </div>
+            <div class="btn_wrapper">
+                <button onclick="closeModal2()">Cancel</button>
+            </div>
+        </div>
+      
+     </div>
 </body>
 </html>

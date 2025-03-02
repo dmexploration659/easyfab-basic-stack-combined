@@ -138,6 +138,8 @@ async def connect_to_electron():
                         
                         case "svg_data":
                             svg_data = data.get("message")
+                            myOtherGcode = gcode_gen.makeGcodFromSVG(svg_data)
+                            serial_comm.send_gcode(myOtherGcode)
                             await log_to_file(f"received svg data:\n -------svg content-------\n\n {svg_data} \n\n -------end of svg content-------\n")
                             await websocket.send(json.dumps({
                                 "type": "private-message",

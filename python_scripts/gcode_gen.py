@@ -70,3 +70,7 @@ class GCodeGenerator:
             return self.generate_circle(**kwargs)
         else:
             return f"Invalid shape type: {shape}"
+        
+
+    def makeGcodFromSVG(self, svg_data):
+        pass

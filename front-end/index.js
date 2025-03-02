@@ -7,6 +7,7 @@ let is_device_connected = false;
 let is_serial_data_valid = false;
 let cnc_canvas;
 let parts_library = [];
+let preset_stock = [];
 const workbench_parts = new Map();
 
 const wsClient = new WebSocketClient('ws://localhost:8080', 'front-end-client');
@@ -46,7 +47,8 @@ const part_modal = (content) =>{
 
 document.addEventListener("DOMContentLoaded", async function () {
     console.log('parts_library#######');
-    await populate_parts_cards();
+   await populate_parts_cards();
+    await populate_preset_stock();
     const select_port = document.getElementById("port_select");
     wsClient.onMessage((data) => {
         console.log('Received WebSocket message---front-end:', data);
@@ -57,8 +59,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                 port.description.includes("USB")
                     ? option.textContent = `${port.device} (${port.description})`
                     : option.textContent = `${port.device}`;
-
-
                 select_port.appendChild(option);
             });
         }
@@ -187,6 +187,33 @@ async function populate_parts_cards(){
     });
 }
 
+async function populate_preset_stock(){
+    const preset_stock_container = document.querySelector(".preset_stock_wrapper");
+    preset_stock_container.innerHTML = "";
+    preset_stock = await (await fetch('./pre_set_stock.json')).json();
+    console.log("populating preset stock");
+    preset_stock.forEach(item => {
+        console.log(item.sizes);
+        const stock_card = document.createElement("div");
+        stock_card.classList.add("stock_card");
+        stock_card.innerHTML = `<p>${item.type}</p>`;
+        stock_card.setAttribute('data-id', item.type)
+
+        stock_card.addEventListener('click', () => {
+            const modalOverlay = document.getElementById("modal_overlay");
+            const size_select = document.getElementById("size_select");
+            const size_options = item.sizes.map(sizeObj => {
+                const sizeName = Object.keys(sizeObj)[0];
+                return `<option value="${sizeName}">${sizeName}</option>`;
+            }).join('');
+            size_select.innerHTML = size_options;
+            modalOverlay.classList.add("show");
+        });
+        preset_stock_container.appendChild(stock_card);
+    });
+    
+}
+
 window.openModal = function(card_content) {
     const content = JSON.parse(card_content);
     console.log("opening modal");
@@ -200,7 +227,10 @@ window.closeModal = function(){
     document.getElementById("modal_overlay").innerHTML = "";
     document.getElementById("modal_overlay").classList.remove("show");
 }
-
+window.closeModal2 = function(){
+    //document.getElementById("modal_overlay").querySelector('.modal_content').innerHTML = "";
+    document.getElementById("modal_overlay").classList.remove("show");
+}
 window.addPart = function(part_title){
     const card_content = document.querySelectorAll('.modal_content .param_field');
     const part_data = {'title': part_title}

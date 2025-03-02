@@ -236,6 +236,38 @@
   .sidebar_card_wrapper::-webkit-scrollbar-thumb:hover {
     background-color: #95a5a6; /* Lighter grey on hover */
   }
+  .preset_stock_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .preset_stock_wrapper .stock_card{
+    display: flex;  
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    height: 80px;
+    border: solid 1px white;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+  }
+  .stock_card:hover{
+    transform: scale(1.02);
+    background-color: #282828;
+  }
+
   
   .modal_overlay{
     display: none;
@@ -262,8 +294,18 @@
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
   }
-  
+  .size_select_wrapper{
+    font-size: 1rem;
+  }
+  .size_select_wrapper label{
+    font-size: 1rem;
+  }
   .btn_wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -359,9 +401,10 @@
   .canvas_container{
     border: solid 1px black;
     margin: 30px;
-    width: 90%;
+    width: 85%;
     height: 90%;
     padding: 5px;
+    padding-top: 50px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -382,18 +425,28 @@
 
   .dimansios_bar{
     position: absolute;
-    top: 5px;
+    top: 0px;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translateX(-50%);
     width: 99%;
-    height: 25px;
+    height: 50px;
     background-color: grey;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     color: black;
-    padding-inline: 2rem;
+    padding-inline: 5px;
+    padding-block: 5px;
+  }
+  .dimansios_bar p{
+    color: #FFFFFF;
+    font-size: .8rem;
+    border: solid 1px white;
+    padding: 5px;
+    border-radius: 8px;
+    min-width: 100px;
+    text-align: start;
   }
   
   #fabricCanvas{
@@ -518,6 +571,7 @@
 .input-row label {
   margin-right: 10px;
   white-space: nowrap;
+  color: #FFFFFF;
 }
 
 .input-row input {
