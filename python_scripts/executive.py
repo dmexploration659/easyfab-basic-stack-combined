@@ -4,6 +4,8 @@ import json
 from gcode_gen import GCodeGenerator
 from serial_comm import SerialCommunication
 import time
+from svg_to_gcode.svg_parser import parse_string
+from svg_to_gcode.compiler import Compiler, interfaces
 
 gcode_gen = GCodeGenerator()
 serial_comm = SerialCommunication()
@@ -138,15 +140,43 @@ async def connect_to_electron():
                         
                         case "svg_data":
                             svg_data = data.get("message")
-                            # myOtherGcode = gcode_gen.makeGcodFromSVG(svg_data)
-                            # serial_comm.send_gcode(myOtherGcode)
-                            await log_to_file(f"received svg data:\n -------svg content-------\n\n {svg_data} \n\n -------end of svg content-------\n")
-                            await websocket.send(json.dumps({
-                                "type": "private-message",
-                                "title": "received_svg_data",
-                                "message": {"svg_data": svg_data},
-                                "to": "front-end-client"
+                            print('printed svg_data terminal : ' , svg_data)
+                            await log_to_file(f"printed svg_data log file :\n{svg_data}\n")
+
+                            try:
+                                # Logic to convert SVG to G-code
+                                curves = parse_string(svg_data)
+                                gcode_compiler = Compiler(
+                                    interfaces.Gcode,
+                                    movement_speed=1000,
+                                    cutting_speed=300,
+                                    unit="mm",
+                                    pass_depth=1.0
+                                )
+                                gcode_compiler.append_curves(curves)
+                                gcode_output = gcode_compiler.compile()
+
+                                await log_to_file(f"Generated G-code:\n{gcode_output}\n")
+
+                                await websocket.send(json.dumps({
+                                    "type": "private-message",
+                                    "title": "received_svg_data",
+                                    "message": {"gcode": gcode_output},
+                                    "to": "front-end-client"
                                 }))
+
+                                await log_to_file("SVG converted to G-code and sent to front-end.")
+
+                            except Exception as e:
+                                error_msg = f"Error converting SVG to G-code: {str(e)}"
+                                await log_to_file(error_msg)
+                                await websocket.send(json.dumps({
+                                    "type": "private-message",
+                                    "title": "svg_conversion_error",
+                                    "message": {"error": error_msg},
+                                    "to": "front-end-client"
+                                }))
+
                         
                         case "disconnect_port":
                             serial_comm.disconnect()
