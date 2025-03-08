@@ -230,59 +230,59 @@ export class FabricCanvasManager {
     }
 
     //////new rect with paths =====
-    // drawRectangle() {
-    //   // Define the rectangle's dimensions
-    //   const width = 50;
-    //   const height = 50;
-    //   const halfWidth = width / 2;
-    //   const halfHeight = height / 2;
-    //   // Determine the center of the canvas
-    //   const centerX = this.canvas.width / 2;
-    //   const centerY = this.canvas.height / 2;
+    drawRectangle() {
+      // Define the rectangle's dimensions
+      const width = 50;
+      const height = 50;
+      const halfWidth = width / 2;
+      const halfHeight = height / 2;
+      // Determine the center of the canvas
+      const centerX = this.canvas.width / 2;
+      const centerY = this.canvas.height / 2;
     
-    //   // Create a path string for a rectangle centered on the canvas.
-    //   // The path moves to the top-left corner and draws lines to each corner, closing the path.
-    //   const pathStr = `
-    //     M ${centerX - halfWidth} ${centerY - halfHeight}
-    //     L ${centerX + halfWidth} ${centerY - halfHeight}
-    //     L ${centerX + halfWidth} ${centerY + halfHeight}
-    //     L ${centerX - halfWidth} ${centerY + halfHeight}
-    //     Z
-    //   `;
+      // Create a path string for a rectangle centered on the canvas.
+      // The path moves to the top-left corner and draws lines to each corner, closing the path.
+      const pathStr = `
+        M ${centerX - halfWidth} ${centerY - halfHeight}
+        L ${centerX + halfWidth} ${centerY - halfHeight}
+        L ${centerX + halfWidth} ${centerY + halfHeight}
+        L ${centerX - halfWidth} ${centerY + halfHeight}
+        Z
+      `;
     
-    //   const rectPath = new fabric.Path(pathStr, {
-    //     fill: 'transparent',
-    //     stroke: 'red',
-    //     strokeWidth: 1,
-    //     strokeUniform: true,
-    //     selectable: true,
-    //     name: 'rectangle',
-    //     snapAngle: 45,
-    //     snapThreshold: 5,
-    //   });
-    
-    //   this.canvas.add(rectPath);
-    // }
-    
-    drawRectangle() {// Method to draw a rectangle on the canvas
-      const rect = new fabric.Rect({
+      const rectPath = new fabric.Path(pathStr, {
         fill: 'transparent',
         stroke: 'red',
         strokeWidth: 1,
         strokeUniform: true,
-        width: 50,
-        height: 50,
         selectable: true,
-        originX: 'center',
-        originY: 'center',
-        top: this.canvas.height / 2,
-        left: this.canvas.width / 2,
         name: 'rectangle',
         snapAngle: 45,
         snapThreshold: 5,
       });
-      this.canvas.add(rect);
+    
+      this.canvas.add(rectPath);
     }
+    
+    // drawRectangle() {// Method to draw a rectangle on the canvas
+    //   const rect = new fabric.Rect({
+    //     fill: 'transparent',
+    //     stroke: 'red',
+    //     strokeWidth: 1,
+    //     strokeUniform: true,
+    //     width: 50,
+    //     height: 50,
+    //     selectable: true,
+    //     originX: 'center',
+    //     originY: 'center',
+    //     top: this.canvas.height / 2,
+    //     left: this.canvas.width / 2,
+    //     name: 'rectangle',
+    //     snapAngle: 45,
+    //     snapThreshold: 5,
+    //   });
+    //   this.canvas.add(rect);
+    // }
     drawCircle() {// Method to draw a circle on the canvas
       const circle = new fabric.Circle({
         fill: 'transparent',

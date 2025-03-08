@@ -150,7 +150,7 @@ function sendPrivateMessage(ws, data) {
           message: message,
           title: data.title,
       }));
-      console.log(`Message forwarded from "${ws.name}" to "${targetClient.name}".`);
+      console.log(`Message forwarded from "${ws.name}" to "${targetClient.name}". g-codes message is ${JSON.stringify(message)}`);
     } 
 
   }

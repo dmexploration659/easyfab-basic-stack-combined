@@ -1,4 +1,4 @@
-from svg_to_gcode.svg_parser import parse_file, parse_string
+from svg_to_gcode.svg_parser import parse_string
 from svg_to_gcode.compiler import Compiler, interfaces
 
 # Create a compiler object with the required 'pass_depth' argument
@@ -24,8 +24,13 @@ gcode_compiler = Compiler(
 # Parse the SVG file
 curves = parse_string(my_svg)
 
+print('curves:', curves)
+
 # Append the SVG curves to the compiler
 gcode_compiler.append_curves(curves)
 
-# Compile the G-code to a file
-gcode_compiler.compile_to_file("output.gcode")
+# Compile the G-code and print instead of saving to a file
+gcode_output = gcode_compiler.compile()
+
+# Print the generated G-code
+print('gcodes : ',gcode_output)
