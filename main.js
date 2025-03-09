@@ -19,7 +19,8 @@ function createWindow() {
   // Maximize the window immediately after creation
   mainWindow.maximize();
 
-  mainWindow.loadURL('file://' + path.join(__dirname, 'front-end', 'index.html'));
+  mainWindow.loadURL('http://localhost:3000');
+  // mainWindow.loadURL('file://' + path.join(__dirname, 'front-end', 'index.html'));
   //mainWindow.webContents.openDevTools();
 
   const pythonProcess = spawn("python", ["-u", path.join(__dirname, "python_scripts", "executive.py")]);
