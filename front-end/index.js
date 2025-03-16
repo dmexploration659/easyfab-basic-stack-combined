@@ -45,9 +45,9 @@ const part_modal = (content) =>{
 }
 
 
-document.addEventListener("DOMContentLoaded", async function () {
-    console.log('parts_library#######');
-   await populate_parts_cards();
+document.addEventListener("DOMContentLoaded", async function(){
+   console.log('parts_library#######');
+   //await populate_parts_cards();
     await populate_preset_stock();
     const select_port = document.getElementById("port_select");
     wsClient.onMessage((data) => {
@@ -81,6 +81,12 @@ document.addEventListener("DOMContentLoaded", async function () {
             serial_resp_item.textContent = data.message.serial_data;
             serial_resp_box.insertBefore(serial_resp_item, serial_resp_box.firstChild);
         }
+        if (data?.type === 'menu-action' && data?.action === 'send-svg') {
+            const svg_data = cnc_canvas.getSvg();
+            console.log('svg_data----',svg_data);
+            wsClient.sendPrivateMessage("py-executive-client", { title: "svg_data", content: svg_data});
+        }
+        
     });
 
     const containerDiv = document.getElementById("fabricCanvas");
@@ -100,8 +106,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (containerDiv) {
         cnc_canvas = new FabricCanvasManager(containerDiv, dim_bar);
         // Attach event listeners to existing buttons
-        document.getElementById("draw_rect").addEventListener("click", () => cnc_canvas.drawRectangle());
-        document.getElementById("draw_circle").addEventListener("click", () => cnc_canvas.drawCircle());
+        // document.getElementById("draw_rect").addEventListener("click", () => cnc_canvas.drawRectangle());
+        // document.getElementById("draw_circle").addEventListener("click", () => cnc_canvas.drawCircle());
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Delete') {
               cnc_canvas.deleteSelected();
@@ -124,10 +130,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         wsClient.sendPrivateMessage("py-executive-client", {title: "connect_port", content: {port: select_port.value}});
     });
 
-    document.getElementById("build_btn").addEventListener("click", () => {
-        const objects = cnc_canvas.collectObjects();
-        console.log(objects);
-    });
+    // document.getElementById("build_btn").addEventListener("click", () => {
+    //     const objects = cnc_canvas.collectObjects();
+    //     console.log(objects);
+    // });
+
     document.getElementById('send_svg').addEventListener('click', function () {
         const svg_data = cnc_canvas.getSvg();
         console.log('svg_data----',svg_data);
@@ -171,6 +178,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 });
 
+
+
 window.sendGcode = function() {
     const gcode = document.getElementById("json_string").value;
     try {
@@ -195,8 +204,11 @@ async function populate_parts_cards(){
     });
 }
 
-async function populate_preset_stock(){
-    const preset_stock_container = document.querySelector(".preset_stock_wrapper");
+const workbench_parts_map = new Map();
+
+async function populate_preset_stock(){ //<img src="${content.thumbnail}">
+   // const preset_stock_container = document.querySelector(".preset_stock_wrapper");
+    const preset_stock_container = document.querySelector(".sidebar_card_wrapper");
     preset_stock_container.innerHTML = "";
     preset_stock = await (await fetch('./pre_set_stock.json')).json();
     console.log("populating preset stock");
@@ -204,23 +216,47 @@ async function populate_preset_stock(){
         console.log(item.sizes);
         const stock_card = document.createElement("div");
         stock_card.classList.add("stock_card");
-        stock_card.innerHTML = `<p>${item.type}</p>`;
+        stock_card.innerHTML = `<p>${item.type}</p> <img src="${item.thumbnail}">`;
         stock_card.setAttribute('data-id', item.type)
 
         stock_card.addEventListener('click', () => {
             const modalOverlay = document.getElementById("modal_overlay");
+            const modal_title = document.getElementById("modal_title");
+            modal_title.innerHTML = item.type;
             const size_select = document.getElementById("size_select");
-            const size_options = item.sizes.map(sizeObj => {
-                const sizeName = Object.keys(sizeObj)[0];
+            const size_options =Object.keys(item.sizes).map(sizeObj => {
+                const sizeName = sizeObj;
                 return `<option value="${sizeName}">${sizeName}</option>`;
             }).join('');
             size_select.innerHTML = size_options;
             modalOverlay.classList.add("show");
+            document.getElementById("draw_part_shape").dataset.type = item.type;
         });
         preset_stock_container.appendChild(stock_card);
     });
     
 }
+window.drawPartShape = function(type){
+    const selected_size = document.getElementById("size_select").value;
+    console.log('selected_size',selected_size);
+    const selected_item = preset_stock.find(item => item.type === type);
+    const part_data = {...selected_item.sizes[selected_size], data: selected_item};
+    console.log('selected preset_stock size----',part_data);
+    cnc_canvas.drawPartShape2(part_data);
+    closeModal2();
+
+}
+
+window.drawShape = function(shape_name){
+    cnc_canvas.drawShape(shape_name);
+}
+window.drawLine = function(){
+    cnc_canvas.drawLine();
+}
+window.enablePolylineDrawing = function(){
+    cnc_canvas.enablePolylineDrawing();
+}
+
 
 window.openModal = function(card_content) {
     const content = JSON.parse(card_content);
@@ -239,6 +275,8 @@ window.closeModal2 = function(){
     //document.getElementById("modal_overlay").querySelector('.modal_content').innerHTML = "";
     document.getElementById("modal_overlay").classList.remove("show");
 }
+
+
 window.addPart = function(part_title){
     const card_content = document.querySelectorAll('.modal_content .param_field');
     const part_data = {'title': part_title}
@@ -266,6 +304,36 @@ window.addPart = function(part_title){
 }
 
 
+window.addPart1 = function(part_date){
+    const card_content = document.querySelectorAll('.modal_content .param_field');
+    const part_data = {'title': part_title}
+    let footer_card_content = Array.from(card_content).map(param => {
+        part_data[param.dataset.label] = {
+            val: param.querySelector('.param_val').value,
+            unit: param.querySelector('.param_unit').value
+        };
+        
+        return `<p>${param.dataset.label}:${param.querySelector('.param_val').value}
+                ${param.querySelector('.param_unit').value}</p>` }).join('');
+    
+    const footer_card = document.createElement("div");
+    footer_card.classList.add("footer_card");
+    footer_card.setAttribute('data-id', part_title);
+    footer_card.id = uidGen();
+    workbench_parts.set(footer_card.id, part_data);
+    footer_card.innerHTML = footer_card_content;
+    document.querySelector('.Workbench_parts_wrapper').appendChild(footer_card);
+    footer_card.addEventListener('click', () => {
+        console.log(workbench_parts.get(footer_card.id));
+        cnc_canvas.drawPartShape(workbench_parts.get(footer_card.id));
+    });
+    closeModal();
+}
+
+
+
+
+
 window.uidGen = function() {
     return `shape_${new Date().getTime()}_${Math.floor(Math.random() * 1000)}`;
   }
@@ -275,17 +343,7 @@ window.uidGen = function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-  //====================================*****=====================================//
+//====================================*****=====================================//
 
 
       // Initialize Fabric.js canvas inside the existing wrapper

@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu, MenuItem, ipcMain} = require('electron');
 const { spawn } = require("child_process");
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 8080 });
@@ -15,6 +15,45 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
+  const existingMenu = Menu.getApplicationMenu();
+  // Modify the existing File menu
+  const fileMenu = existingMenu.items.find(item => item.label === 'File');
+  // Insert new items at the beginning of the File menu (before Exit)
+  if (fileMenu && fileMenu.submenu) {
+    // Add separator before the Exit item
+    fileMenu.submenu.insert(0, new MenuItem({ type: 'separator' }));
+    
+    // Add the new items before the separator
+    fileMenu.submenu.insert(0, new MenuItem({
+      label: 'Send svg (dev)',
+      accelerator: 'CmdOrCtrl+SV',
+      click: () => {
+        broadcast({
+          type: 'menu-action',
+          action: 'send-svg',
+          data: { message: 'SVG export triggered from menu' }
+        });
+      }
+    }));
+    fileMenu.submenu.insert(0, new MenuItem({
+      label: 'Save',
+      accelerator: 'CmdOrCtrl+S',
+      click: () => { /*function to save product*/ }
+    }));
+    
+    fileMenu.submenu.insert(0, new MenuItem({
+      label: 'Open',
+      accelerator: 'CmdOrCtrl+O',
+      click: () => { /*function to open existing product*/ }
+    }));
+    
+    fileMenu.submenu.insert(0, new MenuItem({
+      label: 'New',
+      accelerator: 'CmdOrCtrl+N',
+      click: () => { /*function to create new product new action */ }
+    }));
+  }
+  Menu.setApplicationMenu(existingMenu);
 
   // Maximize the window immediately after creation
   mainWindow.maximize();
