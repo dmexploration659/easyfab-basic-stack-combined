@@ -64,11 +64,15 @@ export default function FabricCanvasUI() {
 
         {/* Workspace Section */}
         <div className="work_space" data-title="Build space">
-          <div className="command_btns">
+          {/* <div className="command_btns"> */}
+          <div className="bg-blue-500 flex justify-center items-center">
+            {/* this needs to be removed */}
+            <div className=''>
             <button id="start_btn">Start</button>
             <button id="stop_btn">Stop</button>
             <button id="pause_btn">Pause</button>
             <button id="estop_btn" style={{ backgroundColor: 'red' }}>E-stop</button>
+            </div>
           </div>
 
           <div className="canvas_container bg-green-500">
