@@ -2,11 +2,13 @@ import { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 import dd from "../../front-end/centering_guidelines.js";
+import { useStore } from '../utils/zustand_setup';
 
 export default function FabricCanvasUI() {
   const [portOptions, setPortOptions] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [sizeOptions, setSizeOptions] = useState([]);
+  const { test } = useStore();
 
   // Functions
   const sendGcode = () => {
@@ -19,11 +21,7 @@ export default function FabricCanvasUI() {
   };
 
   useEffect(() => {
-    // Initialize fabric.js and any other setup
-    // This runs after component mounts
-    return () => {
-      // Cleanup code
-    };
+    console.log('test from Zustand setup : ', test);
   }, []);
 
   return (
