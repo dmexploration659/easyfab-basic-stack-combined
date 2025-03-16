@@ -1,21 +1,40 @@
 {
   "name": "easyfab-nextjs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "main": "main.js",
+  "main": "electron/main.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "concurrently \"npm run start-python\" \"npm run dev:renderer\" \"npm run dev:electron\"",
     "start": "next start",
-    "electron": "electron ."
+    "electron": "electron .",
+    "dev:electron": "electron .",
+    "build": "cd renderer && npm run build",
+    "dev:renderer": "cd renderer && npm run dev"
   },
   "dependencies": {
+    "electron-is-dev": "^2.0.0",
     "fabric": "^6.5.4",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "electron": "^34.1.1"
+    "concurrently": "^9.1.2",
+    "electron": "^34.1.1",
+    "electron-builder": "^24.6.0",
+    "postcss": "^8.5.3",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.example.easyfab-basic-stack-combined",
+    "productName": "EasyFab Basic Stack Combined",
+    "files": [
+      "electron/**/*",
+      "dist/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    }
   }
 }
