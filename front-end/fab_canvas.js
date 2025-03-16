@@ -16,7 +16,7 @@ export class FabricCanvasManager {
     //       // Add zoom properties
     this.canvas.zoomLevel = 1;
     this.canvas.minZoom = 1;
-    this.canvas.maxZoom = 5;
+    this.canvas.maxZoom = 8;
     
     // Add mouse wheel zoom handler
     this.canvas.on('mouse:wheel', (opt) => {
@@ -120,8 +120,10 @@ export class FabricCanvasManager {
       // Bind the resize event to the resizeCanvas method
       window.addEventListener('resize', () => this.resizeCanvas());
       const updateDimensions = (obj) => {
-        const scaledWidth = (obj.getScaledWidth()*this.scaleY).toFixed(3);
-        const scaledHeight = (obj.getScaledHeight()*this.scaleY).toFixed(3);
+        const scaledWidth = this.pixelsToMetrics(obj.getScaledWidth(),'mm');
+        const scaledHeight = this.pixelsToMetrics(obj.getScaledHeight(),'mm');
+        console.log('scaledWidth',obj.getScaledWidth());
+        console.log('scaledHeight',obj.getScaledWidth());
         const angle = (obj.angle || 0).toFixed(2);
         
         const width_dim = dim_bar.querySelector('#width_dim');
@@ -145,8 +147,8 @@ export class FabricCanvasManager {
       const self = this;
       this.canvas.on('object:scaling', function(event) {
         const obj = event.target;
-        const scaledWidth = (obj.getScaledWidth()*(1000/self.canvas.height)).toFixed(3);
-        const scaledHeight = (obj.getScaledHeight()*(1000/self.canvas.height)).toFixed(3);
+        const scaledWidth = self.pixelsToMetrics(obj.getScaledWidth(),'mm');
+        const scaledHeight = self.pixelsToMetrics(obj.getScaledHeight(),'mm');
         
         const width_dim = dim_bar.querySelector('#width_dim');
         const height_dim = dim_bar.querySelector('#height_dim');
@@ -229,7 +231,7 @@ export class FabricCanvasManager {
       }
     }
 
-    //////new rect with paths =====
+    ////new rect with paths =====
     drawRectangle() {
       // Define the rectangle's dimensions
       const width = 50;
@@ -240,6 +242,15 @@ export class FabricCanvasManager {
       const centerX = this.canvas.width / 2;
       const centerY = this.canvas.height / 2;
     
+      // Create a path string for a rectangle centered on the canvas.
+      // The path moves to the top-left corner and draws lines to each corner, closing the path.
+      const pathStr = `
+        M ${centerX - halfWidth} ${centerY - halfHeight}
+        L ${centerX + halfWidth} ${centerY - halfHeight}
+        L ${centerX + halfWidth} ${centerY + halfHeight}
+        L ${centerX - halfWidth} ${centerY + halfHeight}
+        Z
+      `;
       // Create a path string for a rectangle centered on the canvas.
       // The path moves to the top-left corner and draws lines to each corner, closing the path.
       const pathStr = `
@@ -266,10 +277,28 @@ export class FabricCanvasManager {
     
     // drawRectangle() {// Method to draw a rectangle on the canvas
     //   const rect = new fabric.Rect({
+      const rectPath = new fabric.Path(pathStr, {
+        fill: 'transparent',
+        stroke: 'red',
+        strokeWidth: 1,
+        strokeUniform: true,
+        selectable: true,
+        name: 'rectangle',
+        snapAngle: 45,
+        snapThreshold: 5,
+      });
+    
+      this.canvas.add(rectPath);
+    }
+    
+    // drawRectangle() {// Method to draw a rectangle on the canvas
+    //   const rect = new fabric.Rect({
     //     fill: 'transparent',
     //     stroke: 'red',
     //     strokeWidth: 1,
     //     strokeUniform: true,
+    //     width: 50,
+    //     height: 50,
     //     width: 50,
     //     height: 50,
     //     selectable: true,
@@ -280,9 +309,376 @@ export class FabricCanvasManager {
     //     name: 'rectangle',
     //     snapAngle: 45,
     //     snapThreshold: 5,
+    //     noScaleCache: false,
+    //     objectCaching: false
     //   });
     //   this.canvas.add(rect);
     // }
+
+    //----draw line --------------------------------
+
+    drawLine() {
+      // Calculate canvas center
+      const centerX = this.canvas.width / 2;
+      const centerY = this.canvas.height / 2;
+      
+      // Define the line length
+      const length = 100;
+      
+      // The coordinates array is: [x1, y1, x2, y2]
+      // This will create a horizontal line centered at the canvas.
+      const x1 = centerX - length / 2;
+      const y1 = centerY;
+      const x2 = centerX + length / 2;
+      const y2 = centerY;
+      
+      // Create the line
+      const line = new fabric.Line([x1, y1, x2, y2], {
+        stroke: 'red',
+        strokeWidth: 2,
+        strokeUniform: true,
+        selectable: true,
+        name: 'line',
+        snapAngle: 45,
+        snapThreshold: 5,
+      });
+      
+      // Add the line to the canvas
+      this.canvas.add(line);
+    }
+
+
+    //-------line --------------------------------
+
+    //--------------------poly line --------------
+
+    enablePolylineDrawing() {
+      // If needed, check if this.canvas is valid
+      if (!this.canvas) {
+        console.error('No Fabric canvas found on this instance!');
+        return;
+      }
+    
+      let isDrawingPolyline = true;
+      let polylinePoints = [];
+      let polylinePreviewLine = null;
+      let polylinePreviewShape = null;
+    
+      // Use this.canvas instead of the parameter
+      const canvas = this.canvas;
+    
+      // Change cursor to indicate drawing mode
+      canvas.defaultCursor = 'crosshair';
+    
+      // Event listeners
+      canvas.on('mouse:down', onMouseDown);
+      canvas.on('mouse:move', onMouseMove);
+      canvas.on('mouse:dblclick', onDblClick);
+    
+      console.log('Polyline drawing mode activated. Click to add points, double-click to finish.');
+    
+      function onMouseDown(opt) {
+        if (!isDrawingPolyline) return;
+        const pointer = canvas.getPointer(opt.e);
+        polylinePoints.push({ x: pointer.x, y: pointer.y });
+    
+        // Remove old preview line
+        if (polylinePreviewLine) {
+          canvas.remove(polylinePreviewLine);
+          polylinePreviewLine = null;
+        }
+    
+        // Update the preview of the entire polyline
+        updatePreviewPolyline();
+      }
+    
+      function onMouseMove(opt) {
+        if (!isDrawingPolyline || polylinePoints.length === 0) return;
+        const pointer = canvas.getPointer(opt.e);
+    
+        // Remove old preview line if it exists
+        if (polylinePreviewLine) {
+          canvas.remove(polylinePreviewLine);
+        }
+    
+        // Draw a line from the last placed point to the current mouse position
+        const lastPoint = polylinePoints[polylinePoints.length - 1];
+        polylinePreviewLine = new fabric.Line(
+          [lastPoint.x, lastPoint.y, pointer.x, pointer.y],
+          {
+            stroke: 'red',
+            strokeWidth: 2,
+            selectable: false,
+            evented: false,
+          }
+        );
+    
+        canvas.add(polylinePreviewLine);
+        canvas.renderAll();
+    
+        updatePreviewPolyline(pointer);
+      }
+    
+      function onDblClick(opt) {
+        if (!isDrawingPolyline) return;
+    
+        // Make sure we have at least two points for a valid line
+        if (polylinePoints.length < 2) {
+          console.warn('Not enough points to create a polyline.');
+          cleanupAndDeactivate();
+          return;
+        }
+    
+        // Create the Fabric.js Polyline with the collected points
+        const polyline = new fabric.Polyline(polylinePoints, {
+          fill: '',
+          stroke: 'red',
+          strokeWidth: 2,
+          selectable: true,
+        });
+        canvas.add(polyline);
+    
+        console.log('Polyline finalized.');
+        cleanupAndDeactivate();
+      }
+    
+      function updatePreviewPolyline(pointer) {
+        // Remove old preview polyline if any
+        if (polylinePreviewShape) {
+          canvas.remove(polylinePreviewShape);
+        }
+    
+        // Build a temporary list of points: existing points + current mouse pointer (optional)
+        let tempPoints = [...polylinePoints];
+        if (pointer) {
+          tempPoints.push({ x: pointer.x, y: pointer.y });
+        }
+    
+        // Create a new polyline for preview (no fill, just a stroke)
+        polylinePreviewShape = new fabric.Polyline(tempPoints, {
+          fill: '',
+          stroke: 'red',
+          strokeWidth: 1,
+          selectable: false,
+          evented: false,
+        });
+    
+        canvas.add(polylinePreviewShape);
+        canvas.renderAll();
+      }
+    
+      function cleanupAndDeactivate() {
+        isDrawingPolyline = false;
+        canvas.defaultCursor = 'default';
+    
+        // Remove the temporary objects
+        if (polylinePreviewLine) {
+          canvas.remove(polylinePreviewLine);
+          polylinePreviewLine = null;
+        }
+        if (polylinePreviewShape) {
+          canvas.remove(polylinePreviewShape);
+          polylinePreviewShape = null;
+        }
+    
+        // Remove events
+        canvas.off('mouse:down', onMouseDown);
+        canvas.off('mouse:move', onMouseMove);
+        canvas.off('mouse:dblclick', onDblClick);
+    
+        console.log('Polyline drawing mode deactivated.');
+      }
+    }
+    
+
+
+
+
+
+
+
+
+
+    //-------------------drow polyline end-----------
+
+
+
+
+    //-------------------------------------other shapes-------------------------------------/
+
+    drawShape(shape) {
+      // Get the center of the canvas
+      const centerX = this.canvas.width / 2;
+      const centerY = this.canvas.height / 2;
+    
+      switch (shape.toLowerCase()) {
+        case 'rectangle': {
+          // Example: create a rectangle via a path (like your drawRectangle example)
+          const width = 50;
+          const height = 50;
+          const halfWidth = width / 2;
+          const halfHeight = height / 2;
+    
+          const pathStr = `
+            M ${centerX - halfWidth} ${centerY - halfHeight}
+            L ${centerX + halfWidth} ${centerY - halfHeight}
+            L ${centerX + halfWidth} ${centerY + halfHeight}
+            L ${centerX - halfWidth} ${centerY + halfHeight}
+            Z
+          `;
+    
+          const rectPath = new fabric.Path(pathStr, {
+            fill: 'transparent',
+            stroke: 'red',
+            strokeWidth: 1,
+            strokeUniform: true,
+            selectable: true,
+            name: 'rectangle',
+            snapAngle: 45,
+            snapThreshold: 5,
+          });
+    
+          this.canvas.add(rectPath);
+          break;
+        }
+    
+        case 'circle': {
+          // Example: create a circle using fabric.Circle
+          const radius = 25;
+          const circle = new fabric.Circle({
+            radius,
+            fill: 'transparent',
+            stroke: 'red',
+            strokeWidth: 1,
+            strokeUniform: true,
+            left: centerX,
+            top: centerY,
+            originX: 'center',
+            originY: 'center',
+            name: 'circle',
+            snapAngle: 45,
+            snapThreshold: 5,
+          });
+    
+          this.canvas.add(circle);
+          break;
+        }
+    
+        case 'ellipse': {
+          // Example: create an ellipse using fabric.Ellipse
+          const rx = 30; // radius x
+          const ry = 20; // radius y
+          const ellipse = new fabric.Ellipse({
+            rx,
+            ry,
+            fill: 'transparent',
+            stroke: 'red',
+            strokeWidth: 1,
+            strokeUniform: true,
+            left: centerX,
+            top: centerY,
+            originX: 'center',
+            originY: 'center',
+            name: 'ellipse',
+            snapAngle: 45,
+            snapThreshold: 5,
+          });
+    
+          this.canvas.add(ellipse);
+          break;
+        }
+    
+        case 'triangle': {
+          // Example: create a triangle using fabric.Triangle
+          const size = 50;
+          const triangle = new fabric.Triangle({
+            width: size,
+            height: size,
+            fill: 'transparent',
+            stroke: 'red',
+            strokeWidth: 1,
+            strokeUniform: true,
+            left: centerX,
+            top: centerY,
+            originX: 'center',
+            originY: 'center',
+            name: 'triangle',
+            snapAngle: 45,
+            snapThreshold: 5,
+          });
+    
+          this.canvas.add(triangle);
+          break;
+        }
+    
+        case 'hexagon': {
+          // Create a hexagon as a Polygon
+          // A regular hexagon can be approximated using 6 points equally spaced around a circle
+          const sideLength = 30; 
+          const angle = (2 * Math.PI) / 6;
+          const points = [];
+    
+          for (let i = 0; i < 6; i++) {
+            points.push({
+              x: centerX + sideLength * Math.cos(i * angle),
+              y: centerY + sideLength * Math.sin(i * angle),
+            });
+          }
+    
+          const hexagon = new fabric.Polygon(points, {
+            fill: 'transparent',
+            stroke: 'red',
+            strokeWidth: 1,
+            strokeUniform: true,
+            selectable: true,
+            name: 'hexagon',
+            snapAngle: 45,
+            snapThreshold: 5,
+          });
+    
+          this.canvas.add(hexagon);
+          break;
+        }
+    
+        case 'rhombus':
+        case 'lozenge': {
+          // A rhombus (lozenge) can be created as a rotated square, or via a path.
+          // Let's do a simple diamond shape via 4 points (like a square rotated 45 degrees).
+          const size = 40; // distance from center to each corner
+          const points = [
+            { x: centerX - size, y: centerY }, // left
+            { x: centerX, y: centerY - size }, // top
+            { x: centerX + size, y: centerY }, // right
+            { x: centerX, y: centerY + size }, // bottom
+          ];
+    
+          const rhombus = new fabric.Polygon(points, {
+            fill: 'transparent',
+            stroke: 'red',
+            strokeWidth: 1,
+            strokeUniform: true,
+            selectable: true,
+            name: 'rhombus',
+            snapAngle: 45,
+            snapThreshold: 5,
+          });
+    
+          this.canvas.add(rhombus);
+          break;
+        }
+    
+        default:
+          console.warn(`Unknown shape: ${shape}`);
+          break;
+      }
+    }
+
+    //-------------------------------------other shapes-------------------------------------/
+
+
+
+
+
     drawCircle() {// Method to draw a circle on the canvas
       const circle = new fabric.Circle({
         fill: 'transparent',
@@ -298,6 +694,8 @@ export class FabricCanvasManager {
         name: 'circle',
         snapAngle: 45,
         snapThreshold: 5,
+        noScaleCache: false,
+        objectCaching: false
       });
       this.canvas.add(circle);
     }
@@ -349,6 +747,51 @@ export class FabricCanvasManager {
   
       this.canvas.add(partGroup);
     }
+
+    //-------------------------------------draw part shape 2nd way-------------------------------------/
+    drawPartShape2(partData){
+      this.partCount += 1;
+  
+      const partH = parseFloat(partData.height);
+      const partW = parseFloat(partData.width);
+      const partHUnit = partData.unit;
+      const partWUnit = partData.unit;
+  
+      const hInPixels = this.metricsToPixels(100, partWUnit); // 100; // Keep hardcoded height
+      const wInPixels = this.metricsToPixels(partW, partWUnit);
+      console.log('converted to px', partW, 'mm =', wInPixels, 'pixels');
+      
+      const pathString = `
+          M 0 0 
+          L ${wInPixels} 0  
+          L ${wInPixels} ${hInPixels} 
+          L 0 ${hInPixels} 
+          Z
+      `;
+  
+      const partPath = new fabric.Path(pathString, {
+          fill: '#FDFBF6',
+          selectable: true,
+          originX: 'left',
+          originY: 'bottom',
+          lockScalingX: true,
+          top: this.canvas.height / 2,
+          left: this.canvas.width / 2,
+          snapAngle: 45,
+          snapThreshold: 5,
+
+      });  
+      this.canvas.add(partPath);
+      console.log('partPath --- directly', partPath);
+
+  }
+  
+
+
+    //-------------------------------------draw part shape2 end-------------------------------------/
+
+
+
   
     // Method to convert dimensions to pixels
     convertToScaledPixels(length, unit) {
@@ -368,6 +811,16 @@ export class FabricCanvasManager {
         const val_in_pixels = val_in_mm * this.scaleY;
         return val_in_pixels;
       }
+
+      pixelsToMetrics(pixels, unit) {
+        // Convert pixels to millimeters first
+        const val_in_mm = pixels / this.scaleY;
+    
+        // Convert millimeters to the desired unit
+        const val_in_unit = val_in_mm / this.all_in_mm[unit];
+    
+        return val_in_unit;
+    }
 
     pxToMm(pixels) {
         const scaleY = 3000/this.canvas.height
@@ -428,16 +881,24 @@ export class FabricCanvasManager {
 
   zoomIn() {
       let zoom = this.canvas.getZoom();
+      const oldZoom = zoom;
       zoom *= 1.1;
       zoom = Math.min(zoom, this.canvas.maxZoom);
       this.canvas.setZoom(zoom);
+      this.canvas.getObjects().forEach(obj => {
+        obj.strokeWidth = obj.strokeWidth * (oldZoom / zoom);
+    });
   }
   
   zoomOut() {
       let zoom = this.canvas.getZoom();
+      const oldZoom = zoom;
       zoom /= 1.1;
       zoom = Math.max(zoom, this.canvas.minZoom);
       this.canvas.setZoom(zoom);
+      this.canvas.getObjects().forEach(obj => {
+        obj.strokeWidth = obj.strokeWidth * (oldZoom / zoom);
+    });
   }
   
   resetZoom() {

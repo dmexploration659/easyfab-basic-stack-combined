@@ -30,13 +30,6 @@
 
             <!-- Workspace Section -->
             <div class="work_space" data-title="Build space">
-                <div class="command_btns">
-                    <button id="start_btn">Start</button>
-                    <button id="stop_btn">Stop</button>
-                    <button id="pause_btn">Pause</button>
-                    <button id="estop_btn" style="background-color:red">E-stop</button>
-                </div>
-
                 <div class="canvas_container">
                     <div class="dimansion_bar" id="dimansion_bar">
                         <p id="width_dim">Width:</p><p id="height_dim">Height:</p><p id="rotation_dim">Rotation:</p>
@@ -46,28 +39,56 @@
                         </div>
                     </div>
                     <div class="draw_tools_btns">
-                        <button id="draw_rect">▭</button>
-                        <button id="draw_circle">⬤</button>
-                        <button id="draw_triangle">△</button>
-                        <button id="draw_polygon">⬠</button>
-                        <button id="draw_line">─</button>
-                        <button id="draw_arrow">→</button>
-                        <button id="draw_ellipse">⬥</button>
+                        <button id="draw_rect" onclick="drawShape('rectangle')">▭</button>
+                        <button id="draw_circle" onclick="drawShape('circle')">⬤</button>
+                        <button id="draw_triangle" onclick="drawShape('triangle')">△</button>
+                        <button id="draw_hexagon" onclick="drawShape('hexagon')">⬠</button>
+                        <button id="draw_line" onclick="drawLine()">─</button>
+                        <button id="draw_polyline" onclick="enablePolylineDrawing()">&#x2712;</button>
+                        <button id="draw_ellipse" onclick="drawShape('rhombus')">⬥</button>
                     </div>
 
-                    <div class="utils_btns">
+                    <!-- <div class="utils_btns">
                         <button id="build_btn">Build</button>
                         <button id="send_svg">Send SVG</button>
                         <button id="export_btn">Export</button>
                         <button id="send_json">Send JSON</button>
+                    </div> -->
+                    <div class="canvas_wrapper" id="fabricCanvas"></div>
+                    <div class="shape_config">
+                        <div class="set_dimensions shape_config_section">
+                            <p>Edit Dimensions</p>
+                            <span> Width: <input type="number" id="width_input" placeholder="Width" ></span> 
+                            <span> Height: <input type="number" id="height_input" placeholder="Height" ></span>
+                            <span> Thickness: <input type="number" id="thickness_input" placeholder="Thickness" ></span>
+                            <span> Length: <input type="number" id="length_input" placeholder="Length" ></span>
+                        </div>
+                        <div class="change_part shape_config_section">
+                            <p>Change Part</p>
+                            <select id="change_part_select">
+                                <option value="none">Available Part size</option>
+                            </select>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="foot_bar" data-title="Controls">
+                <div class="control_wrapper">
                     <div class="control_btns">
+                        <div class="button-row">
+                            <button class="home-button" data-gcode_val="G28">&#127968;</button>
+                        </div>
                         <div class="input-row">
                             <label for="step-input">Steps</label>
                             <input type="number" id="step-input" value="1" min="0.01" step="0.1">
                         </div>
+                    </div>
+                    <div class="control_btns">
                         <div class="button-row">
                             <button class="jog-button" data-gcode_val="Y1">↑</button>
+                        
                         </div>
                         <div class="button-row">
                             <button class="jog-button" data-gcode_val="X-1">←</button>
@@ -77,32 +98,41 @@
                         <div class="button-row">
                             <button class="jog-button" data-gcode_val="Y-1">↓</button>
                         </div>
+                    </div>
+                    <div class="control_btns">
                         <div class="button-row">
-                            <button class="home-button" data-gcode_val="G28">&#127968;</button>
+                            <button class="jog-button" data-gcode_val="Y1">a↑</button>
+                        </div>
+                        <div class="button-row">
+                            <button class="jog-button" data-gcode_val="Y-1">a↓</button>
                         </div>
                     </div>
-                    <div class="canvas_wrapper" id="fabricCanvas"></div>
-                    <!-- <div id="paperCanvas" resize></div> -->
+                    
                 </div>
-            </div>
+                <div class="command_btns">
+                    <button id="start_btn">Start</button>
+                    <button id="stop_btn">Stop</button>
+                    <button id="pause_btn">Pause</button>
+                    <button id="estop_btn" style="background-color:red">E-stop</button>
+                </div>
 
-            <!-- Footer Section -->
-            <div class="foot_bar" data-title="Workbench">
-                <div class="Workbench_parts_wrapper"></div>
+              
             </div>
         </div>
     </div>
     <div class="modal_overlay" id="modal_overlay">
         <div class="modal_content">
+            <h1 id="modal_title" style="text-align: center;"></h1>
                 <div class="size_select_wrapper">
                     <label for="size_select">Choose size:</label>
                     <select id="size_select"></select>
                 </div>
-                <div class="length_input_wrapper">
+                <!-- <div class="length_input_wrapper">
                     <label for="length_input">Length</label>
                     <input type="number" id="length_input" placeholder="Length">
-                </div>
+                </div> -->
             <div class="btn_wrapper">
+                <button id="draw_part_shape" onclick="drawPartShape(this.dataset.type)">Add</button>
                 <button onclick="closeModal2()">Cancel</button>
             </div>
         </div>

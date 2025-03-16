@@ -98,7 +98,6 @@ async def connect_to_electron():
                                 "to": "front-end-client"
                                 })) 
 
-
                         case "send_to_cnc":
                             shape_data = data.get("message")
                             gcode = gcode_gen.generate_gcode(**shape_data)
