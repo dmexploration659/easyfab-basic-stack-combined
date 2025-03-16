@@ -241,16 +241,6 @@ export class FabricCanvasManager {
       // Determine the center of the canvas
       const centerX = this.canvas.width / 2;
       const centerY = this.canvas.height / 2;
-    
-      // Create a path string for a rectangle centered on the canvas.
-      // The path moves to the top-left corner and draws lines to each corner, closing the path.
-      const pathStr = `
-        M ${centerX - halfWidth} ${centerY - halfHeight}
-        L ${centerX + halfWidth} ${centerY - halfHeight}
-        L ${centerX + halfWidth} ${centerY + halfHeight}
-        L ${centerX - halfWidth} ${centerY + halfHeight}
-        Z
-      `;
       // Create a path string for a rectangle centered on the canvas.
       // The path moves to the top-left corner and draws lines to each corner, closing the path.
       const pathStr = `
@@ -274,23 +264,7 @@ export class FabricCanvasManager {
     
       this.canvas.add(rectPath);
     }
-    
-    // drawRectangle() {// Method to draw a rectangle on the canvas
-    //   const rect = new fabric.Rect({
-      const rectPath = new fabric.Path(pathStr, {
-        fill: 'transparent',
-        stroke: 'red',
-        strokeWidth: 1,
-        strokeUniform: true,
-        selectable: true,
-        name: 'rectangle',
-        snapAngle: 45,
-        snapThreshold: 5,
-      });
-    
-      this.canvas.add(rectPath);
-    }
-    
+      
     // drawRectangle() {// Method to draw a rectangle on the canvas
     //   const rect = new fabric.Rect({
     //     fill: 'transparent',

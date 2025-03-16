@@ -6054,3 +6054,9 @@ M30
 
 2025-03-16 23:21:38--websocket logs: Received from server: {'type': 'private-message', 'from': 'front-end-client', 'message': 'ports_request', 'title': 'ports_request'}
 2025-03-16 23:21:38--Sent available ports: [{'device': 'COM3', 'description': 'Standard Serial over Bluetooth link (COM3)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_VID&00010094_PID&0123\\7&288005A8&0&EC8193A28F4A_C00000000'}, {'device': 'COM7', 'description': 'Standard Serial over Bluetooth link (COM7)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000000'}, {'device': 'COM4', 'description': 'Standard Serial over Bluetooth link (COM4)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\\7&288005A8&0&000000000000_00000001'}, {'device': 'COM5', 'description': 'Standard Serial over Bluetooth link (COM5)', 'manufacturer': 'Microsoft', 'product': None, 'serial_number': None, 'hwid': 'BTHENUM\\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0002\\7&288005A8&0&7844055393C5_C00000000'}]
+2025-03-16 23:47:37--script started
+2025-03-16 23:47:37--Connected to WebSocket server.
+2025-03-16 23:47:37--Sent registration data.
+2025-03-16 23:47:37--websocket logs: Received from server: {'type': 'register-response', 'success': True, 'message': 'You are now registered as "py-executive-client".'}
+2025-03-16 23:47:37--websocket logs: Received from server: {'type': 'user-joined', 'name': 'py-executive-client'}
+2025-03-16 23:50:16--Connection closed by the server.
