@@ -1,29 +1,164 @@
 import { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
-import dd from "../../front-end/centering_guidelines.js";
 import { useStore } from '../utils/zustand_setup';
+import DisplayModel from '../custom/DisplayModel';
+import CommandButtons from '../custom/command-buttons';
+
+// Import custom hooks
+import useWebSocket from '../hooks/useWebSocket';
+import useCanvasManager from '../hooks/useCanvasManager';
+import usePartsLibrary from '../hooks/usePartsLibrary';
+
+// Import components
+import PartCard from '../custom/PartCard';
+import PartModal from '../custom/PartModal';
+import StockCard from '../custom/StockCard';
+import WorkbenchPart from '../custom/WorkbenchPart';
 
 export default function FabricCanvasUI() {
-  const [portOptions, setPortOptions] = useState([]);
+  // Basic state
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+  const [modalType, setModalType] = useState(null); // 'part' or 'stock'
   const [sizeOptions, setSizeOptions] = useState([]);
   const { test } = useStore();
-
-  // Functions
-  const sendGcode = () => {
-    // Implementation for sendGcode
-    console.log('Sending GCode');
+  
+  // Refs
+  const fabricCanvasRef = useRef(null);
+  const dimBarRef = useRef(null);
+  
+  // Custom hooks
+  const { 
+    isConnected, 
+    messages, 
+    sendMessage, 
+    wsClient 
+  } = useWebSocket('ws://localhost:8080', 'front-end-client');
+  
+  const canvasManager = useCanvasManager(fabricCanvasRef, dimBarRef);
+  
+  const {
+    partsLibrary,
+    presetStock,
+    workbenchParts,
+    addWorkbenchPart,
+    generateUid
+  } = usePartsLibrary();
+  
+  // Event handlers
+  const handleDeleteKey = (e) => {
+    if (e.key === 'Delete') {
+      canvasManager.deleteSelected();
+    }
   };
-
+  
+  const sendGcode = () => {
+    const gcodeText = document.getElementById("json_string").value;
+    try {
+      sendMessage("py-executive-client", { 
+        title: "send_to_cnc_dev", 
+        content: gcodeText
+      });
+    } catch (error) {
+      console.error("Error sending GCode:", error);
+      alert("Error sending GCode. Please try again.");
+    }
+  };
+  
+  const handleBuildClick = () => {
+    const objects = canvasManager.collectObjects();
+    console.log(objects);
+  };
+  
+  const handleSendSvgClick = () => {
+    const svgData = canvasManager.getSvg();
+    sendMessage("py-executive-client", { 
+      title: "svg_data", 
+      content: svgData
+    });
+  };
+  
+  const handleStartClick = () => {
+    const objects = canvasManager.collectObjects();
+    if (objects.length > 0) {
+      sendMessage("py-executive-client", { 
+        title: "send_to_cnc", 
+        content: objects[0].gcode_data
+      });
+    }
+  };
+  
+  const handleJogButtonClick = (gcodeVal, step) => {
+    const stepValue = parseFloat(step);
+    let gcode;
+    
+    if (gcodeVal !== 'G28') {
+      gcode = `G21 G91 ${gcodeVal} ${stepValue}`;
+    } else {
+      gcode = gcodeVal;
+    }
+    
+    sendMessage("py-executive-client", { 
+      title: "send_to_cnc_dev", 
+      content: gcode
+    });
+  };
+  
+  const openPartModal = (content) => {
+    setModalContent(content);
+    setModalType('part');
+    setIsModalOpen(true);
+  };
+  
+  const openStockModal = (stockItem) => {
+    const sizeOptions = stockItem.sizes.map(sizeObj => {
+      const sizeName = Object.keys(sizeObj)[0];
+      return { value: sizeName, label: sizeName };
+    });
+    setSizeOptions(sizeOptions);
+    setModalType('stock');
+    setIsModalOpen(true);
+  };
+  
   const closeModal = () => {
     setIsModalOpen(false);
+    setModalContent(null);
   };
-
+  
+  const addPart = (partData) => {
+    const partId = generateUid();
+    addWorkbenchPart(partId, partData);
+    closeModal();
+  };
+  
+  const selectWorkbenchPart = (partData) => {
+    canvasManager.drawPartShape(partData);
+  };
+  
+  // Effects
   useEffect(() => {
-    console.log('test from Zustand setup : ', test);
+    document.addEventListener('keydown', handleDeleteKey);
+    return () => {
+      document.removeEventListener('keydown', handleDeleteKey);
+    };
   }, []);
-
+  
+  useEffect(() => {
+    const serialResponseHandler = (data) => {
+      if (data?.type === 'private-message' && data?.title === 'incoming_serial_data') {
+        const serialRespBox = document.getElementById("debug_response_pre");
+        if (serialRespBox) {
+          const serialRespItem = document.createElement("p");
+          serialRespItem.textContent = data.message.serial_data;
+          serialRespBox.insertBefore(serialRespItem, serialRespBox.firstChild);
+        }
+      }
+    };
+    
+    messages.forEach(serialResponseHandler);
+  }, [messages]);
+  
   return (
     <>
       <Head>
@@ -32,129 +167,157 @@ export default function FabricCanvasUI() {
         <title>Fabric Canvas UI</title>
       </Head>
 
-      {/* External Scripts - loaded with Next.js Script component */}
-      {/* <Script src="../../front-end/fabric.min.js" strategy="beforeInteractive" />
-      <Script src="../../front-end/centering_guidelines.js" strategy="beforeInteractive" />
-      <Script src="../../front-end/aligning_guidelines.js" strategy="beforeInteractive" /> */}
       <Script 
         src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.8.0/two.min.js" 
         strategy="beforeInteractive" 
       />
-      <Script src="/index.js" strategy="afterInteractive" type="module" />
-
+      
       <div className="main_cont">
         {/* Sidebar Section */}
         <div className="side_bar" data-title="Parts Library">
           <div className="sidebar_head">
             <div className="port_select_wrapper">   
-              <select id="port_select">
+              <select 
+                id="port_select"
+                className={isConnected ? "connected" : ""}
+                onFocus={() => {
+                  if (wsClient) {
+                    wsClient.sendPrivateMessage(
+                      "py-executive-client", 
+                      {title: "ports_request", content: "ports_request"}
+                    );
+                  }
+                }}
+                onChange={(e) => {
+                  if (wsClient) {
+                    wsClient.sendPrivateMessage(
+                      "py-executive-client", 
+                      {title: "connect_port", content: {port: e.target.value}}
+                    );
+                  }
+                }}
+              >
                 <option value="none">select port</option>
-                {portOptions.map((port, index) => (
-                  <option key={index} value={port.value}>{port.label}</option>
-                ))}
+                {messages
+                  .filter(msg => msg?.type === 'private-message' && msg?.title === 'available_ports')
+                  .flatMap(msg => msg.message.ports)
+                  .map((port, index) => (
+                    <option key={index} value={port.device}>
+                      {port.description.includes("USB") 
+                        ? `${port.device} (${port.description})` 
+                        : port.device}
+                    </option>
+                  ))
+                }
               </select>
             </div>
             <textarea id="json_string" placeholder="enter gcode" rows="3"></textarea>
-            <button id="send_gcode" onClick={sendGcode} disabled>Send</button>
+            <button 
+              id="send_gcode" 
+              onClick={sendGcode} 
+              disabled={!isConnected}
+            >
+              Send
+            </button>
             <pre id="debug_response_pre" data-title="cnc response"></pre>
           </div>
-          <div className="sidebar_card_wrapper"></div>
-          <div className="preset_stock_wrapper"></div>
+          
+          <div className="sidebar_card_wrapper">
+            {partsLibrary.map((part, index) => (
+              <PartCard 
+                key={index} 
+                content={part} 
+                onOpenModal={openPartModal} 
+              />
+            ))}
+          </div>
+          
+          <div className="preset_stock_wrapper">
+            {presetStock.map((item, index) => (
+              <StockCard 
+                key={index} 
+                item={item} 
+                onOpenSizeModal={openStockModal} 
+              />
+            ))}
+          </div>
         </div>
 
         {/* Workspace Section */}
         <div className="work_space" data-title="Build space">
-          {/* <div className="command_btns"> */}
-          <div className="bg-blue-500 flex justify-center items-center">
-            {/* this needs to be removed */}
-            <div className=''>
-            <button id="start_btn">Start</button>
-            <button id="stop_btn">Stop</button>
-            <button id="pause_btn">Pause</button>
-            <button id="estop_btn" style={{ backgroundColor: 'red' }}>E-stop</button>
-            </div>
-          </div>
-
+          <CommandButtons />
+          
           <div className="canvas_container bg-green-500">
-            <div className="dimansion_bar" id="dimansion_bar">
+            <div 
+              className="dimansion_bar" 
+              id="dimansion_bar"
+              ref={dimBarRef}
+            >
               <p id="width_dim">Width:</p>
               <p id="height_dim">Height:</p>
               <p id="rotation_dim">Rotation:</p>
               <div className="zoom_btns">
-                <button id="zoomIn">+</button>
-                <button id="zoomOut">-</button>
+                <button id="zoomIn" onClick={canvasManager.zoomIn}>+</button>
+                <button id="zoomOut" onClick={canvasManager.zoomOut}>-</button>
               </div>
             </div>
             
             <div className="draw_tools_btns">
-              <button id="draw_rect">▭</button>
-              <button id="draw_circle">⬤</button>
+              <button id="draw_rect" onClick={canvasManager.drawRectangle}>▭</button>
+              <button id="draw_circle" onClick={canvasManager.drawCircle}>⬤</button>
               <button id="draw_triangle">△</button>
               <button id="draw_polygon">⬠</button>
               <button id="draw_line">─</button>
               <button id="draw_arrow">→</button>
               <button id="draw_ellipse">⬥</button>
             </div>
-
+            
             <div className="utils_btns">
-              <button id="build_btn">Build</button>
-              <button id="send_svg">Send SVG</button>
+              <button id="build_btn" onClick={handleBuildClick}>Build</button>
+              <button id="send_svg" onClick={handleSendSvgClick}>Send SVG</button>
               <button id="export_btn">Export</button>
               <button id="send_json">Send JSON</button>
             </div>
             
-            <div className="control_btns">
-              <div className="input-row">
-                <label htmlFor="step-input">Steps</label>
-                <input type="number" id="step-input" defaultValue="1" min="0.01" step="0.1" />
-              </div>
-              <div className="button-row">
-                <button className="jog-button" data-gcode_val="Y1">↑</button>
-              </div>
-              <div className="button-row">
-                <button className="jog-button" data-gcode_val="X-1">←</button>
-                <button className="jog-button" data-gcode_val="A-1">&#10226;</button>
-                <button className="jog-button" data-gcode_val="X1">→</button>
-              </div>
-              <div className="button-row">
-                <button className="jog-button" data-gcode_val="Y-1">↓</button>
-              </div>
-              <div className="button-row">
-                <button className="home-button" data-gcode_val="G28">&#127968;</button>
-              </div>
-            </div>
+            <Controls />
             
-            <div className="canvas_wrapper" id="fabricCanvas"></div>
+            <div 
+              className="canvas_wrapper" 
+              id="fabricCanvas"
+              ref={fabricCanvasRef}
+            ></div>
           </div>
         </div>
 
-        {/* Footer Section */}
         <div className="foot_bar" data-title="Workbench">
-          <div className="Workbench_parts_wrapper"></div>
+          <div className="Workbench_parts_wrapper">
+            {Array.from(workbenchParts).map(([partId, partData]) => (
+              <WorkbenchPart 
+                key={partId}
+                partId={partId}
+                partData={partData}
+                onSelect={selectWorkbenchPart}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="modal_overlay" id="modal_overlay">
-          <div className="modal_content">
-            <div className="size_select_wrapper">
-              <label htmlFor="size_select">Choose size:</label>
-              <select id="size_select">
-                {sizeOptions.map((size, index) => (
-                  <option key={index} value={size.value}>{size.label}</option>
-                ))}
-              </select>
-            </div>
-            <div className="length_input_wrapper">
-              <label htmlFor="length_input">Length</label>
-              <input type="number" id="length_input" placeholder="Length" />
-            </div>
-            <div className="btn_wrapper">
-              <button onClick={closeModal}>Cancel</button>
-            </div>
-          </div>
+      {isModalOpen && modalType === 'part' && (
+        <div className="modal_overlay show" id="modal_overlay">
+          <PartModal 
+            content={modalContent}
+            onClose={closeModal}
+            onAddPart={addPart}
+          />
         </div>
+      )}
+      
+      {isModalOpen && modalType === 'stock' && (
+        <DisplayModel 
+          sizeOptions={sizeOptions} 
+          closeModal={closeModal} 
+        />
       )}
     </>
   );
