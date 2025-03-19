@@ -213,7 +213,7 @@ const Workspace = () => {
 // Enhanced DimensionBar component with actual measurements
 const DimensionBar = ({ width, height, rotation, onZoomIn, onZoomOut }) => {
   return (
-    <div className="dimansion_bar" id="dimansion_bar">
+    <div className="dimansion_bar h-screen" id="dimansion_bar">
       <p id="width_dim">Width: {width}px</p>
       <p id="height_dim">Height: {height}px</p>
       <p id="rotation_dim">Rotation: {rotation}°</p>

@@ -20,7 +20,7 @@ const CNCInterface = () => {
         <Workbench />
       </div>
       {isModalOpen && <Modal isOpen={isModalOpen} onClose={handleCloseModal} />}
-      <button onClick={() => setIsModalOpen(true)}>Open Modal</button>
+      {/* <button onClick={() => setIsModalOpen(true)}>Open Modal</button> */}
     </CanvasProvider>
   );
 };
