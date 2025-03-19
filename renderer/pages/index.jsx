@@ -1,28 +1,13 @@
-import React, { useState } from 'react';
-import Sidebar from '../custom/Sidebar';
+import React from 'react';
+import { CanvasProvider } from '../custom/CanvasContext';
 import Workspace from '../custom/Workspace';
-import Workbench from '../custom/Workbench';
-import Modal from '../custom/Modal';
-import { CanvasProvider } from '../custom/Workspace';
 
-const CNCInterface = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
+function App() {
   return (
     <CanvasProvider>
-      <div className="main_cont">
-        <Sidebar />
-        <Workspace />
-        <Workbench />
-      </div>
-      {isModalOpen && <Modal isOpen={isModalOpen} onClose={handleCloseModal} />}
-      {/* <button onClick={() => setIsModalOpen(true)}>Open Modal</button> */}
+      <Workspace />
     </CanvasProvider>
   );
-};
+}
 
-export default CNCInterface;
+export default App;

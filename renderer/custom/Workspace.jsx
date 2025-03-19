@@ -1,38 +1,17 @@
-import React, { useEffect, useRef, createContext, useContext, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import CommandButtons from './CommandButtons';
 import DrawingTools from './DrawingTools';
 import UtilityButtons from './UtilityButtons';
 import ControlPanel from './ControlPanel';
+import DimensionBar from './DimensionBar';
+import { useCanvas } from './CanvasContext';
+import { 
+  createGrid, 
+  removeAllGuideLines, 
+  showSmartGuides, 
+  updateGridWithZoom 
+} from '../utils/canvasUtils';
 import * as fabric from 'fabric';
-
-// Create a context for the canvas
-const CanvasContext = createContext(null);
-
-// Create a provider for other components to access canvas
-export const CanvasProvider = ({ children }) => {
-  const [canvas, setCanvas] = useState(null);
-  const [selectedObject, setSelectedObject] = useState(null);
-  const [zoom, setZoom] = useState(1);
-  const [drawingMode, setDrawingMode] = useState(null);
-
-  return (
-    <CanvasContext.Provider value={{ 
-      canvas, 
-      setCanvas, 
-      selectedObject, 
-      setSelectedObject,
-      zoom,
-      setZoom,
-      drawingMode,
-      setDrawingMode
-    }}>
-      {children}
-    </CanvasContext.Provider>
-  );
-};
-
-// Hook to use canvas in other components
-export const useCanvas = () => useContext(CanvasContext);
 
 const Workspace = () => {
   const canvasEl = useRef(null);
@@ -40,10 +19,13 @@ const Workspace = () => {
     setCanvas, 
     canvas, 
     setSelectedObject, 
+    selectedObject,
     zoom, 
     setZoom,
     drawingMode,
-    setDrawingMode 
+    setDrawingMode,
+    freeDrawing,
+    setFreeDrawing
   } = useCanvas();
   
   // State for dimensions display
@@ -52,19 +34,25 @@ const Workspace = () => {
     height: 0,
     rotation: 0
   });
-
+  
   useEffect(() => {
     if (!canvasEl.current) return;
 
     const options = {
       width: 1000,
       height: 600,
-      backgroundColor: '#1a1a1a'
+      backgroundColor: '#1a1a1a',
+      isDrawingMode: false
     };
 
     const fabricCanvas = new fabric.Canvas(canvasEl.current, options);
     createGrid(fabricCanvas);
     setCanvas(fabricCanvas);
+
+    // Set up free drawing brush
+    fabricCanvas.freeDrawingBrush = new fabric.PencilBrush(fabricCanvas);
+    fabricCanvas.freeDrawingBrush.color = 'red';
+    fabricCanvas.freeDrawingBrush.width = 2;
 
     // Object selection event
     fabricCanvas.on('selection:created', (e) => {
@@ -95,11 +83,39 @@ const Workspace = () => {
       updateDimensions(e.target);
     });
 
+    // Smart guides implementation
+    fabricCanvas.on('object:moving', (e) => {
+      showSmartGuides(e.target, fabricCanvas);
+    });
+
+    fabricCanvas.on('mouse:up', () => {
+      // Clear all guide lines when mouse is released
+      removeAllGuideLines(fabricCanvas);
+    });
+
+    // Setup keyboard delete event
+    const handleKeyDown = (e) => {
+      if ((e.key === 'Delete' || e.key === 'Backspace') && fabricCanvas.getActiveObject()) {
+        deleteSelectedObject();
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+
     return () => {
+      window.removeEventListener('keydown', handleKeyDown);
       setCanvas(null);
       fabricCanvas.dispose();
     };
   }, [setCanvas, setSelectedObject]);
+
+  // Update the canvas drawing mode when freeDrawing state changes
+  useEffect(() => {
+    if (!canvas) return;
+    
+    canvas.isDrawingMode = freeDrawing;
+    canvas.renderAll();
+  }, [canvas, freeDrawing]);
 
   // Update dimensions display when object is selected or modified
   const updateDimensions = (obj) => {
@@ -112,40 +128,27 @@ const Workspace = () => {
     });
   };
 
-  const createGrid = (canvas, gridSize = 20, color = 'rgba(100, 100, 100, 0.3)') => {
+  // Delete the selected object
+  const deleteSelectedObject = () => {
     if (!canvas) return;
-    const gridLines = [];
     
-    for (let i = 0; i <= canvas.width / gridSize; i++) {
-      const line = new fabric.Line([i * gridSize, 0, i * gridSize, canvas.height], {
-        stroke: color,
-        selectable: false,
-        evented: false,
-        excludeFromExport: true,
-        strokeWidth: 1
-      });
-      gridLines.push(line);
-      canvas.add(line);
+    const activeObject = canvas.getActiveObject();
+    if (activeObject) {
+      if (activeObject.type === 'activeSelection') {
+        // If multiple objects are selected
+        activeObject.forEachObject(obj => {
+          canvas.remove(obj);
+        });
+      } else {
+        // If a single object is selected
+        canvas.remove(activeObject);
+      }
+      
+      canvas.discardActiveObject();
+      canvas.renderAll();
+      setSelectedObject(null);
+      setDimensions({ width: 0, height: 0, rotation: 0 });
     }
-
-    // Create horizontal lines
-    for (let i = 0; i <= canvas.height / gridSize; i++) {
-      const line = new fabric.Line([0, i * gridSize, canvas.width, i * gridSize], {
-        stroke: color,
-        selectable: false,
-        evented: false,
-        excludeFromExport: true,
-        strokeWidth: 1
-      });
-      gridLines.push(line);
-      canvas.add(line);
-    }
-
-    // Store grid lines for potential removal later
-    canvas.gridLines = gridLines;
-
-    // Make sure to render the canvas
-    canvas.renderAll();
   };
 
   // Zoom functions
@@ -156,7 +159,7 @@ const Workspace = () => {
     setZoom(newZoom);
     
     // Update grid scale
-    updateGridWithZoom(newZoom);
+    updateGridWithZoom(canvas, newZoom);
     
     canvas.renderAll();
   };
@@ -168,20 +171,19 @@ const Workspace = () => {
     setZoom(newZoom);
     
     // Update grid scale
-    updateGridWithZoom(newZoom);
+    updateGridWithZoom(canvas, newZoom);
     
     canvas.renderAll();
   };
 
-  // Update grid when zooming
-  const updateGridWithZoom = (newZoom) => {
-    if (!canvas || !canvas.gridLines) return;
+  // Toggle drawing mode on and off
+  const toggleFreeDrawing = (isEnabled) => {
+    setFreeDrawing(isEnabled);
     
-    // Make grid lines thinner when zooming in, thicker when zooming out
-    const newThickness = 1 / newZoom;
-    canvas.gridLines.forEach(line => {
-      line.set({ strokeWidth: newThickness });
-    });
+    // If turning off drawing mode, make sure we restore selection ability
+    if (!isEnabled && canvas) {
+      canvas.selection = true;
+    }
   };
 
   return (
@@ -194,8 +196,10 @@ const Workspace = () => {
           rotation={dimensions.rotation} 
           onZoomIn={zoomIn}
           onZoomOut={zoomOut}
+          onDelete={deleteSelectedObject}
+          hasSelection={!!selectedObject}
         />
-        <DrawingToolsWithCanvas />
+        <DrawingTools toggleFreeDrawing={toggleFreeDrawing} isFreeDrawing={freeDrawing} />
         <UtilityButtons />
         <ControlPanel />
         <canvas
@@ -206,128 +210,6 @@ const Workspace = () => {
           ref={canvasEl}
         />
       </div>
-    </div>
-  );
-};
-
-// Enhanced DimensionBar component with actual measurements
-const DimensionBar = ({ width, height, rotation, onZoomIn, onZoomOut }) => {
-  return (
-    <div className="dimansion_bar h-screen" id="dimansion_bar">
-      <p id="width_dim">Width: {width}px</p>
-      <p id="height_dim">Height: {height}px</p>
-      <p id="rotation_dim">Rotation: {rotation}°</p>
-      <div className="zoom_btns">
-        <button id="zoomIn" onClick={onZoomIn}>+</button>
-        <button id="zoomOut" onClick={onZoomOut}>-</button>
-      </div>
-    </div>
-  );
-};
-
-// Enhanced DrawingTools with canvas interaction
-const DrawingToolsWithCanvas = () => {
-  const { canvas, drawingMode, setDrawingMode } = useCanvas();
-  
-  const addShape = (shapeType) => {
-    if (!canvas) return;
-    
-    let shape;
-    
-    switch(shapeType) {
-      case 'rect':
-        shape = new fabric.Rect({
-          left: 100,
-          top: 100,
-          fill: '#ffffff',
-          width: 100,
-          height: 50,
-          originX: 'left',
-          originY: 'top'
-        });
-        break;
-        
-      case 'circle':
-        shape = new fabric.Circle({
-          left: 100,
-          top: 100,
-          fill: '#ffffff',
-          radius: 50
-        });
-        break;
-        
-      case 'triangle':
-        shape = new fabric.Triangle({
-          left: 100,
-          top: 100,
-          fill: '#ffffff',
-          width: 100,
-          height: 100
-        });
-        break;
-        
-      case 'polygon':
-        shape = new fabric.Polygon([
-          { x: 0, y: 0 },
-          { x: 100, y: 0 },
-          { x: 100, y: 100 },
-          { x: 50, y: 150 },
-          { x: 0, y: 100 }
-        ], {
-          left: 100,
-          top: 100,
-          fill: '#ffffff'
-        });
-        break;
-        
-      case 'line':
-        shape = new fabric.Line([50, 50, 150, 50], {
-          left: 100,
-          top: 100,
-          stroke: '#ffffff',
-          strokeWidth: 2
-        });
-        break;
-        
-      case 'arrow':
-        // Create an arrow using path
-        shape = new fabric.Path('M 0 0 L 100 0 L 100 -10 L 120 10 L 100 30 L 100 20 L 0 20 Z', {
-          left: 100,
-          top: 100,
-          fill: '#ffffff',
-          scaleX: 0.5,
-          scaleY: 0.5
-        });
-        break;
-        
-      case 'ellipse':
-        shape = new fabric.Ellipse({
-          left: 100,
-          top: 100,
-          fill: '#ffffff',
-          rx: 60,
-          ry: 30
-        });
-        break;
-        
-      default:
-        return;
-    }
-    
-    canvas.add(shape);
-    canvas.setActiveObject(shape);
-    canvas.renderAll();
-  };
-  
-  return (
-    <div className="draw_tools_btns">
-      <button id="draw_rect" onClick={() => addShape('rect')}>▭</button>
-      <button id="draw_circle" onClick={() => addShape('circle')}>⬤</button>
-      <button id="draw_triangle" onClick={() => addShape('triangle')}>△</button>
-      <button id="draw_polygon" onClick={() => addShape('polygon')}>⬠</button>
-      <button id="draw_line" onClick={() => addShape('line')}>─</button>
-      <button id="draw_arrow" onClick={() => addShape('arrow')}>→</button>
-      <button id="draw_ellipse" onClick={() => addShape('ellipse')}>⬥</button>
     </div>
   );
 };
