@@ -1,0 +1,238 @@
+
+const partsLibrary = [
+    {
+        "id": 1,
+        "title": "Sheet metal",
+        thumbnail: "/img/steel_flat_sheet.jpg",
+        "params":{
+            "thickness":{
+                "name": "thickness",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "length":{
+                "name": "length",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "width":{
+                "name": "width",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            }
+        },
+        "stock_dimensions":{
+            "length":"2440",
+            "width":"1220",
+            "unit": "mm"
+        }
+    },
+    
+    {
+        "id": 1,
+        "title": "Flat bar",
+        "thumbnail": "img/steel_flat_bar.jpg",
+        "params":{
+            "thickness":{
+                "name": "thickness",
+                "units": ["mm"],
+                "in_type": "number"
+            },
+            "length":{
+                "name": "length",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "width":{
+                "name": "width",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            }
+        },
+        "stock_dimensions":{
+            "length":"6000",
+            "unit": "mm"
+        },
+        "def_2d_width":30
+    },
+    {
+        "id": 2,
+        "title": "Square tube",
+        "thumbnail": "img/steel_square_hollow.jpg",
+        "params":{
+            "thickness":{
+                "name": "thickness",
+                "units": ["mm"],
+                "in_type": "number"
+            },
+            "length":{
+                "name": "length",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "width":{
+                "name": "width",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            },
+            "height":{
+                "name": "height",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            }
+        },
+        "stock_dimensions":{
+            "length":"6000",
+            "unit": "mm"
+        },
+        "def_2d_width":30
+    },
+    {
+        "id": 3,
+        "title": "Round tube",
+        "thumbnail": "img/steel_round_hollow.png",
+        "params":{
+            "thickness":{
+                "name": "thickness",
+                "units": ["mm"],
+                "in_type": "number"
+            },
+            "length":{
+                "name": "length",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "diameter":{
+                "name": "diameter",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            }
+        },
+        "stock_dimensions":{
+            "length":"6000",
+            "unit": "mm"
+        },
+        "def_2d_width":30
+    },
+    {
+        "id": 4,
+        "title": "H beam profile",
+        "thumbnail": "img/iron_steel_H_profile.jpg",
+        "params":{
+            "thickness":{
+                "name": "thickness",
+                "units": ["mm"],
+                "in_type": "number"
+            },
+            "length":{
+                "name": "length",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "width":{
+                "name": "width",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            }
+        },
+        "stock_dimensions":{
+            "length":"6000",
+            "unit": "mm"
+        },
+        "def_2d_width":30
+    },
+    {
+        "id": 5,
+        "title": "L beam profile",
+        "thumbnail": "img/iron_steel_L_profile.png",
+        "params":{
+            "thickness":{
+                "name": "thickness",
+                "units": ["mm"],
+                "in_type": "number"
+            },
+            "length":{
+                "name": "length",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "width":{
+                "name": "width",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            },
+            "height":{
+                "name": "height",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            }
+        },
+        "stock_dimensions":{
+            "length":"6000",
+            "unit": "mm"
+        },
+        "def_2d_width":30
+    },
+    {
+        "id": 6,
+        "title": "T beam profile",
+        "thumbnail": "img/iron_steel_T_profile.png",
+        "params":{
+            "thickness":{
+                "name": "thickness",
+                "units": ["mm"],
+                "in_type": "number"
+            },
+            "length":{
+                "name": "length",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "width":{
+                "name": "width",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            },
+            "height":{
+                "name": "height",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            }
+        },
+        "stock_dimensions":{
+            "length":"6000",
+            "unit": "mm"
+        },
+        "def_2d_width":30
+    },
+    {
+        "id": 7,
+        "title": "U beam profile",
+        "thumbnail": "img/iron_steel_U_profile.jpg",
+        "params":{
+            "thickness":{
+                "name": "thickness",
+                "units": ["mm"],
+                "in_type": "number"
+            },
+            "length":{
+                "name": "length",
+                "units": ["mm","m","cm"],
+                "in_type": "number"
+            },
+            "width":{
+                "name": "width",
+                "units": ["mm","cm"],
+                "in_type": "number"
+            }
+        },
+        "stock_dimensions":{
+            "length":"6000",
+            "unit": "mm"
+        },
+        "def_2d_width":30
+    }
+]
+
+
+export default partsLibrary;

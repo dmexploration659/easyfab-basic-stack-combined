@@ -22,8 +22,9 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
           left: 100,
           top: 100,
           fill: 'transparent',
+          zIndex: 100,
           stroke: 'red',
-          borderColor: 'red',
+          borderColor: 'gray',
           width: 100,
           height: 50,
           originX: 'left',
@@ -36,9 +37,10 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
           left: 100,
           top: 100,
           radius: 50,
+          zIndex: 100,
           fill: 'transparent',
           stroke: 'red',
-          borderColor: 'red',
+          borderColor: 'gray',
          
         });
         break;
@@ -49,7 +51,8 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
           top: 100,
           fill: 'transparent',
           stroke: 'red',
-          borderColor: 'red',
+          zIndex: 100,
+          borderColor: 'gray',
           width: 100,
           height: 100
         });
@@ -66,8 +69,9 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
           left: 100,
           top: 100,
           fill: 'transparent',
+          zIndex: 100,
           stroke: 'red',
-          borderColor: 'red',
+          borderColor: 'gray',
         });
         break;
         
@@ -83,7 +87,8 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
           top: 100,
           fill: 'transparent',
           stroke: 'red',
-          borderColor: 'red',
+          zIndex: 100,
+          borderColor: 'gray',
           scaleX: 0.5,
           scaleY: 0.5
         });
@@ -95,7 +100,8 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
           top: 100,
           fill: 'transparent',
           stroke: 'red',
-          borderColor: 'red',
+          borderColor: 'gray',
+          zIndex: 100,
           rx: 60,
           ry: 30
         });

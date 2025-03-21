@@ -12,6 +12,7 @@ import {
   updateGridWithZoom 
 } from '../utils/canvasUtils';
 import * as fabric from 'fabric';
+import Sidebar from './Sidebar';
 
 const Workspace = () => {
   const canvasEl = useRef(null);
@@ -109,7 +110,6 @@ const Workspace = () => {
     };
   }, [setCanvas, setSelectedObject]);
 
-  // Update the canvas drawing mode when freeDrawing state changes
   useEffect(() => {
     if (!canvas) return;
     
@@ -189,26 +189,34 @@ const Workspace = () => {
   return (
     <div className="work_space" data-title="Build space">
       <CommandButtons />
-      <div className="canvas_container">
-        <DimensionBar 
-          width={dimensions.width} 
-          height={dimensions.height} 
-          rotation={dimensions.rotation} 
-          onZoomIn={zoomIn}
-          onZoomOut={zoomOut}
-          onDelete={deleteSelectedObject}
-          hasSelection={!!selectedObject}
-        />
-        <DrawingTools toggleFreeDrawing={toggleFreeDrawing} isFreeDrawing={freeDrawing} />
-        <UtilityButtons />
-        <ControlPanel />
-        <canvas
-          id="fabricCanvas"
-          className='canvas_wrapper'
-          width="1000"
-          height="600"
-          ref={canvasEl}
-        />
+      <div className="workspace_layout" style={{
+        display: 'flex',
+        flexDirection: 'row',
+        width: '100%',
+        height: '100vh'
+      }}>
+        <Sidebar />
+        <div className="canvas_container">
+          <DimensionBar 
+            width={dimensions.width} 
+            height={dimensions.height} 
+            rotation={dimensions.rotation} 
+            onZoomIn={zoomIn}
+            onZoomOut={zoomOut}
+            onDelete={deleteSelectedObject}
+            hasSelection={!!selectedObject}
+          />
+          <DrawingTools toggleFreeDrawing={toggleFreeDrawing} isFreeDrawing={freeDrawing} />
+          <UtilityButtons />
+          <ControlPanel />
+          <canvas
+            id="fabricCanvas"
+            className='canvas_wrapper'
+            width="1000"
+            height="300"
+            ref={canvasEl}
+          />
+        </div>
       </div>
     </div>
   );
