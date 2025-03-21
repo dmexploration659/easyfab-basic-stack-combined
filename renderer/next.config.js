@@ -5,7 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // This ensures assets are correct both in dev and production
   assetPrefix: './'
 };
 
