@@ -1,0 +1,16 @@
+[
+    {
+        "tube1": "squareXYZ",
+        "size": {
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        "gcode": {
+            "face_bottom": "svgdata....0",
+            "face_top": "svgdata....1",
+            "face_left": "svgdata....2",
+            "face_right": "svgdata....3"
+        }
+    } 
+]

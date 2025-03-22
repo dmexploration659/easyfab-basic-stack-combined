@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", async function(){
 
     const containerDiv = document.getElementById("fabricCanvas");
     const dim_bar = document.getElementById("dimansion_bar");
+    const shape_config_bar = document.getElementById("shape_config");
     //const paperCanvas = document.getElementById("paperCanvas");
     // const twoApp = new TwoApp('paperCanvas');
 
@@ -104,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async function(){
     // });
 
     if (containerDiv) {
-        cnc_canvas = new FabricCanvasManager(containerDiv, dim_bar);
+        cnc_canvas = new FabricCanvasManager(containerDiv, dim_bar, shape_config_bar);
         // Attach event listeners to existing buttons
         // document.getElementById("draw_rect").addEventListener("click", () => cnc_canvas.drawRectangle());
         // document.getElementById("draw_circle").addEventListener("click", () => cnc_canvas.drawCircle());
@@ -337,8 +338,6 @@ window.addPart1 = function(part_date){
 window.uidGen = function() {
     return `shape_${new Date().getTime()}_${Math.floor(Math.random() * 1000)}`;
   }
-
-
 
 
 

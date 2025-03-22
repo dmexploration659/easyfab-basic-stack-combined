@@ -1,6 +1,6 @@
 // FabricCanvasManager.js
 export class FabricCanvasManager {
-    constructor(containerDiv, dim_bar) {
+    constructor(containerDiv, dim_bar, shape_config_bar) {
       // Create and append the canvas element to the provided container div
       this.canvasEl = document.createElement('canvas');
       containerDiv.appendChild(this.canvasEl);
@@ -119,7 +119,9 @@ export class FabricCanvasManager {
   
       // Bind the resize event to the resizeCanvas method
       window.addEventListener('resize', () => this.resizeCanvas());
+      
       const updateDimensions = (obj) => {
+        console.log('obj^^^^',obj);
         const scaledWidth = this.pixelsToMetrics(obj.getScaledWidth(),'mm');
         const scaledHeight = this.pixelsToMetrics(obj.getScaledHeight(),'mm');
         console.log('scaledWidth',obj.getScaledWidth());
@@ -129,10 +131,16 @@ export class FabricCanvasManager {
         const width_dim = dim_bar.querySelector('#width_dim');
         const height_dim = dim_bar.querySelector('#height_dim');
         const rotation_dim = dim_bar.querySelector('#rotation_dim');
-        
+        const shape_conf_w = shape_config_bar.querySelector('#width_input');
+        const shape_conf_h = shape_config_bar.querySelector('#height_input');
+        const shape_conf_t = shape_config_bar.querySelector('#thickness_input');
+
         width_dim.innerHTML = `Width: ${scaledWidth}mm`;
+        shape_conf_w.value = scaledWidth;
         height_dim.innerHTML = `Height: ${scaledHeight}mm`;
+        shape_conf_h.value = scaledHeight;
         rotation_dim.innerHTML = `Rotation: ${angle}°`;
+        shape_conf_t.value = obj.data.thickness;
       };
       const clearDimensions = () => {
         const width_dim = dim_bar.querySelector('#width_dim');
@@ -733,15 +741,16 @@ export class FabricCanvasManager {
     //-------------------------------------draw part shape 2nd way-------------------------------------/
     drawPartShape2(partData){
       this.partCount += 1;
-  
-      const partH = parseFloat(partData.height);
+      const part_type = partData.data.type;
+      const is_sheet_metal = part_type =='sheet_metal';
+      const partH =is_sheet_metal ? parseFloat(partData.length) : 100;
       const partW = parseFloat(partData.width);
-      const partHUnit = partData.unit;
-      const partWUnit = partData.unit;
-  
-      const hInPixels = this.metricsToPixels(100, partWUnit); // 100; // Keep hardcoded height
-      const wInPixels = this.metricsToPixels(partW, partWUnit);
-      console.log('converted to px', partW, 'mm =', wInPixels, 'pixels');
+      const partUnit = partData.unit;
+      console.log('partData', partData);
+      console.log('partH', partH, 'partW', partW, 'partUnit', partUnit);
+      const hInPixels = this.metricsToPixels(partH, partUnit); // 100; // Keep hardcoded height
+      const wInPixels = this.metricsToPixels(partW, partUnit);
+      // console.log('converted to px', partW, 'mm =', wInPixels, 'pixels');
       
       const pathString = `
           M 0 0 
@@ -750,21 +759,23 @@ export class FabricCanvasManager {
           L 0 ${hInPixels} 
           Z
       `;
+      
+      // console.log('partPath --- directly', pathString);
   
       const partPath = new fabric.Path(pathString, {
           fill: '#FDFBF6',
           selectable: true,
           originX: 'left',
           originY: 'bottom',
-          lockScalingX: true,
+          lockScalingX: !is_sheet_metal,
           top: this.canvas.height / 2,
           left: this.canvas.width / 2,
           snapAngle: 45,
           snapThreshold: 5,
+          data: partData,
 
       });  
       this.canvas.add(partPath);
-      console.log('partPath --- directly', partPath);
 
   }
   
@@ -826,43 +837,45 @@ export class FabricCanvasManager {
           this.canvas.discardActiveObject();
           this.canvas.requestRenderAll();
         }
-      }
+    }
 
-      // Method to get all objects from the canvas
-      collectObjects() {
-            if (!this.canvas) {
-              console.error('Canvas not found!');
-              return "error: canvas not found";
+    // Method to get all objects from the canvas
+    collectObjects() {
+          if (!this.canvas) {
+            console.error('Canvas not found!');
+            return "error: canvas not found";
+          }
+          const allObjects = this.canvas.getObjects().map(obj => {
+            const start_x = obj.aCoords.bl.x*this.scaleY
+            const start_y = (this.canvas.height - obj.aCoords.bl.y)*this.scaleY
+
+            return {
+              gcode_data: {
+                shape: obj.name,
+                width: (obj.getScaledWidth()*this.scaleY),
+                height: (obj.getScaledHeight()*this.scaleY),
+                radius: (obj.getScaledWidth()*this.scaleY)/2,
+                start_x: start_x,
+                start_y: start_y,
+              },
+              canvas_obj: obj
             }
-            const allObjects = this.canvas.getObjects().map(obj => {
-              const start_x = obj.aCoords.bl.x*this.scaleY
-              const start_y = (this.canvas.height - obj.aCoords.bl.y)*this.scaleY
-
-              return {
-                gcode_data: {
-                  shape: obj.name,
-                  width: (obj.getScaledWidth()*this.scaleY),
-                  height: (obj.getScaledHeight()*this.scaleY),
-                  radius: (obj.getScaledWidth()*this.scaleY)/2,
-                  start_x: start_x,
-                  start_y: start_y,
-                },
-                canvas_obj: obj
-              }
-            });
-           
-            return allObjects;
+          });
+            
+        return allObjects;
         
     }
     // getSvg(){
     //     return this.canvas.toSVG({ suppressPreamble: true });
     // }
     getSvg() {
-      return this.canvas.toSVG({ 
-        suppressPreamble: true,
-        filter: (obj) => !obj.isGrid // Now excludes all grid lines
-      });
-  }
+      const gridObjects = this.canvas.getObjects().filter(obj => obj.isGrid);
+      gridObjects.forEach(obj => this.canvas.remove(obj));
+      const svg = this.canvas.toSVG({ suppressPreamble: true });
+      gridObjects.forEach(obj => this.canvas.add(obj));
+      this.canvas.renderAll();
+      return svg;
+    }
 
 
  ///+++++++++++++++++++++++++++++++++++++++++++++++++++++///
@@ -919,6 +932,7 @@ export class FabricCanvasManager {
       this.canvas.renderAll();
 
     }
+
 ///+++++++++++++++++++++++++++++++++++++++++++++++++++++///
     
   }
