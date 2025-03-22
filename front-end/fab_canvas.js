@@ -186,38 +186,46 @@ export class FabricCanvasManager {
 
     }
 
-
     drawGrid(gridSize = 20, gridColor = '#FFFFFF') {
       const width = this.canvas.getWidth();
       const height = this.canvas.getHeight();
-      const gridGroup = new fabric.Group([], {// Create a grid pattern using Fabric.js Path
-          selectable: false,
-          evented: false, // Make the grid non-interactive
-          isGrid: true,
-          opacity: 0.05,
+      const gridGroup = new fabric.Group([], {
+        selectable: false,
+        evented: false,
+        isGrid: true, // Parent group property (optional, but useful for grouping)
+        opacity: 0.05,
       });
-      for (let i = 0; i <= width; i += gridSize) {// Draw vertical lines
-          const line = new fabric.Line([i, 0, i, height], {
-              stroke: gridColor,
-              strokeWidth: 1,
-              selectable: false,
-              evented: false,
-          });
-          gridGroup.add(line);
+    
+      // Vertical lines
+      for (let i = 0; i <= width; i += gridSize) {
+        const line = new fabric.Line([i, 0, i, height], {
+          stroke: gridColor,
+          strokeWidth: 1,
+          selectable: false,
+          evented: false,
+          isGrid: true, // Mark individual lines as grid
+        });
+        gridGroup.add(line);
       }
-      for (let i = 0; i <= height; i += gridSize) {// Draw horizontal lines
-          const line = new fabric.Line([0, i, width, i], {
-              stroke: gridColor,
-              strokeWidth: 1,
-              selectable: false,
-              evented: false,
-          });
-          gridGroup.add(line);
+    
+      // Horizontal lines
+      for (let i = 0; i <= height; i += gridSize) {
+        const line = new fabric.Line([0, i, width, i], {
+          stroke: gridColor,
+          strokeWidth: 1,
+          selectable: false,
+          evented: false,
+          isGrid: true, // Mark individual lines as grid
+        });
+        gridGroup.add(line);
       }
-      // Add the grid to the canvas
+    
       this.canvas.add(gridGroup);
       this.canvas.renderAll();
-    }  
+    }
+
+
+ 
     resizeCanvas() { // Method to resize the canvas to match its container
       const container = this.canvasEl.parentElement;
       if (container) {
@@ -846,9 +854,15 @@ export class FabricCanvasManager {
             return allObjects;
         
     }
-    getSvg(){
-        return this.canvas.toSVG({ suppressPreamble: true });
-    }
+    // getSvg(){
+    //     return this.canvas.toSVG({ suppressPreamble: true });
+    // }
+    getSvg() {
+      return this.canvas.toSVG({ 
+        suppressPreamble: true,
+        filter: (obj) => !obj.isGrid // Now excludes all grid lines
+      });
+  }
 
 
  ///+++++++++++++++++++++++++++++++++++++++++++++++++++++///
