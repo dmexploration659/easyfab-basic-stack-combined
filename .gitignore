@@ -40,5 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /components
+/server/node_modules
 
 out_logs.txt
