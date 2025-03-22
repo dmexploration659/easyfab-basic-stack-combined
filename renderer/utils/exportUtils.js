@@ -149,10 +149,10 @@ export const generateGCode = (canvas) => {
       gcode += `G0 Z5 ; Lift pen/tool\n`;
       gcode += `G0 X${left.toFixed(3)} Y${top.toFixed(3)} ; Move to start\n`;
       gcode += `G0 Z0 ; Lower pen/tool\n`;
-      gcode += `G1 X${(left + width).toFixed(3)} Y${top.toFixed(3)} ; Top line\n`;
-      gcode += `G1 X${(left + width).toFixed(3)} Y${(top + height).toFixed(3)} ; Right line\n`;
-      gcode += `G1 X${left.toFixed(3)} Y${(top + height).toFixed(3)} ; Bottom line\n`;
-      gcode += `G1 X${left.toFixed(3)} Y${top.toFixed(3)} ; Left line\n`;
+      gcode += `G90 X${(left + width).toFixed(3)} Y${top.toFixed(3)} ; Top line\n`;
+      gcode += `G90 X${(left + width).toFixed(3)} Y${(top + height).toFixed(3)} ; Right line\n`;
+      gcode += `G90 X${left.toFixed(3)} Y${(top + height).toFixed(3)} ; Bottom line\n`;
+      gcode += `G90 X${left.toFixed(3)} Y${top.toFixed(3)} ; Left line\n`;
       gcode += `G0 Z5 ; Lift pen/tool\n\n`;
     } else if (obj.type === 'circle') {
       // Handle circles with approximation
@@ -173,7 +173,7 @@ export const generateGCode = (canvas) => {
           gcode += `G0 X${x.toFixed(3)} Y${y.toFixed(3)} ; Move to start of circle\n`;
           gcode += `G0 Z0 ; Lower pen/tool\n`;
         } else {
-          gcode += `G1 X${x.toFixed(3)} Y${y.toFixed(3)} ; Circle segment\n`;
+          gcode += `G90 X${x.toFixed(3)} Y${y.toFixed(3)} ; Circle segment\n`;
         }
       }
       
