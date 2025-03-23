@@ -13,25 +13,24 @@ const PortSelector = () => {
   const [connectionProcess, setConnectionProcess] = useState('disconnected'); // disconnected, connecting, connected, error
   const { canvas } = useCanvas();
 
-  useEffect(() => {
-    const fetchPorts = async () => {
-      try {
-        const response = await fetch("http://localhost:5000/api/serial-ports");
-        const data = await response.json();
-        setPorts(data);
-      } catch (error) {
-        console.error("Error fetching serial ports:", error);
-        setConnectionStatus('Error fetching ports');
-        setConnectionProcess('error');
-      }
-    };
 
+  const fetchPorts = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/serial-ports");
+      const data = await response.json();
+      setPorts(data);
+    } catch (error) {
+      console.error("Error fetching serial ports:", error);
+      setConnectionStatus('Error fetching ports');
+      setConnectionProcess('error');
+    }
+  };
+
+  useEffect(() => {
     fetchPorts();
-    
     // Refresh ports list every 5 seconds
-    const intervalId = setInterval(fetchPorts, 5000);
-    
-    return () => clearInterval(intervalId);
+    // const intervalId = setInterval(fetchPorts, 5000);
+    // return () => clearInterval(intervalId);
   }, []);
 
   const handlePortChange = (e) => {
@@ -43,11 +42,9 @@ const PortSelector = () => {
       setConnectionStatus('Please select a port first');
       return;
     }
-
     try {
       setConnectionStatus('Connecting...');
       setConnectionProcess('connecting');
-      
       const response = await fetch('http://localhost:5000/api/connect', {
         method: 'POST',
         headers: {
@@ -120,7 +117,7 @@ const PortSelector = () => {
       const gcode = generateGCode(canvas);
       
       // Simulate a small delay to show the generating state
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // await new Promise(resolve => setTimeout(resolve, 1000));
       
       setSendingStatus('Sending G-code to port...');
       setSendingProcess('sending');
@@ -161,50 +158,6 @@ const PortSelector = () => {
     padding: '10px 16px',
   };
 
-  // Status text styles
-  const getStatusStyle = (processState) => {
-    const baseStyle = {
-      fontSize: '0.875rem',
-      fontWeight: '500',
-      marginTop: '6px',
-      padding: '4px 8px',
-      borderRadius: '4px',
-      display: 'inline-block',
-      transition: 'all 0.3s ease',
-    };
-
-    switch (processState) {
-      case 'connected':
-        return {
-          ...baseStyle,
-          backgroundColor: 'rgba(16, 185, 129, 0.1)',
-          color: '#10b981',
-          border: '1px solid rgba(16, 185, 129, 0.2)',
-        };
-      case 'connecting':
-        return {
-          ...baseStyle,
-          backgroundColor: 'rgba(245, 158, 11, 0.1)',
-          color: '#f59e0b',
-          border: '1px solid rgba(245, 158, 11, 0.2)',
-        };
-      case 'error':
-        return {
-          ...baseStyle,
-          backgroundColor: 'rgba(239, 68, 68, 0.1)',
-          color: '#ef4444',
-          border: '1px solid rgba(239, 68, 68, 0.2)',
-        };
-      case 'disconnected':
-      default:
-        return {
-          ...baseStyle,
-          backgroundColor: 'rgba(107, 114, 128, 0.1)',
-          color: '#6b7280',
-          border: '1px solid rgba(107, 114, 128, 0.2)',
-        };
-    }
-  };
 
   // Select styles
   const selectStyle = {
@@ -383,6 +336,7 @@ const PortSelector = () => {
           }}
           value={selectedPort}
           onChange={handlePortChange}
+          onFocus={fetchPorts}
           disabled={isConnected}
         >
           <option value="">Select a serial port</option>
