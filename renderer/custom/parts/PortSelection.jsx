@@ -179,9 +179,10 @@ const PortSelector = () => {
 
   // Container styles
   const containerStyle = {
-    backgroundColor: '#f8fafc',
+    marginTop: '16px',
     border: '1px solid #e2e8f0',
     borderRadius: '8px',
+    marginBottom: '16px',
     padding: '16px',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
   };
@@ -250,7 +251,7 @@ const PortSelector = () => {
     ];
 
     return (
-      <div style={{ marginTop: '16px', padding: '12px', backgroundColor: 'white', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
+      <div style={{ marginTop: '16px', padding: '12px', backgroundColor: 'red', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
         <div style={{ fontSize: '0.875rem', fontWeight: '600', marginBottom: '10px', color: '#4b5563' }}>G-code Progress</div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           {progressSteps.map((step, index) => (

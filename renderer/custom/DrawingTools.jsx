@@ -120,20 +120,64 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
   };
   
   return (
-    <div className="draw_tools_btns">
-      <button id="draw_rect" onClick={() => addShape('rect')}>▭</button>
-      <button id="draw_circle" onClick={() => addShape('circle')}>⬤</button>
-      <button id="draw_triangle" onClick={() => addShape('triangle')}>△</button>
-      <button id="draw_polygon" onClick={() => addShape('polygon')}>⬠</button>
+    <div className="drawing-tools">
+      {/* <div className="tool-title">Shapes</div> */}
+      
       <button 
-        id="draw_line" 
+        className={`tool-btn ${isFreeDrawing ? 'active' : ''}`}
+        title="Pencil"
         onClick={() => addShape('line')}
-        style={{ backgroundColor: isFreeDrawing ? '#ff4444' : '' }}
       >
-        ─
+        <span className="tool-icon">✏️</span>
       </button>
-      <button id="draw_arrow" onClick={() => addShape('arrow')}>→</button>
-      <button id="draw_ellipse" onClick={() => addShape('ellipse')}>⬥</button>
+      
+      <button 
+        className="tool-btn"
+        title="Rectangle"
+        onClick={() => addShape('rect')}
+      >
+        <span className="tool-icon">□</span>
+      </button>
+      
+      <button 
+        className="tool-btn"
+        title="Circle"
+        onClick={() => addShape('circle')}
+      >
+        <span className="tool-icon">○</span>
+      </button>
+      
+      <button 
+        className="tool-btn"
+        title="Triangle"
+        onClick={() => addShape('triangle')}
+      >
+        <span className="tool-icon">△</span>
+      </button>
+      
+      <button 
+        className="tool-btn"
+        title="Polygon"
+        onClick={() => addShape('polygon')}
+      >
+        <span className="tool-icon">⬠</span>
+      </button>
+      
+      <button 
+        className="tool-btn"
+        title="Arrow"
+        onClick={() => addShape('arrow')}
+      >
+        <span className="tool-icon">→</span>
+      </button>
+      
+      <button 
+        className="tool-btn"
+        title="Ellipse"
+        onClick={() => addShape('ellipse')}
+      >
+        <span className="tool-icon">⬭</span>
+      </button>
     </div>
   );
 };

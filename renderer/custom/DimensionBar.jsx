@@ -3,24 +3,52 @@ import React from 'react';
 // DimensionBar component with measurements and delete button
 const DimensionBar = ({ width, height, rotation, onZoomIn, onZoomOut, onDelete, hasSelection }) => {
   return (
-    <div className="dimansion_bar h-screen" id="dimansion_bar">
-      <p id="width_dim">Width: {width}px</p>
-      <p id="height_dim">Height: {height}px</p>
-      <p id="rotation_dim">Rotation: {rotation}°</p>
-      <div className="zoom_btns">
-        <button id="zoomIn" onClick={onZoomIn}>+</button>
-        <button id="zoomOut" onClick={onZoomOut}>-</button>
-      </div>
-      <div className="delete_btn">
+    <div className="dimension-bar">
+      <div className="dimension-info">
+        <div className="dimension-item">
+          <span className="dimension-label">Width</span>
+          <span className="dimension-value">{width} mm</span>
+        </div>
+        <div className="dimension-item">
+          <span className="dimension-label">Height</span>
+          <span className="dimension-value">{height} mm</span>
+        </div>
+        <div className="dimension-item">
+          <span className="dimension-label">Rotation</span>
+          <span className="dimension-value">{rotation}°</span>
+        </div>
         <button 
-          id="deleteObject" 
+          className="delete-btn" 
           onClick={onDelete} 
           disabled={!hasSelection}
-          style={{ opacity: hasSelection ? 1 : 0.5 }}
         >
-          🗑️ Delete
+          <span className="delete-icon">🗑️</span>
+          <span className="delete-text">Delete</span>
         </button>
       </div>
+      
+      <div className="dimension-controls">
+        <div className="zoom-controls">
+       
+          <button 
+            className="zoom-btn zoom-in" 
+            onClick={onZoomIn}
+            title="Zoom In"
+          >
+            <span>+</span>
+          </button>
+          <button 
+            className="zoom-btn zoom-out" 
+            onClick={onZoomOut}
+            title="Zoom Out"
+          >
+            <span>-</span>
+          </button>
+        </div>
+     
+      </div>
+         
+   
     </div>
   );
 };

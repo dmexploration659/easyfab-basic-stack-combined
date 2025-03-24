@@ -1,41 +1,41 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CommandButtons from './CommandButtons';
 import DrawingTools from './DrawingTools';
-import UtilityButtons from './UtilityButtons';
 import ControlPanel from './ControlPanel';
 import DimensionBar from './DimensionBar';
+import DimensionsPanel from './DimensionPanel';
 import { useCanvas } from './CanvasContext';
-import { 
-  createGrid, 
-  removeAllGuideLines, 
-  showSmartGuides, 
-  updateGridWithZoom 
+import {
+  createGrid,
+  removeAllGuideLines,
+  showSmartGuides,
+  updateGridWithZoom
 } from '../utils/canvasUtils';
 import * as fabric from 'fabric';
 import Sidebar from './Sidebar';
 
 const Workspace = () => {
   const canvasEl = useRef(null);
-  const { 
-    setCanvas, 
-    canvas, 
-    setSelectedObject, 
+  const {
+    setCanvas,
+    canvas,
+    setSelectedObject,
     selectedObject,
-    zoom, 
+    zoom,
     setZoom,
     drawingMode,
     setDrawingMode,
     freeDrawing,
     setFreeDrawing
   } = useCanvas();
-  
+
   // State for dimensions display
   const [dimensions, setDimensions] = useState({
     width: 0,
     height: 0,
     rotation: 0
   });
-  
+
   useEffect(() => {
     if (!canvasEl.current) return;
 
@@ -100,7 +100,7 @@ const Workspace = () => {
         deleteSelectedObject();
       }
     };
-    
+
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
@@ -112,7 +112,7 @@ const Workspace = () => {
 
   useEffect(() => {
     if (!canvas) return;
-    
+
     canvas.isDrawingMode = freeDrawing;
     canvas.renderAll();
   }, [canvas, freeDrawing]);
@@ -120,7 +120,7 @@ const Workspace = () => {
   // Update dimensions display when object is selected or modified
   const updateDimensions = (obj) => {
     if (!obj) return;
-    
+
     setDimensions({
       width: Math.round(obj.getScaledWidth()),
       height: Math.round(obj.getScaledHeight()),
@@ -131,7 +131,7 @@ const Workspace = () => {
   // Delete the selected object
   const deleteSelectedObject = () => {
     if (!canvas) return;
-    
+
     const activeObject = canvas.getActiveObject();
     if (activeObject) {
       if (activeObject.type === 'activeSelection') {
@@ -143,7 +143,7 @@ const Workspace = () => {
         // If a single object is selected
         canvas.remove(activeObject);
       }
-      
+
       canvas.discardActiveObject();
       canvas.renderAll();
       setSelectedObject(null);
@@ -157,10 +157,10 @@ const Workspace = () => {
     const newZoom = Math.min(zoom * 1.2, 5); // Limit max zoom to 5x
     canvas.zoomToPoint({ x: canvas.width / 2, y: canvas.height / 2 }, newZoom);
     setZoom(newZoom);
-    
+
     // Update grid scale
     updateGridWithZoom(canvas, newZoom);
-    
+
     canvas.renderAll();
   };
 
@@ -169,17 +169,17 @@ const Workspace = () => {
     const newZoom = Math.max(zoom / 1.2, 0.2); // Limit min zoom to 0.2x
     canvas.zoomToPoint({ x: canvas.width / 2, y: canvas.height / 2 }, newZoom);
     setZoom(newZoom);
-    
+
     // Update grid scale
     updateGridWithZoom(canvas, newZoom);
-    
+
     canvas.renderAll();
   };
 
   // Toggle drawing mode on and off
   const toggleFreeDrawing = (isEnabled) => {
     setFreeDrawing(isEnabled);
-    
+
     // If turning off drawing mode, make sure we restore selection ability
     if (!isEnabled && canvas) {
       canvas.selection = true;
@@ -187,36 +187,66 @@ const Workspace = () => {
   };
 
   return (
-    <div className="work_space" data-title="Build space">
-      <CommandButtons />
-      <div className="workspace_layout" style={{
-        display: 'flex',
-        flexDirection: 'row',
-        width: '100%',
-        height: '100vh'
-      }}>
-        <Sidebar />
-        <div className="canvas_container">
-          <DimensionBar 
-            width={dimensions.width} 
-            height={dimensions.height} 
-            rotation={dimensions.rotation} 
-            onZoomIn={zoomIn}
-            onZoomOut={zoomOut}
-            onDelete={deleteSelectedObject}
-            hasSelection={!!selectedObject}
-          />
-          <DrawingTools toggleFreeDrawing={toggleFreeDrawing} isFreeDrawing={freeDrawing} />
-          <UtilityButtons />
-          <ControlPanel />
-          <canvas
-            id="fabricCanvas"
-            className='canvas_wrapper'
-            width="1000"
-            height="300"
-            ref={canvasEl}
-          />
+    <div className="work-space" data-title="Build space">
+      <div className="workspace-layout">
+        {/* Left sidebar */}
+        <div className="sidebar-container">
+          <Sidebar />
         </div>
+        
+        {/* Main content area */}
+        <div className="main-content">
+          {/* Top dimension bar */}
+          <div className="dimension-bar-container">
+            <DimensionBar
+              width={dimensions.width}
+              height={dimensions.height}
+              rotation={dimensions.rotation}
+              onZoomIn={zoomIn}
+              onZoomOut={zoomOut}
+              onDelete={deleteSelectedObject}
+              hasSelection={!!selectedObject}
+            />
+          </div>
+          
+          {/* Canvas area with drawing tools and dimensions panel */}
+          <div className="canvas-area">
+            {/* Left drawing tools */}
+            <div className="drawing-tools-container">
+              <DrawingTools toggleFreeDrawing={toggleFreeDrawing} isFreeDrawing={freeDrawing} />
+            </div>
+            
+            {/* Center canvas */}
+            <div className="canvas-container">
+              <canvas
+                id="fabricCanvas"
+                className="canvas-wrapper"
+                width="1000"
+                height="600"
+                ref={canvasEl}
+              />
+              {/* <ControlPanel /> */}
+            </div>
+            
+            {/* Right dimensions panel */}
+            <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              height: '100%'
+            }}
+             className="dimensions-panel-container">
+              <DimensionsPanel />
+              <ControlPanel />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Footer command buttons */}
+      <div className="footer-container">
+        <CommandButtons />
       </div>
     </div>
   );

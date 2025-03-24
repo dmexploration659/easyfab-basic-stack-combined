@@ -11,57 +11,39 @@ import PartModal from './parts/PartModel';
 const Sidebar = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedPart, setSelectedPart] = useState(null);
-  const [partDimensions, setPartDimensions] = useState({});
-  const [selectedUnits, setSelectedUnits] = useState({});
-
+  const [selectedSize, setSelectedSize] = useState('');
   const { canvas } = useCanvas();
 
   const handlePartClick = (part) => {
-    // Initialize the dimensions with default values
-    const initialDimensions = {};
-    const initialUnits = {};
-
-    // For each parameter in the part, set an initial value
-    Object.keys(part.params).forEach(paramKey => {
-      const param = part.params[paramKey];
-      initialDimensions[paramKey] = part.stock_dimensions[paramKey] || 100; // Default to 100 if no stock dimension
-      initialUnits[paramKey] = param.units[0]; // Default to first unit in the array
-    });
-
-    setPartDimensions(initialDimensions);
-    setSelectedUnits(initialUnits);
+    // Set the default selected size to the first size in the list
+    const defaultSize = Object.keys(part.sizes)[0] || '';
+    setSelectedSize(defaultSize);
     setSelectedPart(part);
     setShowModal(true);
   };
 
-  const handleDimensionChange = (param, value) => {
-    setPartDimensions({
-      ...partDimensions,
-      [param]: value
-    });
+  const handleSizeChange = (sizeKey) => {
+    setSelectedSize(sizeKey);
   };
 
-  const handleUnitChange = (param, unit) => {
-    setSelectedUnits({
-      ...selectedUnits,
-      [param]: unit
-    });
-  };
+  const handleAddToCanvas = () => {
+    if (!canvas || !selectedPart || !selectedSize) return;
 
-  const handleAddToCavas = () => {
-    if (!canvas || !selectedPart) return;
-
+    // Get the dimensions from the selected part and size
+    const sizeDetails = selectedPart.sizes[selectedSize];
+    if (!sizeDetails) return;
+    
     // Create a shape based on the part type
     let shape;
 
-    // Determine the shape dimensions
-    const width = parseFloat(partDimensions.width) || 100;
-    const height = parseFloat(partDimensions.height || partDimensions.thickness) || 50;
-    const length = parseFloat(partDimensions.length) || 200;
-    const diameter = parseFloat(partDimensions.diameter) || 50;
+    // Extract dimensions from the selected size
+    const width = parseFloat(sizeDetails.width) || 100;
+    const height = parseFloat(sizeDetails.height || width) || 100;
+    const length = parseFloat(sizeDetails.length) || 200;
+    const thickness = parseFloat(sizeDetails.thickness || selectedPart.thickness) || 2;
 
-    switch (selectedPart.title) {
-      case "Sheet metal":
+    switch (selectedPart.type) {
+      case "sheet_metal":
         shape = new fabric.Rect({
           left: 100,
           top: 100,
@@ -76,22 +58,7 @@ const Sidebar = () => {
         });
         break;
 
-      case "Flat bar":
-        shape = new fabric.Rect({
-          left: 100,
-          top: 100,
-          fill: 'transparent',
-          zIndex: 0,
-          backgroundColor: "white",
-          stroke: 'white',
-          width: width,
-          height: length,
-          originX: 'left',
-          originY: 'top'
-        });
-        break;
-
-      case "Square tube":
+      case "square_tube":
         // Create a square tube as a group of rectangles
         const outerRect = new fabric.Rect({
           left: 0,
@@ -104,14 +71,13 @@ const Sidebar = () => {
           height: height
         });
 
-        const innerThickness = parseFloat(partDimensions.thickness) || 2;
         const innerRect = new fabric.Rect({
-          left: innerThickness,
-          top: innerThickness,
+          left: thickness,
+          top: thickness,
           fill: 'black',
           stroke: 'white',
-          width: width - (innerThickness * 2),
-          height: height - (innerThickness * 2)
+          width: width - (thickness * 2),
+          height: height - (thickness * 2)
         });
 
         shape = new fabric.Group([outerRect, innerRect], {
@@ -120,8 +86,9 @@ const Sidebar = () => {
         });
         break;
 
-      case "Round tube":
+      case "round_tube":
         // Create a round tube as a group of circles
+        const diameter = width; // Assuming width is the diameter for round tubes
         const outerCircle = new fabric.Circle({
           left: 0,
           top: 0,
@@ -132,95 +99,15 @@ const Sidebar = () => {
           stroke: 'white'
         });
 
-        const tubeThickness = parseFloat(partDimensions.thickness) || 2;
         const innerCircle = new fabric.Circle({
-          left: tubeThickness,
-          top: tubeThickness,
-          radius: (diameter / 2) - tubeThickness,
+          left: thickness,
+          top: thickness,
+          radius: (diameter / 2) - thickness,
           fill: 'black',
           stroke: 'white'
         });
 
         shape = new fabric.Group([outerCircle, innerCircle], {
-          left: 100,
-          top: 100
-        });
-        break;
-
-      case "H beam profile":
-        // Create H beam as a group of rectangles
-        const hBeamThickness = parseFloat(partDimensions.thickness) || 5;
-        const hBeamWidth = width;
-        const hBeamHeight = height || 100;
-
-        const hBeamHorizontal1 = new fabric.Rect({
-          left: 0,
-          top: 0,
-          width: hBeamWidth,
-          height: hBeamThickness,
-          fill: 'transparent',
-          zIndex: 0,
-          backgroundColor: "white",
-          stroke: 'white'
-        });
-
-        const hBeamHorizontal2 = new fabric.Rect({
-          left: 0,
-          top: hBeamHeight - hBeamThickness,
-          width: hBeamWidth,
-          height: hBeamThickness,
-          fill: 'transparent',
-          zIndex: 0,
-          backgroundColor: "white",
-          stroke: 'white'
-        });
-
-        const hBeamVertical = new fabric.Rect({
-          left: (hBeamWidth - hBeamThickness) / 2,
-          top: hBeamThickness,
-          width: hBeamThickness,
-          height: hBeamHeight - (hBeamThickness * 2),
-          fill: 'transparent',
-          zIndex: 0,
-          backgroundColor: "white",
-          stroke: 'white'
-        });
-
-        shape = new fabric.Group([hBeamHorizontal1, hBeamHorizontal2, hBeamVertical], {
-          left: 100,
-          top: 100
-        });
-        break;
-
-      case "L beam profile":
-        // Create L beam as a group of rectangles
-        const lBeamThickness = parseFloat(partDimensions.thickness) || 5;
-        const lBeamWidth = width;
-        const lBeamHeight = height || 100;
-
-        const lBeamHorizontal = new fabric.Rect({
-          left: 0,
-          top: 0,
-          width: lBeamWidth,
-          height: lBeamThickness,
-          fill: 'transparent',
-          zIndex: 0,
-          backgroundColor: "white",
-          stroke: 'white'
-        });
-
-        const lBeamVertical = new fabric.Rect({
-          left: 0,
-          top: lBeamThickness,
-          width: lBeamThickness,
-          height: lBeamHeight - lBeamThickness,
-          fill: 'transparent',
-          zIndex: 0,
-          backgroundColor: "white",
-          stroke: 'white'
-        });
-
-        shape = new fabric.Group([lBeamHorizontal, lBeamVertical], {
           left: 100,
           top: 100
         });
@@ -243,8 +130,9 @@ const Sidebar = () => {
     }
 
     // Add metadata to the shape
-    shape.set('partType', selectedPart.title);
-    shape.set('partDimensions', { ...partDimensions });
+    shape.set('partType', selectedPart.type);
+    shape.set('partSize', selectedSize);
+    shape.set('partDimensions', { ...sizeDetails });
 
     // Add the shape to canvas
     canvas.add(shape);
@@ -269,13 +157,13 @@ const Sidebar = () => {
           gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '10px',
           maxHeight: '250px',
-          overflowY: 'auto',
+          overflowY: 'hidden',
           padding: '10px'
         }}
       >
-        {partsLibrary.map((part) => (
+        {partsLibrary.map((part, index) => (
           <PartCard
-            key={part.id}
+            key={index}
             part={part}
             onClick={() => handlePartClick(part)}
           />
@@ -287,12 +175,10 @@ const Sidebar = () => {
       {showModal && selectedPart && (
         <PartModal
           selectedPart={selectedPart}
-          partDimensions={partDimensions}
-          selectedUnits={selectedUnits}
-          onDimensionChange={handleDimensionChange}
-          onUnitChange={handleUnitChange}
+          selectedSize={selectedSize}
+          onSizeChange={handleSizeChange}
           onCancel={() => setShowModal(false)}
-          onSubmit={handleAddToCavas}
+          onSubmit={handleAddToCanvas}
         />
       )}
     </div>

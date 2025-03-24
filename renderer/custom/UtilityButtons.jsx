@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCanvas } from './CanvasContext';
 import { exportSVG, generateGCode } from '../utils/exportUtils';
 
@@ -35,14 +35,51 @@ const UtilityButtons = () => {
     console.log('G-code exported and download triggered');
   };
 
-  return (
-    <div className="utils_btns">
-      <button id="build_btn">Build</button>
-      <button id="send_svg" onClick={handleSendSVG}>Send SVG</button>
-      <button id="export_btn" onClick={handleExportGCode}>Export</button>
-      <button id="send_json">Send JSON</button>
-    </div>
-  );
+  // Handle build action
+  const handleBuild = () => {
+    console.log('Build action triggered');
+    // Implement your build functionality here
+  };
+
+  // Handle send JSON action
+  const handleSendJSON = () => {
+    console.log('Send JSON action triggered');
+    // Implement your send JSON functionality here
+  };
+
+  useEffect(() => {
+    // Set up a listener for menu actions
+    const menuActionHandler = (action) => {
+      switch (action) {
+        case 'build':
+          handleBuild();
+          break;
+        case 'send-svg':
+          handleSendSVG();
+          break;
+        case 'export-gcode':
+          handleExportGCode();
+          break;
+        case 'send-json':
+          handleSendJSON();
+          break;
+        default:
+          console.log(`Unknown menu action: ${action}`);
+      }
+    };
+
+    // Register the listener
+    window.electronAPI.onMenuAction(menuActionHandler);
+
+    // Clean up the listener when component unmounts
+    return () => {
+      // Note: Electron doesn't provide a direct way to remove listeners from preload,
+      // but in a real app you might use a custom event system that supports removal
+    };
+  }, [canvas]); // Re-register when canvas changes
+
+  // No UI is rendered as functionality is now in the menu
+  return null;
 };
 
 export default UtilityButtons;
