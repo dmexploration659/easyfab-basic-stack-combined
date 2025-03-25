@@ -3,13 +3,22 @@ import React from 'react';
 
 const GCodeInput = () => {
   return (
-    <>
+    <div
+    style={{
+      padding: '10px',
+      border: '1px solid #ddd',
+      border: '1px solid #e2e8f0',
+      borderRadius: '8px',
+      padding: '6px',
+      display: 'flex',
+      flexDirection: 'column',
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+    }}>
       <textarea
         id="json_string"
         placeholder="enter gcode"
         rows="3"
         style={{
-          width: '100%',
           marginBottom: '8px',
           padding: '8px',
           borderRadius: '4px',
@@ -29,7 +38,7 @@ const GCodeInput = () => {
       >
         Send
       </button>
-    </>
+    </div>
   );
 };
 

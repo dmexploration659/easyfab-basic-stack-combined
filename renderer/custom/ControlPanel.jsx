@@ -2,24 +2,44 @@ import React from 'react';
 
 const ControlPanel = () => {
   return (
-    <div className="control_btns">
-      <div className="input-row">
-        <label htmlFor="step-input">Steps</label>
-        <input type="number" id="step-input" defaultValue="1" min="0.01" step="0.1" />
-      </div>
-      <div className="button-row">
-        <button className="jog-button" data-gcode_val="Y1">↑</button>
-      </div>
-      <div className="button-row">
-        <button className="jog-button" data-gcode_val="X-1">←</button>
-        <button className="jog-button" data-gcode_val="A-1">&#10226;</button>
-        <button className="jog-button" data-gcode_val="X1">→</button>
-      </div>
-      <div className="button-row">
-        <button className="jog-button" data-gcode_val="Y-1">↓</button>
-      </div>
-      <div className="button-row">
-        <button className="home-button" data-gcode_val="G28">&#127968;</button>
+    <div className="control-paneld">
+      <div className="control-section">
+        <div className="steps-indicator">
+          <span className="steps-label">Steps</span>
+          <span className="steps-value">1</span>
+        </div>
+        
+        <div className="control-grid">
+          <button className="control-btn home-btn">
+            <span role="img" aria-label="Home">🏠</span>
+          </button>
+          
+          <button className="control-btn up-btn">
+            <span role="img" aria-label="Up">↑</span>
+          </button>
+          
+          <button className="control-btn a1-btn">a1</button>
+          
+          <div className="navigation-cluster">
+            <button className="control-btn left-btn">
+              <span role="img" aria-label="Left">←</span>
+            </button>
+            
+            <button className="control-btn reset-btn">
+              <span role="img" aria-label="Reset">↻</span>
+            </button>
+            
+            <button className="control-btn right-btn">
+              <span role="img" aria-label="Right">→</span>
+            </button>
+          </div>
+          
+          <button className="control-btn down-btn">
+            <span role="img" aria-label="Down">↓</span>
+          </button>
+          
+          <button className="control-btn second-a1-btn">a1</button>
+        </div>
       </div>
     </div>
   );
