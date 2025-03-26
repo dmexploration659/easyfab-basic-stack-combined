@@ -40,8 +40,9 @@ const Workspace = () => {
     if (!canvasEl.current) return;
 
     const options = {
-      width: 1000,
-      height: 600,
+      // set width and height of window screen size
+      width: 6000,
+      height: 6000,
       backgroundColor: '#1a1a1a',
       isDrawingMode: false
     };
@@ -166,8 +167,27 @@ const Workspace = () => {
 
   const zoomOut = () => {
     if (!canvas) return;
-    const newZoom = Math.max(zoom / 1.2, 0.2); // Limit min zoom to 0.2x
-    canvas.zoomToPoint({ x: canvas.width / 2, y: canvas.height / 2 }, newZoom);
+    
+    // Get the current viewport center point
+    const viewportTransform = canvas.viewportTransform;
+    const centerPoint = {
+      x: canvas.width / 2,
+      y: canvas.height / 2
+    };
+
+    // Calculate new zoom level
+    const newZoom = Math.max(zoom / 1.2, 1); // Limit min zoom to 0.1x
+    const zoomFactor = newZoom / zoom;
+
+    // Adjust viewport transform to zoom around center
+    viewportTransform[0] = newZoom;
+    viewportTransform[3] = newZoom;
+    viewportTransform[4] = centerPoint.x - (centerPoint.x * zoomFactor);
+    viewportTransform[5] = centerPoint.y - (centerPoint.y * zoomFactor);
+
+    // Apply the new viewport transform
+    canvas.setViewportTransform(viewportTransform);
+    
     setZoom(newZoom);
 
     // Update grid scale
