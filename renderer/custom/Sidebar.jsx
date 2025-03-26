@@ -42,11 +42,15 @@ const Sidebar = () => {
     const length = parseFloat(sizeDetails.length) || 200;
     const thickness = parseFloat(sizeDetails.thickness || selectedPart.thickness) || 2;
 
+    // Get canvas center coordinates
+    const canvasCenterX = canvas.getWidth() / 2;
+    const canvasCenterY = canvas.getHeight() / 2;
+
     switch (selectedPart.type) {
       case "sheet_metal":
         shape = new fabric.Rect({
-          left: 100,
-          top: 100,
+          left: canvasCenterX - (width / 2),
+          top: canvasCenterY - (length / 2),
           fill: 'transparent',
           zIndex: 0,
           backgroundColor: "white",
@@ -81,8 +85,8 @@ const Sidebar = () => {
         });
 
         shape = new fabric.Group([outerRect, innerRect], {
-          left: 100,
-          top: 100
+          left: canvasCenterX - (width / 2),
+          top: canvasCenterY - (height / 2)
         });
         break;
 
@@ -108,16 +112,16 @@ const Sidebar = () => {
         });
 
         shape = new fabric.Group([outerCircle, innerCircle], {
-          left: 100,
-          top: 100
+          left: canvasCenterX - (diameter / 2),
+          top: canvasCenterY - (diameter / 2)
         });
         break;
 
       default:
         // Default to a rectangle for unhandled types
         shape = new fabric.Rect({
-          left: 100,
-          top: 100,
+          left: canvasCenterX - (width / 2),
+          top: canvasCenterY - (height / 2),
           fill: 'transparent',
           zIndex: 0,
           backgroundColor: "white",

@@ -2,93 +2,94 @@ import React from 'react';
 import { useCanvas } from './CanvasContext';
 import * as fabric from 'fabric';
 
-// DrawingTools with canvas interaction
 const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
   const { canvas, drawingMode, setDrawingMode } = useCanvas();
   
   const addShape = (shapeType) => {
     if (!canvas) return;
     
-    // If we're switching to a regular shape, make sure we turn off free drawing
     if (isFreeDrawing) {
       toggleFreeDrawing(false);
     }
     
     let shape;
     
+    // Get the center of the canvas
+    const canvasCenterX = canvas.width / 2;
+    const canvasCenterY = canvas.height / 2;
+    
+    const commonShapeProps = {
+      fill: 'transparent',
+      stroke: 'red',
+      strokeWidth: 2,
+      strokeUniform: true,
+      zIndex: 100,
+      borderColor: 'gray',
+    };
+    
     switch(shapeType) {
       case 'rect':
         shape = new fabric.Rect({
-          left: 100,
-          top: 100,
-          fill: 'transparent',
-          zIndex: 100,
-          stroke: 'red',
-          borderColor: 'gray',
+          ...commonShapeProps,
           width: 100,
           height: 50,
-          originX: 'left',
-          originY: 'top'
+          left: canvasCenterX,
+          top: canvasCenterY,
+          originX: 'center',
+          originY: 'center'
         });
         break;
         
       case 'circle':
         shape = new fabric.Circle({
-          left: 100,
-          top: 100,
+          ...commonShapeProps,
           radius: 50,
-          zIndex: 100,
-          fill: 'transparent',
-          stroke: 'red',
-          borderColor: 'gray',
-         
+          left: canvasCenterX,
+          top: canvasCenterY,
+          originX: 'center',
+          originY: 'center'
         });
         break;
         
       case 'triangle':
         shape = new fabric.Triangle({
-          left: 100,
-          top: 100,
-          fill: 'transparent',
-          stroke: 'red',
-          zIndex: 100,
-          borderColor: 'gray',
+          ...commonShapeProps,
           width: 100,
-          height: 100
+          height: 100,
+          left: canvasCenterX,
+          top: canvasCenterY,
+          originX: 'center',
+          originY: 'center'
         });
         break;
         
       case 'polygon':
         shape = new fabric.Polygon([
-          { x: 0, y: 0 },
-          { x: 100, y: 0 },
-          { x: 100, y: 100 },
-          { x: 50, y: 150 },
-          { x: 0, y: 100 }
+          { x: -50, y: -50 },
+          { x: 50, y: -50 },
+          { x: 50, y: 50 },
+          { x: 0, y: 75 },
+          { x: -50, y: 50 }
         ], {
-          left: 100,
-          top: 100,
-          fill: 'transparent',
-          zIndex: 100,
-          stroke: 'red',
-          borderColor: 'gray',
+          ...commonShapeProps,
+          left: canvasCenterX,
+          top: canvasCenterY,
+          originX: 'center',
+          originY: 'center'
         });
         break;
         
       case 'line':
-        // Clicking line tool now toggles free drawing mode
         toggleFreeDrawing(!isFreeDrawing);
         return;
         
       case 'arrow':
-        // Create an arrow using path
         shape = new fabric.Path('M 0 0 L 100 0 L 100 -10 L 120 10 L 100 30 L 100 20 L 0 20 Z', {
-          left: 100,
-          top: 100,
-          fill: 'transparent',
-          stroke: 'red',
-          zIndex: 100,
-          borderColor: 'gray',
+          ...commonShapeProps,
+          left: canvasCenterX,
+          top: canvasCenterY,
+          originX: 'center',
+          originY: 'center',
           scaleX: 0.5,
           scaleY: 0.5
         });
@@ -96,12 +97,11 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
         
       case 'ellipse':
         shape = new fabric.Ellipse({
-          left: 100,
-          top: 100,
-          fill: 'transparent',
-          stroke: 'red',
-          borderColor: 'gray',
-          zIndex: 100,
+          ...commonShapeProps,
+          left: canvasCenterX,
+          top: canvasCenterY,
+          originX: 'center',
+          originY: 'center',
           rx: 60,
           ry: 30
         });
@@ -111,18 +111,25 @@ const DrawingTools = ({ toggleFreeDrawing, isFreeDrawing }) => {
         return;
     }
     
-    // Only add a shape if one was created (not in free drawing mode)
     if (shape) {
+      // Enable object controls for resizing and moving
+      shape.set({
+        cornerColor: 'blue',
+        cornerStyle: 'circle',
+        cornerSize: 12,
+        transparentCorners: false,
+        borderScaleFactor: 2,
+      });
+      
       canvas.add(shape);
       canvas.setActiveObject(shape);
       canvas.renderAll();
     }
   };
-  
+
+  // Rest of the component remains the same
   return (
     <div className="drawing-tools">
-      {/* <div className="tool-title">Shapes</div> */}
-      
       <button 
         className={`tool-btn ${isFreeDrawing ? 'active' : ''}`}
         title="Pencil"
