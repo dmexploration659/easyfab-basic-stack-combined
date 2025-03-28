@@ -340,9 +340,13 @@ const PortSelector = () => {
           onFocus={fetchPorts}
           disabled={isConnected}
         >
-          <option value="">Select a serial port</option>
+          <option value="" style={{
+            color: '#9ca3af',
+          }}>Select a serial port</option>
           {ports.map((port, index) => (
-            <option key={index} value={port.path}>
+            <option key={index} value={port.path} style={{
+              color: port.path ? 'white' : '#9ca3af',
+            }}>
               {port.path} - {port.friendlyName || "Unknown"}
             </option>
           ))}

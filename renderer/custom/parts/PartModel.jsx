@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 
 const PartModal = ({
   selectedPart,
@@ -8,6 +8,8 @@ const PartModal = ({
   onCancel,
   onSubmit
 }) => {
+  const [customLength, setCustomLength] = useState('');
+
   if (!selectedPart || !selectedPart.sizes) return null;
   
   const sizeDetails = selectedPart.sizes[selectedSize] || {};
@@ -71,6 +73,32 @@ const PartModal = ({
               <option key={sizeKey} value={sizeKey}>{sizeKey}</option>
             ))}
           </select>
+        </div>
+        
+        {/* Custom Length Input */}
+        <div style={{ marginBottom: '15px' }}>
+          <label style={{
+            display: 'block',
+            fontSize: '14px',
+            marginBottom: '5px',
+            color: "black",
+            fontWeight: 'bold'
+          }}>
+            Custom Length
+          </label>
+          <input
+            type="number"
+            value={customLength}
+            onChange={(e) => setCustomLength(e.target.value)}
+            placeholder="Enter custom length"
+            style={{
+              width: '100%',
+              padding: '8px',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              backgroundColor: 'white'
+            }}
+          />
         </div>
         
         {/* Display the details of the selected size */}
@@ -163,7 +191,7 @@ const PartModal = ({
           Cancel
         </button>
         <button
-          onClick={onSubmit}
+          onClick={() => onSubmit(customLength)}
           style={{
             padding: '8px 16px',
             borderRadius: '4px',

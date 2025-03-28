@@ -26,7 +26,7 @@ const Sidebar = () => {
     setSelectedSize(sizeKey);
   };
 
-  const handleAddToCanvas = () => {
+  const handleAddToCanvas = (customLength) => {
     if (!canvas || !selectedPart || !selectedSize) return;
 
     // Get the dimensions from the selected part and size
@@ -39,104 +39,113 @@ const Sidebar = () => {
     // Extract dimensions from the selected size
     const width = parseFloat(sizeDetails.width) || 100;
     const height = parseFloat(sizeDetails.height || width) || 100;
-    const length = parseFloat(sizeDetails.length) || 200;
     const thickness = parseFloat(sizeDetails.thickness || selectedPart.thickness) || 2;
+    
+    // Use custom length if provided, otherwise use default or calculated length
+    const length = customLength 
+      ? parseFloat(customLength) 
+      : (parseFloat(sizeDetails.length) || 200);
 
     // Get canvas center coordinates
     const canvasCenterX = canvas.getWidth() / 2;
     const canvasCenterY = canvas.getHeight() / 2;
 
+    // Create side view representations
     switch (selectedPart.type) {
       case "sheet_metal":
         shape = new fabric.Rect({
-          left: canvasCenterX - (width / 2),
+          left: canvasCenterX - (thickness / 2),
           top: canvasCenterY - (length / 2),
           fill: 'transparent',
           zIndex: 0,
           backgroundColor: "white",
           stroke: 'white',
-          width: width,
+          width: thickness,
           height: length,
-          originX: 'left',
-          originY: 'top'
+          originX: 'center',
+          originY: 'center'
         });
         break;
 
       case "square_tube":
-        // Create a square tube as a group of rectangles
-        const outerRect = new fabric.Rect({
+        // Side view of square tube with thickness
+        const outerRectSide = new fabric.Rect({
           left: 0,
           top: 0,
           fill: 'transparent',
-          zIndex: 0,
-          backgroundColor: "white",
           stroke: 'white',
-          width: width,
-          height: height
+          width: thickness,
+          height: length
         });
 
-        const innerRect = new fabric.Rect({
-          left: thickness,
-          top: thickness,
+        const innerRectSide = new fabric.Rect({
+          left: thickness / 4,
+          top: thickness / 4,
           fill: 'black',
           stroke: 'white',
-          width: width - (thickness * 2),
-          height: height - (thickness * 2)
+          width: thickness / 2,
+          height: length - (thickness / 2)
         });
 
-        shape = new fabric.Group([outerRect, innerRect], {
-          left: canvasCenterX - (width / 2),
-          top: canvasCenterY - (height / 2)
+        shape = new fabric.Group([outerRectSide, innerRectSide], {
+          left: canvasCenterX - (thickness / 2),
+          top: canvasCenterY - (length / 2),
+          originX: 'center',
+          originY: 'center'
         });
         break;
 
       case "round_tube":
-        // Create a round tube as a group of circles
-        const diameter = width; // Assuming width is the diameter for round tubes
-        const outerCircle = new fabric.Circle({
+        // Side view of round tube
+        const outerCircle = new fabric.Ellipse({
           left: 0,
           top: 0,
-          radius: diameter / 2,
+          rx: thickness / 2,
+          ry: length / 2,
           fill: 'transparent',
-          zIndex: 0,
-          backgroundColor: "white",
           stroke: 'white'
         });
 
-        const innerCircle = new fabric.Circle({
-          left: thickness,
-          top: thickness,
-          radius: (diameter / 2) - thickness,
+        const innerCircle = new fabric.Ellipse({
+          left: thickness / 4,
+          top: thickness / 4,
+          rx: (thickness / 4),
+          ry: (length / 2) - (thickness / 2),
           fill: 'black',
           stroke: 'white'
         });
 
         shape = new fabric.Group([outerCircle, innerCircle], {
-          left: canvasCenterX - (diameter / 2),
-          top: canvasCenterY - (diameter / 2)
+          left: canvasCenterX - (thickness / 2),
+          top: canvasCenterY - (length / 2),
+          originX: 'center',
+          originY: 'center'
         });
         break;
 
       default:
-        // Default to a rectangle for unhandled types
+        // Default to a thin rectangle for side view
         shape = new fabric.Rect({
-          left: canvasCenterX - (width / 2),
-          top: canvasCenterY - (height / 2),
+          left: canvasCenterX - (thickness / 2),
+          top: canvasCenterY - (length / 2),
           fill: 'transparent',
           zIndex: 0,
           backgroundColor: "white",
           stroke: 'white',
-          width: width,
-          height: height,
-          originX: 'left',
-          originY: 'top'
+          width: thickness,
+          height: length,
+          originX: 'center',
+          originY: 'center'
         });
     }
 
     // Add metadata to the shape
     shape.set('partType', selectedPart.type);
     shape.set('partSize', selectedSize);
-    shape.set('partDimensions', { ...sizeDetails });
+    shape.set('partDimensions', { 
+      ...sizeDetails, 
+      customLength: customLength ? customLength : undefined 
+    });
 
     // Add the shape to canvas
     canvas.add(shape);
