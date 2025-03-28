@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+import * as fabric from 'fabric';
 import CommandButtons from './CommandButtons';
 import DrawingTools from './DrawingTools';
 import ControlPanel from './ControlPanel';
 import DimensionBar from './DimensionBar';
 import DimensionsPanel from './DimensionPanel';
+import Sidebar from './Sidebar';
 import { useCanvas } from './CanvasContext';
 import {
   createGrid,
@@ -11,11 +13,10 @@ import {
   showSmartGuides,
   updateGridWithZoom
 } from '../utils/canvasUtils';
-import * as fabric from 'fabric';
-import Sidebar from './Sidebar';
 
 const Workspace = () => {
   const canvasEl = useRef(null);
+  const canvasContainerRef = useRef(null);
   const {
     setCanvas,
     canvas,
@@ -37,26 +38,78 @@ const Workspace = () => {
   });
 
   useEffect(() => {
-    if (!canvasEl.current) return;
+    if (!canvasEl.current || !canvasContainerRef.current) return;
+
+    // Get container dimensions
+    const containerWidth = canvasContainerRef.current.clientWidth;
+    const containerHeight = canvasContainerRef.current.clientHeight;
 
     const options = {
-      // set width and height of window screen size
-      width: 6000,
-      height: 6000,
+      width: containerWidth,
+      height: containerHeight,
       backgroundColor: '#1a1a1a',
-      isDrawingMode: false
+      isDrawingMode: false,
+      originX: 'left',   // Set origin to left
+      originY: 'bottom'  // Set origin to bottom
     };
 
     const fabricCanvas = new fabric.Canvas(canvasEl.current, options);
+    const height = (fabricCanvas.height-10)
+
+
+    // Create origin marker (red dot with white border)
+    const originMarker = new fabric.Circle({
+      left: 0,
+      top: height, // Position at bottom left
+      radius: 3,
+      fill: 'red',
+      stroke: 'white',
+      strokeWidth: 2,
+      selectable: false,
+      evented: false,
+      objectCaching: false
+    });
+
+    // Create small precise origin point
+    const preciseOriginMarker = new fabric.Circle({
+      left: 0,
+      top: fabricCanvas.height,
+      radius: 3,
+      fill: 'white',
+      selectable: false,
+      evented: false,
+      objectCaching: false
+    });
+
+    // Add origin markers to canvas
+    fabricCanvas.add(originMarker, preciseOriginMarker);
+
+    // Coordinate system lines
+    const xAxisLine = new fabric.Line([0, fabricCanvas.height, fabricCanvas.width, fabricCanvas.height], {
+      stroke: 'rgba(255,255,255,0.5)',
+      strokeDashArray: [5, 5],
+      selectable: false,
+      evented: false
+    });
+
+    const yAxisLine = new fabric.Line([0, fabricCanvas.height, 0, 0], {
+      stroke: 'rgba(255,255,255,0.5)',
+      strokeDashArray: [5, 5],
+      selectable: false,
+      evented: false
+    });
+
+    fabricCanvas.add(xAxisLine, yAxisLine);
+
+    // Create grid
     createGrid(fabricCanvas);
-    setCanvas(fabricCanvas);
 
     // Set up free drawing brush
     fabricCanvas.freeDrawingBrush = new fabric.PencilBrush(fabricCanvas);
     fabricCanvas.freeDrawingBrush.color = 'red';
     fabricCanvas.freeDrawingBrush.width = 2;
 
-    // Object selection event
+    // Object selection events
     fabricCanvas.on('selection:created', (e) => {
       updateDimensions(e.selected[0]);
       setSelectedObject(e.selected[0]);
@@ -91,11 +144,10 @@ const Workspace = () => {
     });
 
     fabricCanvas.on('mouse:up', () => {
-      // Clear all guide lines when mouse is released
       removeAllGuideLines(fabricCanvas);
     });
 
-    // Setup keyboard delete event
+    // Keyboard delete event
     const handleKeyDown = (e) => {
       if ((e.key === 'Delete' || e.key === 'Backspace') && fabricCanvas.getActiveObject()) {
         deleteSelectedObject();
@@ -104,21 +156,30 @@ const Workspace = () => {
 
     window.addEventListener('keydown', handleKeyDown);
 
+    // Handle window resize
+    const handleResize = () => {
+      const newWidth = canvasContainerRef.current.clientWidth;
+      const newHeight = canvasContainerRef.current.clientHeight;
+      
+      fabricCanvas.setWidth(newWidth);
+      fabricCanvas.setHeight(newHeight);
+      fabricCanvas.renderAll();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Set canvas in context
+    setCanvas(fabricCanvas);
+
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      setCanvas(null);
+      window.removeEventListener('resize', handleResize);
       fabricCanvas.dispose();
+      setCanvas(null);
     };
   }, [setCanvas, setSelectedObject]);
 
-  useEffect(() => {
-    if (!canvas) return;
-
-    canvas.isDrawingMode = freeDrawing;
-    canvas.renderAll();
-  }, [canvas, freeDrawing]);
-
-  // Update dimensions display when object is selected or modified
+  // Update dimensions display
   const updateDimensions = (obj) => {
     if (!obj) return;
 
@@ -129,19 +190,17 @@ const Workspace = () => {
     });
   };
 
-  // Delete the selected object
+  // Delete selected object
   const deleteSelectedObject = () => {
     if (!canvas) return;
 
     const activeObject = canvas.getActiveObject();
     if (activeObject) {
       if (activeObject.type === 'activeSelection') {
-        // If multiple objects are selected
         activeObject.forEachObject(obj => {
           canvas.remove(obj);
         });
       } else {
-        // If a single object is selected
         canvas.remove(activeObject);
       }
 
@@ -155,52 +214,41 @@ const Workspace = () => {
   // Zoom functions
   const zoomIn = () => {
     if (!canvas) return;
-    const newZoom = Math.min(zoom * 1.2, 5); // Limit max zoom to 5x
+    const newZoom = Math.min(zoom * 1.2, 5);
     canvas.zoomToPoint({ x: canvas.width / 2, y: canvas.height / 2 }, newZoom);
     setZoom(newZoom);
-
-    // Update grid scale
     updateGridWithZoom(canvas, newZoom);
-
     canvas.renderAll();
   };
 
   const zoomOut = () => {
     if (!canvas) return;
     
-    // Get the current viewport center point
     const viewportTransform = canvas.viewportTransform;
     const centerPoint = {
       x: canvas.width / 2,
       y: canvas.height / 2
     };
 
-    // Calculate new zoom level
-    const newZoom = Math.max(zoom / 1.2, 1); // Limit min zoom to 0.1x
+    const newZoom = Math.max(zoom / 1.2, 1);
     const zoomFactor = newZoom / zoom;
 
-    // Adjust viewport transform to zoom around center
     viewportTransform[0] = newZoom;
     viewportTransform[3] = newZoom;
     viewportTransform[4] = centerPoint.x - (centerPoint.x * zoomFactor);
     viewportTransform[5] = centerPoint.y - (centerPoint.y * zoomFactor);
 
-    // Apply the new viewport transform
     canvas.setViewportTransform(viewportTransform);
     
     setZoom(newZoom);
-
-    // Update grid scale
     updateGridWithZoom(canvas, newZoom);
-
     canvas.renderAll();
   };
 
-  // Toggle drawing mode on and off
+  // Toggle drawing mode
   const toggleFreeDrawing = (isEnabled) => {
     setFreeDrawing(isEnabled);
 
-    // If turning off drawing mode, make sure we restore selection ability
     if (!isEnabled && canvas) {
       canvas.selection = true;
     }
@@ -209,14 +257,11 @@ const Workspace = () => {
   return (
     <div className="work-space" data-title="Build space">
       <div className="workspace-layout">
-        {/* Left sidebar */}
         <div className="sidebar-container">
           <Sidebar />
         </div>
         
-        {/* Main content area */}
         <div className="main-content">
-          {/* Top dimension bar */}
           <div className="dimension-bar-container">
             <DimensionBar
               width={dimensions.width}
@@ -229,34 +274,46 @@ const Workspace = () => {
             />
           </div>
           
-          {/* Canvas area with drawing tools and dimensions panel */}
           <div className="canvas-area">
-            {/* Left drawing tools */}
             <div className="drawing-tools-container">
-              <DrawingTools toggleFreeDrawing={toggleFreeDrawing} isFreeDrawing={freeDrawing} />
+              <DrawingTools 
+                toggleFreeDrawing={toggleFreeDrawing} 
+                isFreeDrawing={freeDrawing} 
+              />
             </div>
             
-            {/* Center canvas */}
-            <div className="canvas-container">
+            <div 
+              ref={canvasContainerRef}
+              className="canvas-container"
+              style={{
+                width: '100%',
+                height: '100%',
+                position: 'relative'
+              }}
+            >
               <canvas
                 id="fabricCanvas"
                 className="canvas-wrapper"
-                width="1000"
-                height="600"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0
+                }}
                 ref={canvasEl}
               />
-              {/* <ControlPanel /> */}
             </div>
             
-            {/* Right dimensions panel */}
-            <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              height: '100%'
-            }}
-             className="dimensions-panel-container">
+            <div 
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '100%'
+              }} 
+              className="dimensions-panel-container"
+            >
               <DimensionsPanel />
               <ControlPanel />
             </div>
@@ -264,7 +321,6 @@ const Workspace = () => {
         </div>
       </div>
       
-      {/* Footer command buttons */}
       <div className="footer-container">
         <CommandButtons />
       </div>
