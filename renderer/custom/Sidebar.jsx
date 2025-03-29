@@ -67,61 +67,67 @@ const Sidebar = () => {
         });
         break;
 
-      case "square_tube":
-        // Side view of square tube with thickness
-        const outerRectSide = new fabric.Rect({
-          left: 0,
-          top: 0,
-          fill: 'transparent',
-          stroke: 'white',
-          width: thickness,
-          height: length
-        });
-
-        const innerRectSide = new fabric.Rect({
-          left: thickness / 4,
-          top: thickness / 4,
-          fill: 'black',
-          stroke: 'white',
-          width: thickness / 2,
-          height: length - (thickness / 2)
-        });
-
-        shape = new fabric.Group([outerRectSide, innerRectSide], {
-          left: canvasCenterX - (thickness / 2),
-          top: canvasCenterY - (length / 2),
-          originX: 'center',
-          originY: 'center'
-        });
-        break;
-
+        case "square_tube":
+          // Left vertical bar
+          const leftRect = new fabric.Rect({
+            left: canvasCenterX - (thickness / 2),
+            top: canvasCenterY - (length / 2),
+            fill: 'white',
+            stroke: 'white',
+            width: thickness,
+            height: length,
+            originX: 'center',
+            originY: 'center'
+          });
+        
+          // Right vertical bar
+          const rightRect = new fabric.Rect({
+            left: canvasCenterX + (thickness / 2),
+            top: canvasCenterY - (length / 2),
+            fill: 'white',
+            stroke: 'white',
+            width: thickness,
+            height: length,
+            originX: 'center',
+            originY: 'center'
+          });
+        
+          // Group both sides together
+          shape = new fabric.Group([leftRect, rightRect], {
+            left: canvasCenterX,
+            top: canvasCenterY,
+            originX: 'center',
+            originY: 'center'
+          });
+          break;
+        
       case "round_tube":
-        // Side view of round tube
-        const outerCircle = new fabric.Ellipse({
-          left: 0,
-          top: 0,
-          rx: thickness / 2,
-          ry: length / 2,
-          fill: 'transparent',
-          stroke: 'white'
-        });
+  // Side view of round tube as a rectangle with inner rectangle
+  const outerRectRound = new fabric.Rect({
+    left: 0,
+    top: 0,
+    fill: 'transparent',
+    stroke: 'white',
+    width: thickness,
+    height: length
+  });
 
-        const innerCircle = new fabric.Ellipse({
-          left: thickness / 4,
-          top: thickness / 4,
-          rx: (thickness / 4),
-          ry: (length / 2) - (thickness / 2),
-          fill: 'black',
-          stroke: 'white'
-        });
+  const innerRectRound = new fabric.Rect({
+    left: thickness / 4,
+    top: thickness / 4,
+    fill: 'black',
+    stroke: 'white',
+    width: thickness / 2,
+    height: length - (thickness / 2)
+  });
 
-        shape = new fabric.Group([outerCircle, innerCircle], {
-          left: canvasCenterX - (thickness / 2),
-          top: canvasCenterY - (length / 2),
-          originX: 'center',
-          originY: 'center'
-        });
-        break;
+  shape = new fabric.Group([outerRectRound, innerRectRound], {
+    left: canvasCenterX - (thickness / 2),
+    top: canvasCenterY - (length / 2),
+    originX: 'center',
+    originY: 'center'
+  });
+  break;
 
       default:
         // Default to a thin rectangle for side view
